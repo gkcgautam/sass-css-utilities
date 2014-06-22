@@ -1,1 +1,143 @@
-.test { display: inline-block; vertical-align: baseline; zoom: 1; *display: inline; *vertical-align: auto; }
+.pad-0 { padding: 0px; }
+
+.pad-5 { padding: 5px; }
+
+.pad-10 { padding: 10px; }
+
+.pad-15 { padding: 15px; }
+
+.pad-20 { padding: 20px; }
+
+.pad-25 { padding: 25px; }
+
+.pad-30 { padding: 30px; }
+
+.pad-35 { padding: 35px; }
+
+.pad-40 { padding: 40px; }
+
+.pad-45 { padding: 45px; }
+
+.pad-50 { padding: 50px; }
+
+.pad-60 { padding: 60px; }
+
+.pt-0 { padding-top: 0px; }
+
+.pb-0 { padding-bottom: 0px; }
+
+.pt-5 { padding-top: 5px; }
+
+.pb-5 { padding-bottom: 5px; }
+
+.pt-10 { padding-top: 10px; }
+
+.pb-10 { padding-bottom: 10px; }
+
+.pt-15 { padding-top: 15px; }
+
+.pb-15 { padding-bottom: 15px; }
+
+.pt-20 { padding-top: 20px; }
+
+.pb-20 { padding-bottom: 20px; }
+
+.pt-25 { padding-top: 25px; }
+
+.pb-25 { padding-bottom: 25px; }
+
+.pt-30 { padding-top: 30px; }
+
+.pb-30 { padding-bottom: 30px; }
+
+.pt-35 { padding-top: 35px; }
+
+.pb-35 { padding-bottom: 35px; }
+
+.pt-40 { padding-top: 40px; }
+
+.pb-40 { padding-bottom: 40px; }
+
+.pt-45 { padding-top: 45px; }
+
+.pb-45 { padding-bottom: 45px; }
+
+.pt-50 { padding-top: 50px; }
+
+.pb-50 { padding-bottom: 50px; }
+
+.pt-60 { padding-top: 60px; }
+
+.pb-60 { padding-bottom: 60px; }
+
+.pt-70 { padding-top: 70px; }
+
+.pb-70 { padding-bottom: 70px; }
+
+.pt-80 { padding-top: 80px; }
+
+.pb-80 { padding-bottom: 80px; }
+
+.pt-90 { padding-top: 90px; }
+
+.pb-90 { padding-bottom: 90px; }
+
+.pt-100 { padding-top: 100px; }
+
+.pb-100 { padding-bottom: 100px; }
+
+.pt-150 { padding-top: 150px; }
+
+.pb-150 { padding-bottom: 150px; }
+
+.pt-200 { padding-top: 200px; }
+
+.pb-200 { padding-bottom: 200px; }
+
+.pl-0 { padding-left: 0px; }
+
+.pr-0 { padding-right: 0px; }
+
+.pl-5 { padding-left: 5px; }
+
+.pr-5 { padding-right: 5px; }
+
+.pl-10 { padding-left: 10px; }
+
+.pr-10 { padding-right: 10px; }
+
+.pl-15 { padding-left: 15px; }
+
+.pr-15 { padding-right: 15px; }
+
+.pl-20 { padding-left: 20px; }
+
+.pr-20 { padding-right: 20px; }
+
+.pl-25 { padding-left: 25px; }
+
+.pr-25 { padding-right: 25px; }
+
+.pl-30 { padding-left: 30px; }
+
+.pr-30 { padding-right: 30px; }
+
+.pl-35 { padding-left: 35px; }
+
+.pr-35 { padding-right: 35px; }
+
+.pl-40 { padding-left: 40px; }
+
+.pr-40 { padding-right: 40px; }
+
+.pl-45 { padding-left: 45px; }
+
+.pr-45 { padding-right: 45px; }
+
+.pl-50 { padding-left: 50px; }
+
+.pr-50 { padding-right: 50px; }
+
+.pl-60 { padding-left: 60px; }
+
+.pr-60 { padding-right: 60px; }

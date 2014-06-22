@@ -1,0 +1,32 @@
+// Paddings General
+@if $paddings_general{
+    @each $val in $paddings_general{
+		.#{$prefix}pad-#{$val}{
+			padding: #{$val}px;
+		}
+    }
+}
+
+// Paddings Vertical
+@if $paddings_vertical{
+    @each $val in $paddings_vertical{
+		.#{$prefix}pt-#{$val}{
+			padding-top: #{$val}px;
+		}
+		.#{$prefix}pb-#{$val}{
+			padding-bottom: #{$val}px;
+		}
+    }
+}
+
+// Paddings Horizontal
+@if $paddings_horizontal{
+    @each $val in $paddings_horizontal{
+		.#{$prefix}pl-#{$val}{
+			padding-left: #{$val}px;
+		}
+		.#{$prefix}pr-#{$val}{
+			padding-right: #{$val}px;
+		}
+    }
+}
