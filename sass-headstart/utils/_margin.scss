@@ -1,0 +1,32 @@
+// Margins General
+@if $margins_general{
+    @each $val in $margins_general{
+		.#{$prefix}mar-#{$val}{
+			margin: #{$val}px;
+		}
+    }
+}
+
+// Margins Vertical
+@if $margins_vertical{
+    @each $val in $margins_vertical{
+		.#{$prefix}mt-#{$val}{
+			margin-top: #{$val}px;
+		}
+		.#{$prefix}mb-#{$val}{
+			margin-bottom: #{$val}px;
+		}
+    }
+}
+
+// Margins Horizontal
+@if $margins_horizontal{
+    @each $val in $margins_horizontal{
+		.#{$prefix}ml-#{$val}{
+			margin-left: #{$val}px;
+		}
+		.#{$prefix}mr-#{$val}{
+			margin-right: #{$val}px;
+		}
+    }
+}
