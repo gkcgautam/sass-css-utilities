@@ -8,3 +8,5 @@
 *.codekit-cache
 *.sass-cache
 *node_modules
+package.json
+Gruntfile.js
