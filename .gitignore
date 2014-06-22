@@ -1,0 +1,10 @@
+*.DS_Store
+*.Spotlight-V100
+*.Trashes
+*Thumbs.db
+*error_log
+*.log
+*config.codekit
+*.codekit-cache
+*.sass-cache
+*node_modules
