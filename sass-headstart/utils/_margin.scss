@@ -11,34 +11,36 @@
 	margin-right: auto;
 }
 
-// Margins General
-@if $margins_general{
-    @each $val in $margins_general{
+@if $margins{
+    @each $val in $margins{
+
+    	// Margin all
+		.ma-#{$val},
 		.mar-#{$val}{
 			margin: #{$val}px;
 		}
-    }
-}
 
-// Margins Vertical
-@if $margins_vertical{
-    @each $val in $margins_vertical{
-		.mt-#{$val}{
+		// Margin top and vertical
+		.mt-#{$val},
+		.mv-#{$val}{
 			margin-top: #{$val}px;
 		}
-		.mb-#{$val}{
+
+		// Margin bottom and vertical
+		.mb-#{$val},
+		.mv-#{$val}{
 			margin-bottom: #{$val}px;
 		}
-    }
-}
 
-// Margins Horizontal
-@if $margins_horizontal{
-    @each $val in $margins_horizontal{
-		.ml-#{$val}{
+		// Margin left and horizontal
+		.ml-#{$val},
+		.mh-#{$val}{
 			margin-left: #{$val}px;
 		}
-		.mr-#{$val}{
+
+		// Margin right and horizontal
+		.mr-#{$val},
+		.mh-#{$val}{
 			margin-right: #{$val}px;
 		}
     }
