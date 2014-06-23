@@ -1,0 +1,10 @@
+
+@mixin font-size ($size: 12, $line_height:false ){
+	font-size: $size + px;
+	font-size: (0.125 * $size) + rem;
+
+	@if $line_height{
+		line-height: $line_height + px;
+		line-height: (0.125 * $line_height) + rem;
+	}
+}

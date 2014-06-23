@@ -1,0 +1,81 @@
+
+// ---- Floats ----  
+
+	.fl {
+		float:left;
+	}
+	.fr {
+		float:right;
+	}
+	.fl-imp{
+		float:left !important;
+	}
+	.fr-imp {
+		float:right !important;
+	}
+	.clr,
+	.clear {
+		clear:both;
+	}
+
+
+// ---- Align ----  
+
+	.ta-l, .align-left{
+		text-align: left;
+	}
+	.ta-r, .align-right {
+		text-align: right;
+	}
+	.ta-c, .align-center {
+		text-align: center;
+	}
+
+// ---- Clear Fix ----  
+
+	.clearfix{
+		zoom:1;
+
+		&:before,
+		&:after{
+			content:"";
+	    	display:table;
+		}
+		&:after{
+			clear:both;
+		}
+	}
+
+// ---- Visibility and more ---- 
+
+	.hide {
+		display: none;
+	}
+	.invisible {
+		visibility: hidden;
+	}
+	.invisible-imp {
+		visibility: hidden !important;
+	}
+
+	.block{
+		display: block;
+	}
+	.block-imp{
+		display: block !important;
+	}
+	.inline-block{
+		@include inline-block();
+	}
+
+	.hide-text {
+	    @include hide-text();
+	}
+
+	.ellipsis {
+		@include ellipsis();
+	}
+
+	.disable-text-select {
+		@include disable-text-select();
+	}
