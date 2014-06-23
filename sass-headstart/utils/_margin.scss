@@ -1,15 +1,24 @@
-.ma,
-.mar-auto {
-	margin-left: auto;
-	margin-right: auto;
-}
+// General margin classes
 
-.ml-auto{
-	margin-left: auto;
-}
-.mr-auto{
-	margin-right: auto;
-}
+	.ma,
+	.mar-auto {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.ml-auto { margin-left: auto; }
+	.mr-auto { margin-right: auto; }
+
+// Zero margin classes
+
+	.zm { margin:0 !important; }
+	.zmt { margin-top:0 !important; }
+	.zmb { margin-bottom:0 !important; }
+	.zml { margin-left:0 !important; }
+	.zmr { margin-right:0 !important; }
+	.zmv { margin-top:0 !important; margin-bottom:0 !important; }
+	.zmh { margin-left:0 !important; margin-right:0 !important; }
+
 
 @if $margins{
     @each $val in $margins{

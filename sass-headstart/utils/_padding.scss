@@ -1,4 +1,14 @@
 
+// Zero padding classes
+
+	.zp { padding:0 !important; }
+	.zpt { padding-top:0 !important; }
+	.zpb { padding-bottom:0 !important; }
+	.zpl { padding-left:0 !important; }
+	.zpr { padding-right:0 !important; }
+	.zpv { padding-top:0 !important; padding-bottom:0 !important; }
+	.zph { padding-left:0 !important; padding-right:0 !important; }
+
 @if $paddings{
     @each $val in $paddings{
 
