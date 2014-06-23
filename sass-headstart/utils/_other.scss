@@ -19,7 +19,7 @@
 	}
 
 
-// ---- Align ----  
+// ---- Text Align ----  
 
 	.ta-l, .align-left{
 		text-align: left;
@@ -30,6 +30,20 @@
 	.ta-c, .align-center {
 		text-align: center;
 	}
+
+
+// ---- Align ----  
+
+	.va-t, .align-top{
+		vertical-align: top;
+	}
+	.va-m, .align-middle {
+		vertical-align: middle;
+	}
+	.va-b, .align-bottom {
+		vertical-align: bottom;
+	}
+
 
 // ---- Clear Fix ----  
 
@@ -58,6 +72,13 @@
 		visibility: hidden !important;
 	}
 
+	.transparent{
+		@include opacity(0);
+	}
+	.opaque{
+		@include opacity(1);
+	}
+
 	.block{
 		display: block;
 	}
@@ -76,6 +97,13 @@
 		@include ellipsis();
 	}
 
-	.disable-text-select {
-		@include disable-text-select();
+	.non-selectable {
+		@include non-selectable();
+	}
+
+	.uc, .uppercase{
+		text-transform: uppercase;
+	}
+	.lc, .lowercase{
+		text-transform: lowercase;
 	}

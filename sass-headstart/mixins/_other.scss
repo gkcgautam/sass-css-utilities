@@ -8,12 +8,12 @@
 }
 
 @mixin opacity($opacity) {
+	zoom: 1;
+	filter: alpha(opacity=($opacity*100));
 	opacity: $opacity;
-	$opacity-ie: $opacity * 100;
-	filter: alpha(opacity=$opacity-ie);
 }
 
-@mixin disable-text-select() {
+@mixin non-selectable() {
 	-webkit-user-select: none;  
 	-moz-user-select: none;    
 	-ms-user-select: none;      
