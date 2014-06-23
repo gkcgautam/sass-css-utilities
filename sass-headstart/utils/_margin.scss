@@ -1,12 +1,20 @@
-.ma{
+.ma,
+.mar-auto {
 	margin-left: auto;
+	margin-right: auto;
+}
+
+.ml-auto{
+	margin-left: auto;
+}
+.mr-auto{
 	margin-right: auto;
 }
 
 // Margins General
 @if $margins_general{
     @each $val in $margins_general{
-		.#{$prefix}mar-#{$val}{
+		.mar-#{$val}{
 			margin: #{$val}px;
 		}
     }
@@ -15,10 +23,10 @@
 // Margins Vertical
 @if $margins_vertical{
     @each $val in $margins_vertical{
-		.#{$prefix}mt-#{$val}{
+		.mt-#{$val}{
 			margin-top: #{$val}px;
 		}
-		.#{$prefix}mb-#{$val}{
+		.mb-#{$val}{
 			margin-bottom: #{$val}px;
 		}
     }
@@ -27,10 +35,10 @@
 // Margins Horizontal
 @if $margins_horizontal{
     @each $val in $margins_horizontal{
-		.#{$prefix}ml-#{$val}{
+		.ml-#{$val}{
 			margin-left: #{$val}px;
 		}
-		.#{$prefix}mr-#{$val}{
+		.mr-#{$val}{
 			margin-right: #{$val}px;
 		}
     }
