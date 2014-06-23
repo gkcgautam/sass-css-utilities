@@ -21,26 +21,26 @@
 
 // ---- Text Align ----  
 
-	.ta-l, .align-left{
+	.ta-l, .tal, .align-left{
 		text-align: left;
 	}
-	.ta-r, .align-right {
+	.ta-r, .tar, .align-right {
 		text-align: right;
 	}
-	.ta-c, .align-center {
+	.ta-c, .tac, .align-center, .center {
 		text-align: center;
 	}
 
 
 // ---- Align ----  
 
-	.va-t, .align-top{
+	.va-t, .vat, .align-top{
 		vertical-align: top;
 	}
-	.va-m, .align-middle {
+	.va-m, .vam, .align-middle {
 		vertical-align: middle;
 	}
-	.va-b, .align-bottom {
+	.va-b, .vab, .align-bottom {
 		vertical-align: bottom;
 	}
 
