@@ -9,22 +9,10 @@
 	.ml-auto { margin-left: auto !important; }
 	.mr-auto { margin-right: auto !important; }
 
-// Zero margin classes
-
-	.zm { margin:0 !important; }
-	.zmt { margin-top:0 !important; }
-	.zmb { margin-bottom:0 !important; }
-	.zml { margin-left:0 !important; }
-	.zmr { margin-right:0 !important; }
-	.zmv { margin-top:0 !important; margin-bottom:0 !important; }
-	.zmh { margin-left:0 !important; margin-right:0 !important; }
-
-
-@if $margins{
-    @each $val in $margins{
+@if variable-exists(config-margins) {
+    @each $val in $config-margins{
 
     	// Margin all
-		.ma-#{$val},
 		.mar-#{$val}{
 			margin: #{$val}px !important;
 		}
