@@ -48,45 +48,30 @@
 // ---- Clear Fix ----  
 
 	.clearfix{
-		zoom:1;
-
-		&:before,
-		&:after{
-			content:"";
-	    	display:table;
-		}
-		&:after{
-			clear:both;
-		}
+		@include clearfix;
 	}
 
 // ---- Visibility and more ---- 
 
-	.hide {
-		display: none;
+	.is-hidden {
+		display: none !important;
 	}
-	.hidden {
-		visibility: hidden;
-	}
-	.hidden-imp {
+	.is-invisible {
 		visibility: hidden !important;
 	}
 
-	.transparent{
+	.is-transparent{
 		@include opacity(0);
 	}
-	.opaque{
+	.is-opaque{
 		@include opacity(1);
 	}
 
 	.block{
-		display: block;
-	}
-	.block-imp{
 		display: block !important;
 	}
 	.inline-block{
-		@include inline-block();
+		@include inline-block("!important");
 	}
 
 	.hide-text {
