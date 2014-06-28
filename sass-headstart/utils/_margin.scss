@@ -2,12 +2,12 @@
 
 	.ma,
 	.mar-auto {
-		margin-left: auto;
-		margin-right: auto;
+		margin-left: auto !important;
+		margin-right: auto !important;
 	}
 
-	.ml-auto { margin-left: auto; }
-	.mr-auto { margin-right: auto; }
+	.ml-auto { margin-left: auto !important; }
+	.mr-auto { margin-right: auto !important; }
 
 // Zero margin classes
 
@@ -26,31 +26,31 @@
     	// Margin all
 		.ma-#{$val},
 		.mar-#{$val}{
-			margin: #{$val}px;
+			margin: #{$val}px !important;
 		}
 
 		// Margin top and vertical
 		.mt-#{$val},
 		.mv-#{$val}{
-			margin-top: #{$val}px;
+			margin-top: #{$val}px !important;
 		}
 
 		// Margin bottom and vertical
 		.mb-#{$val},
 		.mv-#{$val}{
-			margin-bottom: #{$val}px;
+			margin-bottom: #{$val}px !important;
 		}
 
 		// Margin left and horizontal
 		.ml-#{$val},
 		.mh-#{$val}{
-			margin-left: #{$val}px;
+			margin-left: #{$val}px !important;
 		}
 
 		// Margin right and horizontal
 		.mr-#{$val},
 		.mh-#{$val}{
-			margin-right: #{$val}px;
+			margin-right: #{$val}px !important;
 		}
     }
 }

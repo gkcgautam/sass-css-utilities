@@ -15,31 +15,31 @@
     	// Padding all
 		.pa-#{$val},
 		.pad-#{$val}{
-			padding: #{$val}px;
+			padding: #{$val}px !important;
 		}
 
 		// Padding top and vertical
 		.pt-#{$val},
 		.pv-#{$val}{
-			padding-top: #{$val}px;
+			padding-top: #{$val}px !important;
 		}
 
 		// Padding bottom and vertical
 		.pb-#{$val},
 		.pv-#{$val}{
-			padding-bottom: #{$val}px;
+			padding-bottom: #{$val}px !important;
 		}
 
 		// Padding left and horizontal
 		.pl-#{$val},
 		.ph-#{$val}{
-			padding-left: #{$val}px;
+			padding-left: #{$val}px !important;
 		}
 
 		// Padding right and horizontal
 		.pr-#{$val},
 		.ph-#{$val}{
-			padding-right: #{$val}px;
+			padding-right: #{$val}px !important;
 		}
     }
 }
