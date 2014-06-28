@@ -30,7 +30,7 @@
 
 @mixin hide-text{
     overflow:hidden;
-    text-indent:-9000px;
+    text-indent:-9999px;
     display:block;
 }
 
@@ -53,5 +53,11 @@
 	&:after{
 		clear:both;
 	}
+}
+
+@mixin border-box{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 

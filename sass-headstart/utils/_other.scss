@@ -2,15 +2,9 @@
 // ---- Floats ----  
 
 	.fl {
-		float:left;
-	}
-	.fr {
-		float:right;
-	}
-	.fl-imp{
 		float:left !important;
 	}
-	.fr-imp {
+	.fr {
 		float:right !important;
 	}
 	.clr,
@@ -21,27 +15,27 @@
 
 // ---- Text Align ----  
 
-	.ta-l, .tal, .align-left{
-		text-align: left;
-	}
-	.ta-r, .tar, .align-right {
-		text-align: right;
-	}
-	.ta-c, .tac, .align-center, .center {
-		text-align: center;
+	.ta-c, .align-center {
+		text-align: center !important;
 	}
 
+	.ta-l, .align-left{
+		text-align: left !important;
+	}
+	.ta-r, .align-right {
+		text-align: right !important;
+	}
 
 // ---- Align ----  
 
-	.va-t, .vat, .align-top{
-		vertical-align: top;
+	.va-t, .align-top{
+		vertical-align: top !important;
 	}
-	.va-m, .vam, .align-middle {
-		vertical-align: middle;
+	.va-m, .align-middle {
+		vertical-align: middle !important;
 	}
-	.va-b, .vab, .align-bottom {
-		vertical-align: bottom;
+	.va-b, .align-bottom {
+		vertical-align: bottom !important;
 	}
 
 
@@ -72,6 +66,9 @@
 	}
 	.inline-block{
 		@include inline-block("!important");
+	}
+	.border-box{
+		@include border-box;
 	}
 
 	.hide-text {

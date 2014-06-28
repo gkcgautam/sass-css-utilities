@@ -1,12 +1,12 @@
 
-.b {
-    font-weight: bold;
+.b, .bold {
+    font-weight: bold !important;
 }
 
-.em {
-    font-style: italic;
+.em, .italic {
+    font-style: italic !important;
 }
 
 .del{
-    text-decoration: line-through;
+    text-decoration: line-through !important;
 }
