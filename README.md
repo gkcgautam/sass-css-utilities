@@ -29,8 +29,10 @@ This is just a simple example. The classes can be used to modify even a single p
 ## Documentation
 
 ### Margin
-`ma` or `mar-auto` : `auto` value for left and right margin property
+`ma` or `mar-auto` : Auto value for left and right margin. (margin-left:auto; margin-right:auto;)
+
 `ml-a` or `ml-auto`: `auto` value for left margin property
+
 `mr-a` or `mr-auto`: `auto` value for right margin property
 
 #### Auto generated margin classes:
@@ -72,7 +74,7 @@ Padding classes are just like margin classes.
 `ph-X` : Horizontal Padding. Eg: ph-5 is padding-left: 5px; padding-right: 5px;
 
 ### Tablet and Mobile
-Both padding and margins of an element can be changed in different devices by usinf them with device specific prefix. For example:
+Both padding and margins of an element can be changed in different devices by using them with device specific prefix. For example:
 
     <div class="pad-40 tab-pad-30 phn-pad-20 phn-pt-10">Content</div>
 This div will have `40px` padding in desktop, `30px` padding in tablets and `20px` padding in phones. Additionally we have further changes the top padding to `10px` in phone.
@@ -80,7 +82,7 @@ This div will have `40px` padding in desktop, `30px` padding in tablets and `20p
 ### Custom values
 The classes to be generated can be specified in variables `$config-paddings` and `$config-margins`. The default values are:
 
-    $config-paddings: (0 5 10 15 20 25 30) !default;
-$config-margins:  (0 5 10 15 20 25 30) !default;
+    $config-paddings: (0 5 10 15 20 25 30);
+    $config-margins:  (0 5 10 15 20 25 30);
 
-DOCS COMING SOON!
+MORE DOCS COMING SOON!
