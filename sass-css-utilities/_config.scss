@@ -22,7 +22,7 @@
 	$config-phone-tablet-margins:  $config-margins !default;
 	$config-phone-margins:         $config-margins !default;
 
-// ====== Setting default variables based on config ======
+// ====== Setting default variables based on config. Do not edit unless you know what you are doing! ======
 
 	$important: if($config-global-use-important, " !important", "");
 	$important-paddings: $important;
