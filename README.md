@@ -85,7 +85,7 @@ This is just a simple example. The classes can be used to modify even a single p
  - `until-width($device-width)` : Devices with max width as specified
  - `if-device($device)` : Media query specific to a device. Possible values are `tablet`, `phone-tablet` and `phone`.
 
-Device width config can be updated in these variables:
+Device width config can be updated with these variables:
 ```
 $config-phone-max-width   : 767px;
 $config-tablet-min-width  : 768px;
@@ -93,22 +93,108 @@ $config-tablet-max-width  : 979px;
 $config-desktop-min-width : 980px;
 ```
 
-#### Example Usage
+#### Example
 ```
-@include at-least-width(979px){
-    ...
+@include at-least-width(1600px){
+    // a wide screen device with width >= 1600px
+}
+@include until-width(979px){
+    // phones and tablets (width <= 979px)
+}
+@include if-device(tablet){
+    // tablet (min-width 768px and max width 979px)
+}
+@include if-device(phone-tablet){
+    // phone or tablet (max-width 979px)
 }
 @include if-device(phone){
-    ...
+    // phone (max-width 767px)
 }
 ```
 
 #### Shadow
- - `box-shadow($params)` : Example: @include box-shadow(2px 2px 2px 0 #000);
+ - `box-shadow($params)`
  - `text-shadow($params)`
 
+Example:
+```
+.title{
+    @include box-shadow(2px 2px 2px 0 #000);
+}
+```
+
 #### Font size and line height
- - `font-size($size, $line_height)` : Converts to rem values + provides px values as fallback. Line height is optional. Example usage: `@include font-size(12,18);`
+ - `font-size($size, $line_height)` : Converts to rem values + provides px values as fallback.
+
+Line height is optional. Example:
+```
+.title{
+    @include font-size(18,24);
+}
+```
+
+#### Opacity
+ - `opacity($opacity)` : Accepts values between 0 and 1. Converts to filter property for IE support.
+
+Example:
+```
+.thumb{
+    @include opacity(0.5);
+}
+```
+
+#### Disable text selection
+ - `non-selectable` : Disables ability to select text from the element
+
+Example:
+```
+.description{
+    @include non-selectable;
+}
+```
+
+#### Hide text
+ - `hide-text` : Hides text by setting large negative text-indent value with overflow hidden.
+
+Example:
+```
+.logo{
+    @include hide-text;
+}
+```
+
+#### Inline Block
+ - `inline-block` : Converts element to inline block. Converts to inline as fallback for older IE browsers which do not support inline-block property.
+
+Example:
+```
+.name{
+    @include inline-block;
+}
+```
+
+#### Clearfix
+ - `clearfix` : Clears float using the before and after pseudo classes as table.
+
+Example:
+```
+.element{
+    @include clearfix;
+}
+```
+
+#### Border Box
+ - `border-box` : Applies border-box box model to element.
+
+Example:
+```
+.tile{
+    @include border-box;
+}
+```
+
+
+----------
 
 ### Margin
 `ma` or `mar-auto` : Auto value for left and right margin. (margin-left:auto; margin-right:auto;)
