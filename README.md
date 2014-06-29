@@ -257,9 +257,9 @@ All of these utility classes can be used with Device prefix technique. For examp
 
 ```
 <div class="pad-40 align-center phn-pad-20 phn-pt-10 phn-align-left">Content</div>
+```
 This div will have `40px` padding in desktop and `20px` padding in phones. Additionally we have further changes the top padding to `10px` in phone.
 Text align will be `center` in desktop and `left` in phone.
-```
 
 ----------
 ## Configuration ##
