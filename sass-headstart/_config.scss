@@ -1,0 +1,25 @@
+// Default config values. Do NOT modify in this file.
+
+// ====== Prefixes ======
+
+	$prefix-tablet:       "tab-" !default;
+	$prefix-phone-tablet: "phn-tab-" !default;
+	$prefix-phone:        "phn-" !default;
+
+// ====== Paddings ======
+
+	$config-paddings: 			   (0 5 10 15 20 25 30) !default;
+	$config-tablet-paddings:       $config-paddings !default;
+	$config-phone-tablet-paddings: $config-paddings !default;
+	$config-phone-paddings:        $config-paddings !default;
+
+	$config-paddings-use-important: true !default;
+
+// ====== Margins ======
+
+	$config-margins: 			   (0 5 10 15 20 25 30) !default;
+	$config-tablet-margins:        $config-margins !default;
+	$config-phone-tablet-margins:  $config-margins !default;
+	$config-phone-margins:         $config-margins !default;
+
+	$config-margins-use-important: true !default;

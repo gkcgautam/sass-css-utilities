@@ -1,13 +1,6 @@
 
-$config-paddings: (0 5 10 15 20 25 30) !default;
-$config-tablet-paddings: $config-paddings !default;
-$config-phone-tablet-paddings: $config-paddings !default;
-$config-phone-paddings: $config-paddings !default;
-
-$config-paddings-use-important : true !default;
-
 @mixin auto-generate-paddings($values, $prefix:"") {
-	$important : if($config-paddings-use-important, " !important", "");
+	$important: if($config-paddings-use-important, " !important", "");
 
 	@each $val in $values{
 		// Padding all
@@ -46,13 +39,13 @@ $config-paddings-use-important : true !default;
 	@include auto-generate-paddings($config-paddings);
 
 	@include if-device(tablet) {
-		@include auto-generate-paddings($config-tablet-paddings, "tab-");
+		@include auto-generate-paddings($config-tablet-paddings, $prefix-tablet);
 	}
 
 	@include if-device(phone-tablet) {
-		@include auto-generate-paddings($config-phone-tablet-paddings, "phn-tab-");
+		@include auto-generate-paddings($config-phone-tablet-paddings, $prefix-phone-tablet);
 	}
 
 	@include if-device(phone) {
-		@include auto-generate-paddings($config-phone-paddings, "phn-");
+		@include auto-generate-paddings($config-phone-paddings, $prefix-phone);
 	}

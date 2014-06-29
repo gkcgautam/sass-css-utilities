@@ -1,13 +1,6 @@
 
-$config-margins: (0 5 10 15 20 25 30) !default;
-$config-tablet-margins: $config-margins !default;
-$config-phone-tablet-margins: $config-margins !default;
-$config-phone-margins: $config-margins !default;
-
-$config-margins-use-important : true !default;
-
 @mixin auto-generate-margins($values, $prefix:"") {
-	$important : if($config-margins-use-important, " !important", "");
+	$important: if($config-margins-use-important, " !important", "");
 
 	@each $val in $values{
 		// Margin all
@@ -57,13 +50,13 @@ $config-margins-use-important : true !default;
 	@include auto-generate-margins($config-margins);
 
 	@include if-device(tablet) {
-		@include auto-generate-margins($config-tablet-margins, "tab-");
+		@include auto-generate-margins($config-tablet-margins, $prefix-tablet);
 	}
 
 	@include if-device(phone-tablet) {
-		@include auto-generate-margins($config-phone-tablet-margins, "phn-tab-");
+		@include auto-generate-margins($config-phone-tablet-margins, $prefix-phone-tablet);
 	}
 
 	@include if-device(phone) {
-		@include auto-generate-margins($config-phone-margins, "phn-");
+		@include auto-generate-margins($config-phone-margins, $prefix-phone);
 	}
