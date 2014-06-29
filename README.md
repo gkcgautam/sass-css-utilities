@@ -40,6 +40,76 @@ This is just a simple example. The classes can be used to modify even a single p
  - `ta-l` or `align-left` : Text align left
  - `ta-r` or `align-right` : Text align right
 
+#### Vertical Align
+ - `va-t` or `align-top` : Vertical align top
+ - `va-m` or `align-middle` : Vertical align middle
+ - `va-b` or `align-bottom` : Vertical align bottom
+
+#### Appearance
+ - `is-hidden` : display:none
+ - `is-invisible` : visibility: hidden
+ - `is-transparent` : opacity 0
+ - `is-opaque` : opacity 1
+ - `block` : display:block
+ - `inline-block` : display:inline-block
+ - `border-box` : border-box box model
+
+#### Text Utilities
+ - `hide-text` : Hides text using text-index technique
+ - `ellipsis` : Truncates text with ellipsis
+ - `non-selectable` or `disable-text-select` : Disables text selection
+ - `uc` or `uppercase` : Transforms text to uppercase
+ - `lc` or `lowercase` : Transforms text to lowercase
+
+#### Position
+ - `pos-relative` : Relative position
+ - `pos-absolute` : Absolute position
+ - `pos-fixed` : Fixed position
+ - `pos-static` : Static position
+
+#### Interaction
+ - `clickable` : cursor:pointer; (Add adjacent class `disabled` to disable it for the element)
+
+----------
+### Utility SASS mixins (Cross-browser and No dependencies)
+
+#### Border radius
+ - `border-radius($radius)`
+ - `border-radius-top-left($radius)`
+ - `border-radius-top-right($radius)`
+ - `border-radius-bottom-left($radius)`
+ - `border-radius-bottom-right($radius)`
+
+#### Media queries
+ - `at-least-width($device-width)` : Devices with min width as specified
+ - `until-width($device-width)` : Devices with max width as specified
+ - `if-device($device)` : Media query specific to a device. Possible values are `tablet`, `phone-tablet` and `phone`.
+
+Device width config can be updated in these variables:
+```
+$config-phone-max-width   : 767px;
+$config-tablet-min-width  : 768px;
+$config-tablet-max-width  : 979px;
+$config-desktop-min-width : 980px;
+```
+
+#### Example Usage
+```
+@include at-least-width(979px){
+    ...
+}
+@include if-device(phone){
+    ...
+}
+```
+
+#### Shadow
+ - `box-shadow($params)` : Example: @include box-shadow(2px 2px 2px 0 #000);
+ - `text-shadow($params)`
+
+#### Font size and line height
+ - `font-size($size, $line_height)` : Converts to rem values + provides px values as fallback. Line height is optional. Example usage: `@include font-size(12,18);`
+
 ### Margin
 `ma` or `mar-auto` : Auto value for left and right margin. (margin-left:auto; margin-right:auto;)
 
