@@ -1,3 +1,42 @@
+
+$config-margins: (0 5 10 15 20 25 30) !default;
+$config-tablet-margins: $config-margins !default;
+$config-phone-tablet-margins: $config-margins !default;
+$config-phone-margins: $config-margins !default;
+
+@mixin auto-generate-margins($values, $prefix:"") {
+	@each $val in $values{
+		// Margin all
+		.#{$prefix}mar-#{$val}{
+			margin: #{$val}px !important;
+		}
+
+		// Margin top and vertical
+		.#{$prefix}mt-#{$val},
+		.#{$prefix}mv-#{$val}{
+			margin-top: #{$val}px !important;
+		}
+
+		// Margin bottom and vertical
+		.#{$prefix}mb-#{$val},
+		.#{$prefix}mv-#{$val}{
+			margin-bottom: #{$val}px !important;
+		}
+
+		// Margin left and horizontal
+		.#{$prefix}ml-#{$val},
+		.#{$prefix}mh-#{$val}{
+			margin-left: #{$val}px !important;
+		}
+
+		// Margin right and horizontal
+		.#{$prefix}mr-#{$val},
+		.#{$prefix}mh-#{$val}{
+			margin-right: #{$val}px !important;
+		}
+	}
+}
+
 // General margin classes
 
 	.ma,
@@ -9,36 +48,18 @@
 	.ml-auto { margin-left: auto !important; }
 	.mr-auto { margin-right: auto !important; }
 
-@if variable-exists(config-margins) {
-    @each $val in $config-margins{
+// Auto generated margin classes
 
-    	// Margin all
-		.mar-#{$val}{
-			margin: #{$val}px !important;
-		}
+	@include auto-generate-margins($config-margins);
 
-		// Margin top and vertical
-		.mt-#{$val},
-		.mv-#{$val}{
-			margin-top: #{$val}px !important;
-		}
+	@include if-device(tablet) {
+		@include auto-generate-margins($config-tablet-margins, "tab-");
+	}
 
-		// Margin bottom and vertical
-		.mb-#{$val},
-		.mv-#{$val}{
-			margin-bottom: #{$val}px !important;
-		}
+	@include if-device(phone-tablet) {
+		@include auto-generate-margins($config-phone-tablet-margins, "phn-tab-");
+	}
 
-		// Margin left and horizontal
-		.ml-#{$val},
-		.mh-#{$val}{
-			margin-left: #{$val}px !important;
-		}
-
-		// Margin right and horizontal
-		.mr-#{$val},
-		.mh-#{$val}{
-			margin-right: #{$val}px !important;
-		}
-    }
-}
+	@include if-device(phone) {
+		@include auto-generate-margins($config-phone-margins, "phn-");
+	}

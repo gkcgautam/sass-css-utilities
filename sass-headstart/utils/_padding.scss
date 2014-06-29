@@ -37,16 +37,18 @@ $config-phone-paddings: $config-paddings !default;
 	}
 }
 
-@include auto-generate-paddings($config-paddings);
+// Auto generated padding classes
 
-@include if-device(tablet) {
-	@include auto-generate-paddings($config-tablet-paddings, "tab-");
-}
+	@include auto-generate-paddings($config-paddings);
 
-@include if-device(phone-tablet) {
-	@include auto-generate-paddings($config-phone-tablet-paddings, "phn-tab-");
-}
+	@include if-device(tablet) {
+		@include auto-generate-paddings($config-tablet-paddings, "tab-");
+	}
 
-@include if-device(phone) {
-	@include auto-generate-paddings($config-phone-paddings, "phn-");
-}
+	@include if-device(phone-tablet) {
+		@include auto-generate-paddings($config-phone-tablet-paddings, "phn-tab-");
+	}
+
+	@include if-device(phone) {
+		@include auto-generate-paddings($config-phone-paddings, "phn-");
+	}
