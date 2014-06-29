@@ -1,0 +1,28 @@
+
+$config-phone-max-width   : if(variable-exists(config-phone-max-width), $config-phone-max-width, 767px);
+$config-tablet-min-width  : if(variable-exists(config-tablet-min-width), $config-tablet-min-width, 768px);
+$config-tablet-max-width  : if(variable-exists(config-tablet-max-width), $config-tablet-max-width, 979px);
+$config-desktop-min-width : if(variable-exists(config-desktop-min-width), $config-desktop-min-width, 980px);
+
+@mixin at-least-width($device-width) {
+	@media only screen and (min-width: $device-width) { @content; }
+}
+
+@mixin until-width($device-width) {
+	@media only screen and (max-width: $device-width) { @content; }
+}
+
+@mixin if-device($device) {
+	@if $device == desktop {
+		@media only screen and (min-width: $config-desktop-min-width) { @content; }
+	}
+	@else if $device == tablet {
+		@media only screen and (min-width: $config-tablet-min-width) and (max-width: $config-tablet-max-width) { @content; }
+	}
+	@else if $device == phone-tablet {
+		@media only screen and (max-width: $config-tablet-max-width) { @content; }
+	}
+	@else if $device == phone {
+		@media only screen and (max-width: $config-phone-max-width) { @content; }
+	}
+}
