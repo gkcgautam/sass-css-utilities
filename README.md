@@ -302,13 +302,13 @@ $config-phone-margins:        (0 5 10 15 20 25 30);
 
 ----------
 
-## Note on Usage ##
+## NOTE ON USAGE ##
 These classes are meant to be used only for making minor changes in elements. Default values should always be specified in the css class or id of the element.
 
 ## BUGS AND CONTRIBUTIONS ##
 If you have a patch, fork my repo and send me a pull request. Bugs can be reported in Issues section.
 
-## Licence ##
+## License ##
 
 The MIT License
 
