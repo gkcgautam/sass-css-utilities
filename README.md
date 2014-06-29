@@ -24,6 +24,15 @@ This is just a simple example. The classes can be used to modify even a single p
 
     <div class="pad-30 mt-60 phn-pv-20 phn-mt-20">My top margin and vertical padding will change in phone</div>
 
+----------
+## How to use
+Just copy the directory to your project and import using:
+```
+@import "sass-css-utilities/sass-css-utilities";
+```
+
+If you want to change configuration, declare the configuration variables before importing the library. (In different file, or on top of import statement. Check style.scss for example)
+
 
 ----------
 ## Documentation
@@ -241,16 +250,19 @@ Padding classes are also auto generated just like the margin classes.
 
 `ph-X` : Horizontal Padding. Eg: ph-5 is padding-left: 5px; padding-right: 5px;
 
-### Tablet and Mobile
-Both padding and margins of an element can be changed in different devices by using them with device specific prefix. For example:
-
-    <div class="pad-40 tab-pad-30 phn-pad-20 phn-pt-10">Content</div>
-This div will have `40px` padding in desktop, `30px` padding in tablets and `20px` padding in phones. Additionally we have further changes the top padding to `10px` in phone.
-
-### Custom values
+### Custom values for margin and padding
 The classes to be generated can be specified in variables `$config-paddings` and `$config-margins`. The default values are:
 
     $config-paddings: (0 5 10 15 20 25 30);
     $config-margins:  (0 5 10 15 20 25 30);
 
-MORE DOCS COMING SOON!
+----------
+
+### Tablet and Mobile
+All of these utility classes can be used with Device prefix technique. For example:
+
+```
+<div class="pad-40 align-center phn-pad-20 phn-pt-10 phn-align-left">Content</div>
+This div will have `40px` padding in desktop and `20px` padding in phones. Additionally we have further changes the top padding to `10px` in phone.
+Text align will be `center` in desktop and `left` in phone.
+```
