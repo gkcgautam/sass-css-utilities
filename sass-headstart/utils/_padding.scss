@@ -4,35 +4,39 @@ $config-tablet-paddings: $config-paddings !default;
 $config-phone-tablet-paddings: $config-paddings !default;
 $config-phone-paddings: $config-paddings !default;
 
+$config-paddings-use-important : true !default;
+
 @mixin auto-generate-paddings($values, $prefix:"") {
+	$important : if($config-paddings-use-important, " !important", "");
+
 	@each $val in $values{
 		// Padding all
 		.#{$prefix}pad-#{$val}{
-			padding: #{$val}px !important;
+			padding: #{$val}px#{$important};
 		}
 
 		// Padding top and vertical
 		.#{$prefix}pt-#{$val},
 		.#{$prefix}pv-#{$val}{
-			padding-top: #{$val}px !important;
+			padding-top: #{$val}px#{$important};
 		}
 
 		// Padding bottom and vertical
 		.#{$prefix}pb-#{$val},
 		.#{$prefix}pv-#{$val}{
-			padding-bottom: #{$val}px !important;
+			padding-bottom: #{$val}px#{$important};
 		}
 
 		// Padding left and horizontal
 		.#{$prefix}pl-#{$val},
 		.#{$prefix}ph-#{$val}{
-			padding-left: #{$val}px !important;
+			padding-left: #{$val}px#{$important};
 		}
 
 		// Padding right and horizontal
 		.#{$prefix}pr-#{$val},
 		.#{$prefix}ph-#{$val}{
-			padding-right: #{$val}px !important;
+			padding-right: #{$val}px#{$important};
 		}
 	}
 }
