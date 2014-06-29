@@ -10,7 +10,7 @@ It also contains a small set of useful SASS mixins.
 
 ## Class names
 
-All of the classes support addition usage in phones and tables through media queries. Just prefix these to the class name: `tab-`, `phn-tab-`, `phn-`
+All of the CSS classes support usage in phones and tables through media queries. You simply need to add the device category specific prefix to make them device specific. The default prefixes are: `tab-`, `phn-tab-`, `phn-` (These can be changed in config)
 
 For example, For  modifying the display property of a div in different devices:
 
