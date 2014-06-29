@@ -193,3 +193,194 @@
 			text-transform: lowercase !important;
 		}
 }
+
+@include if-device(phone-tablet) {
+
+	// ---- Width ----
+
+		.#{$prefix-phone-tablet}width-auto {
+			width:auto !important;
+		}
+		.#{$prefix-phone-tablet}width-full {
+			width:100% !important;
+		}
+
+	// ---- Floats ----
+
+		.#{$prefix-phone-tablet}fl {
+			float:left !important;
+		}
+		.#{$prefix-phone-tablet}fr {
+			float:right !important;
+		}
+		.#{$prefix-phone-tablet}clr,
+		.#{$prefix-phone-tablet}clear {
+			clear:both;
+		}
+
+	// ---- Text Align ----
+
+		.#{$prefix-phone-tablet}ta-c, .#{$prefix-phone-tablet}align-center {
+			text-align: center !important;
+		}
+
+		.#{$prefix-phone-tablet}ta-l, .#{$prefix-phone-tablet}align-left{
+			text-align: left !important;
+		}
+		.#{$prefix-phone-tablet}ta-r, .#{$prefix-phone-tablet}align-right {
+			text-align: right !important;
+		}
+
+	// ---- Align ----
+
+		.#{$prefix-phone-tablet}va-t, .#{$prefix-phone-tablet}align-top{
+			vertical-align: top !important;
+		}
+		.#{$prefix-phone-tablet}va-m, .#{$prefix-phone-tablet}align-middle {
+			vertical-align: middle !important;
+		}
+		.#{$prefix-phone-tablet}va-b, .#{$prefix-phone-tablet}align-bottom {
+			vertical-align: bottom !important;
+		}
+
+	// ---- Visibility and more ---- 
+
+		.#{$prefix-phone-tablet}is-hidden {
+			display: none !important;
+		}
+		.#{$prefix-phone-tablet}is-invisible {
+			visibility: hidden !important;
+		}
+
+		.#{$prefix-phone-tablet}is-transparent{
+			@include opacity(0);
+		}
+		.#{$prefix-phone-tablet}is-opaque{
+			@include opacity(1);
+		}
+
+		.#{$prefix-phone-tablet}block{
+			display: block !important;
+		}
+		.#{$prefix-phone-tablet}inline-block{
+			@include inline-block("!important");
+		}
+		.#{$prefix-phone-tablet}border-box{
+			@include border-box;
+		}
+
+		.#{$prefix-phone-tablet}hide-text {
+		    @include hide-text();
+		}
+
+		.#{$prefix-phone-tablet}ellipsis {
+			@include ellipsis();
+		}
+
+		.#{$prefix-phone-tablet}non-selectable, .disable-text-select {
+			@include non-selectable();
+		}
+
+		.#{$prefix-phone-tablet}uc, .#{$prefix-phone-tablet}uppercase{
+			text-transform: uppercase !important;
+		}
+		.#{$prefix-phone-tablet}lc, .#{$prefix-phone-tablet}lowercase{
+			text-transform: lowercase !important;
+		}
+}
+
+@include if-device(phone) {
+
+	// ---- Width ----
+
+		.#{$prefix-phone}width-auto {
+			width:auto !important;
+		}
+		.#{$prefix-phone}width-full {
+			width:100% !important;
+		}
+
+	// ---- Floats ----
+
+		.#{$prefix-phone}fl {
+			float:left !important;
+		}
+		.#{$prefix-phone}fr {
+			float:right !important;
+		}
+		.#{$prefix-phone}clr,
+		.#{$prefix-phone}clear {
+			clear:both;
+		}
+
+	// ---- Text Align ----
+
+		.#{$prefix-phone}ta-c, .#{$prefix-phone}align-center {
+			text-align: center !important;
+		}
+
+		.#{$prefix-phone}ta-l, .#{$prefix-phone}align-left{
+			text-align: left !important;
+		}
+		.#{$prefix-phone}ta-r, .#{$prefix-phone}align-right {
+			text-align: right !important;
+		}
+
+	// ---- Align ----
+
+		.#{$prefix-phone}va-t, .#{$prefix-phone}align-top{
+			vertical-align: top !important;
+		}
+		.#{$prefix-phone}va-m, .#{$prefix-phone}align-middle {
+			vertical-align: middle !important;
+		}
+		.#{$prefix-phone}va-b, .#{$prefix-phone}align-bottom {
+			vertical-align: bottom !important;
+		}
+
+	// ---- Visibility and more ---- 
+
+		.#{$prefix-phone}is-hidden {
+			display: none !important;
+		}
+		.#{$prefix-phone}is-invisible {
+			visibility: hidden !important;
+		}
+
+		.#{$prefix-phone}is-transparent{
+			@include opacity(0);
+		}
+		.#{$prefix-phone}is-opaque{
+			@include opacity(1);
+		}
+
+		.#{$prefix-phone}block{
+			display: block !important;
+		}
+		.#{$prefix-phone}inline-block{
+			@include inline-block("!important");
+		}
+		.#{$prefix-phone}border-box{
+			@include border-box;
+		}
+
+		.#{$prefix-phone}hide-text {
+		    @include hide-text();
+		}
+
+		.#{$prefix-phone}ellipsis {
+			@include ellipsis();
+		}
+
+		.#{$prefix-phone}non-selectable, .disable-text-select {
+			@include non-selectable();
+		}
+
+		.#{$prefix-phone}uc, .#{$prefix-phone}uppercase{
+			text-transform: uppercase !important;
+		}
+		.#{$prefix-phone}lc, .#{$prefix-phone}lowercase{
+			text-transform: lowercase !important;
+		}
+}
+
