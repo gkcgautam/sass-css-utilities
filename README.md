@@ -41,21 +41,34 @@ Specify values of margins to be generated in variable `$config-margins` and the 
 Properties available are (where `X` is one of the values passed in `$config-margins`
 
 `mar-X` : Margin X. Eg: mar-5 is margin: 5px;
+
 `mt-X` : Top Margin. Eg: mt-10 is margin-top: 10px;
+
 `mb-X` : Bottom Margin. Eg: mb-10 is margin-bottom: 10px;
+
 `ml-X` : Left Margin. Eg: ml-10 is margin-left: 10px;
+
 `mr-X` : Right Margin. Eg: mr-10 is margin-right: 10px;
+
 `mv-X` : Vertical Margin. Eg: mv-5 is margin-top: 5px; margin-bottom: 5px;
+
 `mh-X` : Horizontal Margin. Eg: mh-5 is margin-left: 5px; margin-right: 5px;
 
 ### Padding
 Padding classes are just like margin classes.
+
 `pad-X` : Padding X. Eg: pad-5 is padding: 5px;
+
 `pt-X` : Top Padding. Eg: pt-10 is padding-top: 10px;
+
 `pb-X` : Bottom Padding. Eg: pb-10 is padding-bottom: 10px;
+
 `pl-X` : Left Padding. Eg: pl-10 is padding-left: 10px;
+
 `pr-X` : Right Padding. Eg: pr-10 is padding-right: 10px;
+
 `pv-X` : Vertical Padding. Eg: pv-5 is padding-top: 5px; padding-bottom: 5px;
+
 `ph-X` : Horizontal Padding. Eg: ph-5 is padding-left: 5px; padding-right: 5px;
 
 ### Tablet and Mobile
