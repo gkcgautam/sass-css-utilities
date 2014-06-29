@@ -1,8 +1,8 @@
 
-$config-phone-max-width   : if(variable-exists(config-phone-max-width), $config-phone-max-width, 767px);
-$config-tablet-min-width  : if(variable-exists(config-tablet-min-width), $config-tablet-min-width, 768px);
-$config-tablet-max-width  : if(variable-exists(config-tablet-max-width), $config-tablet-max-width, 979px);
-$config-desktop-min-width : if(variable-exists(config-desktop-min-width), $config-desktop-min-width, 980px);
+$config-phone-max-width   : 767px !default;
+$config-tablet-min-width  : 768px !default;
+$config-tablet-max-width  : 979px !default;
+$config-desktop-min-width : 980px !default;
 
 @mixin at-least-width($device-width) {
 	@media only screen and (min-width: $device-width) { @content; }
@@ -24,5 +24,17 @@ $config-desktop-min-width : if(variable-exists(config-desktop-min-width), $confi
 	}
 	@else if $device == phone {
 		@media only screen and (max-width: $config-phone-max-width) { @content; }
+	}
+}
+
+.test{
+	display: inline;
+	@include if-device(phone) {
+		display: block;
+	}
+}
+.test2{
+	@include if-device(phone) {
+		color: red;
 	}
 }
