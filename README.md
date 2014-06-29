@@ -1,14 +1,14 @@
 sass-css-utilities - A SASS library for rapid frontend development.
 ==============
 
-## Intro
+## Intro ##
 
 The main aim of the library is to speedup up the website development process with the usage of simple utility classes.
 The utility classes can be used to modify web page elements in `tablets` and `phones` without needing to make any CSS changes.
 
 It also contains a small set of useful SASS mixins.
 
-## Class names
+## Class names ##
 
 All of the CSS classes support usage in phones and tables through media queries. You simply need to add the device category specific prefix to make them device specific. The default prefixes are: `tab-`, `phn-tab-`, `phn-` (These can be changed in config)
 
@@ -25,7 +25,7 @@ This is just a simple example. The classes can be used to modify even a single p
     <div class="pad-30 mt-60 phn-pv-20 phn-mt-20">My top margin and vertical padding will change in phone</div>
 
 ----------
-## How to use
+## How to use ##
 Just copy the directory to your project and import using:
 ```
 @import "sass-css-utilities/sass-css-utilities";
@@ -35,26 +35,26 @@ If you want to change configuration, declare the configuration variables before 
 
 
 ----------
-## Documentation
+## Documentation ##
 
-### Utility classes
+### Utility classes ###
 
-#### Floats
+#### Floats ####
  - `fl` : Float left
  - `fr` : Float right
  - `clr` or `clear` : Clear both
 
-#### Text Align
+#### Text Align ####
  - `ta-c` or `align-center` : Text align center
  - `ta-l` or `align-left` : Text align left
  - `ta-r` or `align-right` : Text align right
 
-#### Vertical Align
+#### Vertical Align ####
  - `va-t` or `align-top` : Vertical align top
  - `va-m` or `align-middle` : Vertical align middle
  - `va-b` or `align-bottom` : Vertical align bottom
 
-#### Appearance
+#### Appearance ####
  - `is-hidden` : display:none
  - `is-invisible` : visibility: hidden
  - `is-transparent` : opacity 0
@@ -63,33 +63,33 @@ If you want to change configuration, declare the configuration variables before 
  - `inline-block` : display:inline-block
  - `border-box` : border-box box model
 
-#### Text Utilities
+#### Text Utilities ####
  - `hide-text` : Hides text using text-index technique
  - `ellipsis` : Truncates text with ellipsis
  - `non-selectable` or `disable-text-select` : Disables text selection
  - `uc` or `uppercase` : Transforms text to uppercase
  - `lc` or `lowercase` : Transforms text to lowercase
 
-#### Position
+#### Position ####
  - `pos-relative` : Relative position
  - `pos-absolute` : Absolute position
  - `pos-fixed` : Fixed position
  - `pos-static` : Static position
 
-#### Interaction
+#### Interaction ####
  - `clickable` : cursor:pointer; (Add adjacent class `disabled` to disable it for the element)
 
 ----------
-### Utility SASS mixins (Cross-browser and No dependencies)
+### Utility SASS mixins ###
 
-#### Border radius
+#### Border radius ####
  - `border-radius($radius)`
  - `border-radius-top-left($radius)`
  - `border-radius-top-right($radius)`
  - `border-radius-bottom-left($radius)`
  - `border-radius-bottom-right($radius)`
 
-#### Media queries
+#### Media queries ####
  - `at-least-width($device-width)` : Devices with min width as specified
  - `until-width($device-width)` : Devices with max width as specified
  - `if-device($device)` : Media query specific to a device. Possible values are `tablet`, `phone-tablet` and `phone`.
@@ -102,7 +102,7 @@ $config-tablet-max-width  : 979px;
 $config-desktop-min-width : 980px;
 ```
 
-#### Example
+#### Example ####
 ```
 @include at-least-width(1600px){
     // a wide screen device with width >= 1600px
@@ -121,7 +121,7 @@ $config-desktop-min-width : 980px;
 }
 ```
 
-#### Shadow
+#### Shadow ####
  - `box-shadow($params)`
  - `text-shadow($params)`
 
@@ -132,7 +132,7 @@ Example:
 }
 ```
 
-#### Font size and line height
+#### Font size and line height ####
  - `font-size($size, $line_height)` : Converts to rem values + provides px values as fallback.
 
 Line height is optional. Example:
@@ -142,7 +142,7 @@ Line height is optional. Example:
 }
 ```
 
-#### Opacity
+#### Opacity ####
  - `opacity($opacity)` : Accepts values between 0 and 1. Converts to filter property for IE support.
 
 Example:
@@ -152,7 +152,7 @@ Example:
 }
 ```
 
-#### Disable text selection
+#### Disable text selection ####
  - `non-selectable` : Disables ability to select text from the element
 
 Example:
@@ -162,7 +162,7 @@ Example:
 }
 ```
 
-#### Hide text
+#### Hide text ####
  - `hide-text` : Hides text by setting large negative text-indent value with overflow hidden.
 
 Example:
@@ -172,7 +172,7 @@ Example:
 }
 ```
 
-#### Inline Block
+#### Inline Block ####
  - `inline-block` : Converts element to inline block. Converts to inline as fallback for older IE browsers which do not support inline-block property.
 
 Example:
@@ -182,7 +182,7 @@ Example:
 }
 ```
 
-#### Clearfix
+#### Clearfix ####
  - `clearfix` : Clears float using the before and after pseudo classes as table.
 
 Example:
@@ -192,7 +192,7 @@ Example:
 }
 ```
 
-#### Border Box
+#### Border Box ####
  - `border-box` : Applies border-box box model to element.
 
 Example:
@@ -205,14 +205,14 @@ Example:
 
 ----------
 
-### Margin
+### Margin ###
 `ma` or `mar-auto` : Auto value for left and right margin. (margin-left:auto; margin-right:auto;)
 
 `ml-a` or `ml-auto`: `auto` value for left margin property
 
 `mr-a` or `mr-auto`: `auto` value for right margin property
 
-#### Auto generated margin classes:
+#### Auto generated margin classes: ####
 Specify values of margins to be generated in variable `$config-margins` and the library will automatically generate different cases based on these. 
 
     $config-margins: (0 5 10 15 20)
@@ -233,7 +233,7 @@ Properties available are (where `X` is one of the values passed in `$config-marg
 
 `mh-X` : Horizontal Margin. Eg: mh-5 is margin-left: 5px; margin-right: 5px;
 
-### Padding
+### Padding ###
 Padding classes are also auto generated just like the margin classes.
 
 `pad-X` : Padding X. Eg: pad-5 is padding: 5px;
@@ -250,15 +250,9 @@ Padding classes are also auto generated just like the margin classes.
 
 `ph-X` : Horizontal Padding. Eg: ph-5 is padding-left: 5px; padding-right: 5px;
 
-### Custom values for margin and padding
-The classes to be generated can be specified in variables `$config-paddings` and `$config-margins`. The default values are:
-
-    $config-paddings: (0 5 10 15 20 25 30);
-    $config-margins:  (0 5 10 15 20 25 30);
-
 ----------
 
-### Tablet and Mobile
+### Tablet and Mobile ###
 All of these utility classes can be used with Device prefix technique. For example:
 
 ```
@@ -266,3 +260,72 @@ All of these utility classes can be used with Device prefix technique. For examp
 This div will have `40px` padding in desktop and `20px` padding in phones. Additionally we have further changes the top padding to `10px` in phone.
 Text align will be `center` in desktop and `left` in phone.
 ```
+
+----------
+## Configuration ##
+
+### !important in rules ###
+By default all of the css properties defined in the utility classes have `!important` attribute to ensure that the classes work as expected by overiding values for the element.
+This can be disabled with these variable:
+```
+$config-global-use-important: true; // For all classes. Default value is true
+$config-paddings-use-important: true; // For auto generated paddings
+$config-margins-use-important: true; // For auto generated margins
+```
+
+### Device prefixes ###
+Default device prefixes can be changed with these variables:
+```
+$config-prefix-tablet:       "tab-";
+$config-prefix-phone-tablet: "phn-tab-";
+$config-prefix-phone:        "phn-";
+```
+### Custom values for auto-generated margins and paddings ###
+The classes to be generated can be specified in variables `$config-paddings` and `$config-margins`. The default values are:
+```
+$config-paddings: (0 5 10 15 20 25 30);
+$config-margins:  (0 5 10 15 20 25 30);
+```
+
+Device prefixed margin and padding classess will also use the above values by default, but you can change them with these variables:
+```
+$config-tablet-paddings:       (0 5 10 15 20 25 30);
+$config-phone-tablet-paddings: (0 5 10 15 20 25 30);
+$config-phone-paddings:        (0 5 10 15 20 25 30);
+```
+```
+$config-tablet-margins:       (0 5 10 15 20 25 30);
+$config-phone-tablet-margins: (0 5 10 15 20 25 30);
+$config-phone-margins:        (0 5 10 15 20 25 30);
+```
+
+
+----------
+
+## Note on Usage ##
+These classes are meant to be used only for making minor changes in elements. Default values should always be specified in the css class or id of the element.
+
+## BUGS AND CONTRIBUTIONS ##
+If you have a patch, fork my repo and send me a pull request. Bugs can be reported in Issues section.
+
+## Licence ##
+
+The MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
