@@ -1,4 +1,13 @@
 
+// ---- Width ----
+
+	.width-auto {
+		width:auto !important;
+	}
+	.width-full {
+		width:100% !important;
+	}
+
 // ---- Floats ----  
 
 	.fl {
@@ -100,7 +109,7 @@
 		.#{$prefix-tablet}width-full {
 			width:100% !important;
 		}
-	
+
 	// ---- Floats ----
 
 		.#{$prefix-tablet}fl {
