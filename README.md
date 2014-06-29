@@ -1,4 +1,8 @@
-sass-headstart
+sass-css-utilities
 ==============
 
-Work in progress. Check back soon!
+A SASS library for making frontend development work easier for responsive websites.
+
+Contains utility classes and mixins.
+
+DOCS COMING SOON!
