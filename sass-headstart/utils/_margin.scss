@@ -8,7 +8,7 @@ $config-margins-use-important : true !default;
 
 @mixin auto-generate-margins($values, $prefix:"") {
 	$important : if($config-margins-use-important, " !important", "");
-	
+
 	@each $val in $values{
 		// Margin all
 		.#{$prefix}mar-#{$val}{
@@ -49,8 +49,8 @@ $config-margins-use-important : true !default;
 		margin-right: auto !important;
 	}
 
-	.ml-auto { margin-left: auto !important; }
-	.mr-auto { margin-right: auto !important; }
+	.ml-a, .ml-auto { margin-left: auto !important; }
+	.mr-a, .mr-auto { margin-right: auto !important; }
 
 // Auto generated margin classes
 
