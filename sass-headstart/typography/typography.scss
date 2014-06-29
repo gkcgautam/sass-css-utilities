@@ -1,68 +1,68 @@
 
 .normal {
-	font-weight: normal !important;
+	font-weight: normal#{$important};
 }
 .bold {
-    font-weight: bold !important;
+    font-weight: bold#{$important};
 }
 
 .italic {
-    font-style: italic !important;
+    font-style: italic#{$important};
 }
 
 .line-through{
-    text-decoration: line-through !important;
+    text-decoration: line-through#{$important};
 }
 
 @include if-device(tablet) {
-	.#{$prefix-tablet}normal {
-		font-weight: normal !important;
+	.#{$config-prefix-tablet}normal {
+		font-weight: normal#{$important};
 	}
-	.#{$prefix-tablet}bold {
-	    font-weight: bold !important;
-	}
-
-	.#{$prefix-tablet}italic {
-	    font-style: italic !important;
+	.#{$config-prefix-tablet}bold {
+	    font-weight: bold#{$important};
 	}
 
-	.#{$prefix-tablet}line-through{
-	    text-decoration: line-through !important;
+	.#{$config-prefix-tablet}italic {
+	    font-style: italic#{$important};
+	}
+
+	.#{$config-prefix-tablet}line-through{
+	    text-decoration: line-through#{$important};
 	}
 }
 
 @include if-device(phone-tablet) {
-	.#{$prefix-phone-tablet}normal {
-		font-weight: normal !important;
+	.#{$config-prefix-phone-tablet}normal {
+		font-weight: normal#{$important};
 	}
 
-	.#{$prefix-phone-tablet}bold {
-	    font-weight: bold !important;
+	.#{$config-prefix-phone-tablet}bold {
+	    font-weight: bold#{$important};
 	}
 
-	.#{$prefix-phone-tablet}italic {
-	    font-style: italic !important;
+	.#{$config-prefix-phone-tablet}italic {
+	    font-style: italic#{$important};
 	}
 
-	.#{$prefix-phone-tablet}line-through{
-	    text-decoration: line-through !important;
+	.#{$config-prefix-phone-tablet}line-through{
+	    text-decoration: line-through#{$important};
 	}
 }
 
 @include if-device(phone) {
-	.#{$prefix-phone}normal {
-		font-weight: normal !important;
+	.#{$config-prefix-phone}normal {
+		font-weight: normal#{$important};
 	}
 
-	.#{$prefix-phone}bold {
-	    font-weight: bold !important;
+	.#{$config-prefix-phone}bold {
+	    font-weight: bold#{$important};
 	}
 
-	.#{$prefix-phone}italic {
-	    font-style: italic !important;
+	.#{$config-prefix-phone}italic {
+	    font-style: italic#{$important};
 	}
 
-	.#{$prefix-phone}line-through{
-	    text-decoration: line-through !important;
+	.#{$config-prefix-phone}line-through{
+	    text-decoration: line-through#{$important};
 	}
 }

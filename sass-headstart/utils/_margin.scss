@@ -1,35 +1,34 @@
 
 @mixin auto-generate-margins($values, $prefix:"") {
-	$important: if($config-margins-use-important, " !important", "");
 
 	@each $val in $values{
 		// Margin all
 		.#{$prefix}mar-#{$val}{
-			margin: #{$val}px#{$important};
+			margin: #{$val}px#{$important-margins};
 		}
 
 		// Margin top and vertical
 		.#{$prefix}mt-#{$val},
 		.#{$prefix}mv-#{$val}{
-			margin-top: #{$val}px#{$important};
+			margin-top: #{$val}px#{$important-margins};
 		}
 
 		// Margin bottom and vertical
 		.#{$prefix}mb-#{$val},
 		.#{$prefix}mv-#{$val}{
-			margin-bottom: #{$val}px#{$important};
+			margin-bottom: #{$val}px#{$important-margins};
 		}
 
 		// Margin left and horizontal
 		.#{$prefix}ml-#{$val},
 		.#{$prefix}mh-#{$val}{
-			margin-left: #{$val}px#{$important};
+			margin-left: #{$val}px#{$important-margins};
 		}
 
 		// Margin right and horizontal
 		.#{$prefix}mr-#{$val},
 		.#{$prefix}mh-#{$val}{
-			margin-right: #{$val}px#{$important};
+			margin-right: #{$val}px#{$important-margins};
 		}
 	}
 }
@@ -38,25 +37,64 @@
 
 	.ma,
 	.mar-auto {
-		margin-left: auto !important;
-		margin-right: auto !important;
+		margin-left: auto#{$important};
+		margin-right: auto#{$important};
 	}
 
-	.ml-a, .ml-auto { margin-left: auto !important; }
-	.mr-a, .mr-auto { margin-right: auto !important; }
+	.ml-a, .ml-auto { margin-left: auto#{$important}; }
+	.mr-a, .mr-auto { margin-right: auto#{$important}; }
 
 // Auto generated margin classes
 
 	@include auto-generate-margins($config-margins);
 
 	@include if-device(tablet) {
-		@include auto-generate-margins($config-tablet-margins, $prefix-tablet);
+		.#{$config-prefix-tablet}ma,
+		.#{$config-prefix-tablet}mar-auto {
+			margin-left: auto#{$important};
+			margin-right: auto#{$important};
+		}
+
+		.#{$config-prefix-tablet}ml-a, .#{$config-prefix-tablet}ml-auto {
+			margin-left: auto#{$important};
+		}
+		.#{$config-prefix-tablet}mr-a, .#{$config-prefix-tablet}mr-auto {
+			margin-right: auto#{$important};
+		}
+
+		@include auto-generate-margins($config-tablet-margins, $config-prefix-tablet);
 	}
 
 	@include if-device(phone-tablet) {
-		@include auto-generate-margins($config-phone-tablet-margins, $prefix-phone-tablet);
+		.#{$config-prefix-phone-tablet}ma,
+		.#{$config-prefix-phone-tablet}mar-auto {
+			margin-left: auto#{$important};
+			margin-right: auto#{$important};
+		}
+
+		.#{$config-prefix-phone-tablet}ml-a, .#{$config-prefix-tablet}ml-auto {
+			margin-left: auto#{$important};
+		}
+		.#{$config-prefix-phone-tablet}mr-a, .#{$config-prefix-tablet}mr-auto {
+			margin-right: auto#{$important};
+		}
+
+		@include auto-generate-margins($config-phone-tablet-margins, $config-prefix-phone-tablet);
 	}
 
 	@include if-device(phone) {
-		@include auto-generate-margins($config-phone-margins, $prefix-phone);
+		.#{$config-prefix-phone}ma,
+		.#{$config-prefix-phone}mar-auto {
+			margin-left: auto#{$important};
+			margin-right: auto#{$important};
+		}
+
+		.#{$config-prefix-phone}ml-a, .#{$config-prefix-tablet}ml-auto {
+			margin-left: auto#{$important};
+		}
+		.#{$config-prefix-phone}mr-a, .#{$config-prefix-tablet}mr-auto {
+			margin-right: auto#{$important};
+		}
+
+		@include auto-generate-margins($config-phone-margins, $config-prefix-phone);
 	}

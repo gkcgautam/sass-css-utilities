@@ -1,70 +1,70 @@
 
 .pos-relative {
-	position:relative !important;
+	position:relative#{$important};
 }
 
 .pos-absolute {
-	position:absolute !important;
+	position:absolute#{$important};
 }
 
 .pos-static {
-	position:static !important;
+	position:static#{$important};
 }
 
 .pos-fixed {
-	position:fixed !important;
+	position:fixed#{$important};
 }
 
 @include if-device(tablet) {
-	.#{$prefix-tablet}pos-relative {
-		position:relative !important;
+	.#{$config-prefix-tablet}pos-relative {
+		position:relative#{$important};
 	}
 
-	.#{$prefix-tablet}pos-absolute {
-		position:absolute !important;
+	.#{$config-prefix-tablet}pos-absolute {
+		position:absolute#{$important};
 	}
 
-	.#{$prefix-tablet}pos-static {
-		position:static !important;
+	.#{$config-prefix-tablet}pos-static {
+		position:static#{$important};
 	}
 
-	.#{$prefix-tablet}pos-fixed {
-		position:fixed !important;
+	.#{$config-prefix-tablet}pos-fixed {
+		position:fixed#{$important};
 	}
 }
 
 @include if-device(phone-tablet) {
-	.#{$prefix-phone-tablet}pos-relative {
-		position:relative !important;
+	.#{$config-prefix-phone-tablet}pos-relative {
+		position:relative#{$important};
 	}
 
-	.#{$prefix-phone-tablet}pos-absolute {
-		position:absolute !important;
+	.#{$config-prefix-phone-tablet}pos-absolute {
+		position:absolute#{$important};
 	}
 
-	.#{$prefix-phone-tablet}pos-static {
-		position:static !important;
+	.#{$config-prefix-phone-tablet}pos-static {
+		position:static#{$important};
 	}
 
-	.#{$prefix-phone-tablet}pos-fixed {
-		position:fixed !important;
+	.#{$config-prefix-phone-tablet}pos-fixed {
+		position:fixed#{$important};
 	}
 }
 
 @include if-device(phone) {
-	.#{$prefix-phone}pos-relative {
-		position:relative !important;
+	.#{$config-prefix-phone}pos-relative {
+		position:relative#{$important};
 	}
 
-	.#{$prefix-phone}pos-absolute {
-		position:absolute !important;
+	.#{$config-prefix-phone}pos-absolute {
+		position:absolute#{$important};
 	}
 
-	.#{$prefix-phone}pos-static {
-		position:static !important;
+	.#{$config-prefix-phone}pos-static {
+		position:static#{$important};
 	}
 
-	.#{$prefix-phone}pos-fixed {
-		position:fixed !important;
+	.#{$config-prefix-phone}pos-fixed {
+		position:fixed#{$important};
 	}
 }

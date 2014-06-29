@@ -2,19 +2,19 @@
 // ---- Width ----
 
 	.width-auto {
-		width:auto !important;
+		width:auto#{$important};
 	}
 	.width-full {
-		width:100% !important;
+		width:100%#{$important};
 	}
 
 // ---- Floats ----  
 
 	.fl {
-		float:left !important;
+		float:left#{$important};
 	}
 	.fr {
-		float:right !important;
+		float:right#{$important};
 	}
 	.clr,
 	.clear {
@@ -25,26 +25,26 @@
 // ---- Text Align ----  
 
 	.ta-c, .align-center {
-		text-align: center !important;
+		text-align: center#{$important};
 	}
 
 	.ta-l, .align-left{
-		text-align: left !important;
+		text-align: left#{$important};
 	}
 	.ta-r, .align-right {
-		text-align: right !important;
+		text-align: right#{$important};
 	}
 
 // ---- Align ----  
 
 	.va-t, .align-top{
-		vertical-align: top !important;
+		vertical-align: top#{$important};
 	}
 	.va-m, .align-middle {
-		vertical-align: middle !important;
+		vertical-align: middle#{$important};
 	}
 	.va-b, .align-bottom {
-		vertical-align: bottom !important;
+		vertical-align: bottom#{$important};
 	}
 
 
@@ -57,10 +57,10 @@
 // ---- Visibility and more ---- 
 
 	.is-hidden {
-		display: none !important;
+		display: none#{$important};
 	}
 	.is-invisible {
-		visibility: hidden !important;
+		visibility: hidden#{$important};
 	}
 
 	.is-transparent{
@@ -71,10 +71,10 @@
 	}
 
 	.block{
-		display: block !important;
+		display: block#{$important};
 	}
 	.inline-block{
-		@include inline-block("!important");
+		@include inline-block($important);
 	}
 	.border-box{
 		@include border-box;
@@ -93,104 +93,104 @@
 	}
 
 	.uc, .uppercase{
-		text-transform: uppercase !important;
+		text-transform: uppercase#{$important};
 	}
 	.lc, .lowercase{
-		text-transform: lowercase !important;
+		text-transform: lowercase#{$important};
 	}
 
 @include if-device(tablet) {
 
 	// ---- Width ----
 
-		.#{$prefix-tablet}width-auto {
-			width:auto !important;
+		.#{$config-prefix-tablet}width-auto {
+			width:auto#{$important};
 		}
-		.#{$prefix-tablet}width-full {
-			width:100% !important;
+		.#{$config-prefix-tablet}width-full {
+			width:100%#{$important};
 		}
 
 	// ---- Floats ----
 
-		.#{$prefix-tablet}fl {
-			float:left !important;
+		.#{$config-prefix-tablet}fl {
+			float:left#{$important};
 		}
-		.#{$prefix-tablet}fr {
-			float:right !important;
+		.#{$config-prefix-tablet}fr {
+			float:right#{$important};
 		}
-		.#{$prefix-tablet}clr,
-		.#{$prefix-tablet}clear {
+		.#{$config-prefix-tablet}clr,
+		.#{$config-prefix-tablet}clear {
 			clear:both;
 		}
 
 	// ---- Text Align ----
 
-		.#{$prefix-tablet}ta-c, .#{$prefix-tablet}align-center {
-			text-align: center !important;
+		.#{$config-prefix-tablet}ta-c, .#{$config-prefix-tablet}align-center {
+			text-align: center#{$important};
 		}
 
-		.#{$prefix-tablet}ta-l, .#{$prefix-tablet}align-left{
-			text-align: left !important;
+		.#{$config-prefix-tablet}ta-l, .#{$config-prefix-tablet}align-left{
+			text-align: left#{$important};
 		}
-		.#{$prefix-tablet}ta-r, .#{$prefix-tablet}align-right {
-			text-align: right !important;
+		.#{$config-prefix-tablet}ta-r, .#{$config-prefix-tablet}align-right {
+			text-align: right#{$important};
 		}
 
 	// ---- Align ----
 
-		.#{$prefix-tablet}va-t, .#{$prefix-tablet}align-top{
-			vertical-align: top !important;
+		.#{$config-prefix-tablet}va-t, .#{$config-prefix-tablet}align-top{
+			vertical-align: top#{$important};
 		}
-		.#{$prefix-tablet}va-m, .#{$prefix-tablet}align-middle {
-			vertical-align: middle !important;
+		.#{$config-prefix-tablet}va-m, .#{$config-prefix-tablet}align-middle {
+			vertical-align: middle#{$important};
 		}
-		.#{$prefix-tablet}va-b, .#{$prefix-tablet}align-bottom {
-			vertical-align: bottom !important;
+		.#{$config-prefix-tablet}va-b, .#{$config-prefix-tablet}align-bottom {
+			vertical-align: bottom#{$important};
 		}
 
 	// ---- Visibility and more ---- 
 
-		.#{$prefix-tablet}is-hidden {
-			display: none !important;
+		.#{$config-prefix-tablet}is-hidden {
+			display: none#{$important};
 		}
-		.#{$prefix-tablet}is-invisible {
-			visibility: hidden !important;
+		.#{$config-prefix-tablet}is-invisible {
+			visibility: hidden#{$important};
 		}
 
-		.#{$prefix-tablet}is-transparent{
+		.#{$config-prefix-tablet}is-transparent{
 			@include opacity(0);
 		}
-		.#{$prefix-tablet}is-opaque{
+		.#{$config-prefix-tablet}is-opaque{
 			@include opacity(1);
 		}
 
-		.#{$prefix-tablet}block{
-			display: block !important;
+		.#{$config-prefix-tablet}block{
+			display: block#{$important};
 		}
-		.#{$prefix-tablet}inline-block{
-			@include inline-block("!important");
+		.#{$config-prefix-tablet}inline-block{
+			@include inline-block($important);
 		}
-		.#{$prefix-tablet}border-box{
+		.#{$config-prefix-tablet}border-box{
 			@include border-box;
 		}
 
-		.#{$prefix-tablet}hide-text {
+		.#{$config-prefix-tablet}hide-text {
 		    @include hide-text();
 		}
 
-		.#{$prefix-tablet}ellipsis {
+		.#{$config-prefix-tablet}ellipsis {
 			@include ellipsis();
 		}
 
-		.#{$prefix-tablet}non-selectable, .disable-text-select {
+		.#{$config-prefix-tablet}non-selectable, .disable-text-select {
 			@include non-selectable();
 		}
 
-		.#{$prefix-tablet}uc, .#{$prefix-tablet}uppercase{
-			text-transform: uppercase !important;
+		.#{$config-prefix-tablet}uc, .#{$config-prefix-tablet}uppercase{
+			text-transform: uppercase#{$important};
 		}
-		.#{$prefix-tablet}lc, .#{$prefix-tablet}lowercase{
-			text-transform: lowercase !important;
+		.#{$config-prefix-tablet}lc, .#{$config-prefix-tablet}lowercase{
+			text-transform: lowercase#{$important};
 		}
 }
 
@@ -198,94 +198,94 @@
 
 	// ---- Width ----
 
-		.#{$prefix-phone-tablet}width-auto {
-			width:auto !important;
+		.#{$config-prefix-phone-tablet}width-auto {
+			width:auto#{$important};
 		}
-		.#{$prefix-phone-tablet}width-full {
-			width:100% !important;
+		.#{$config-prefix-phone-tablet}width-full {
+			width:100%#{$important};
 		}
 
 	// ---- Floats ----
 
-		.#{$prefix-phone-tablet}fl {
-			float:left !important;
+		.#{$config-prefix-phone-tablet}fl {
+			float:left#{$important};
 		}
-		.#{$prefix-phone-tablet}fr {
-			float:right !important;
+		.#{$config-prefix-phone-tablet}fr {
+			float:right#{$important};
 		}
-		.#{$prefix-phone-tablet}clr,
-		.#{$prefix-phone-tablet}clear {
+		.#{$config-prefix-phone-tablet}clr,
+		.#{$config-prefix-phone-tablet}clear {
 			clear:both;
 		}
 
 	// ---- Text Align ----
 
-		.#{$prefix-phone-tablet}ta-c, .#{$prefix-phone-tablet}align-center {
-			text-align: center !important;
+		.#{$config-prefix-phone-tablet}ta-c, .#{$config-prefix-phone-tablet}align-center {
+			text-align: center#{$important};
 		}
 
-		.#{$prefix-phone-tablet}ta-l, .#{$prefix-phone-tablet}align-left{
-			text-align: left !important;
+		.#{$config-prefix-phone-tablet}ta-l, .#{$config-prefix-phone-tablet}align-left{
+			text-align: left#{$important};
 		}
-		.#{$prefix-phone-tablet}ta-r, .#{$prefix-phone-tablet}align-right {
-			text-align: right !important;
+		.#{$config-prefix-phone-tablet}ta-r, .#{$config-prefix-phone-tablet}align-right {
+			text-align: right#{$important};
 		}
 
 	// ---- Align ----
 
-		.#{$prefix-phone-tablet}va-t, .#{$prefix-phone-tablet}align-top{
-			vertical-align: top !important;
+		.#{$config-prefix-phone-tablet}va-t, .#{$config-prefix-phone-tablet}align-top{
+			vertical-align: top#{$important};
 		}
-		.#{$prefix-phone-tablet}va-m, .#{$prefix-phone-tablet}align-middle {
-			vertical-align: middle !important;
+		.#{$config-prefix-phone-tablet}va-m, .#{$config-prefix-phone-tablet}align-middle {
+			vertical-align: middle#{$important};
 		}
-		.#{$prefix-phone-tablet}va-b, .#{$prefix-phone-tablet}align-bottom {
-			vertical-align: bottom !important;
+		.#{$config-prefix-phone-tablet}va-b, .#{$config-prefix-phone-tablet}align-bottom {
+			vertical-align: bottom#{$important};
 		}
 
 	// ---- Visibility and more ---- 
 
-		.#{$prefix-phone-tablet}is-hidden {
-			display: none !important;
+		.#{$config-prefix-phone-tablet}is-hidden {
+			display: none#{$important};
 		}
-		.#{$prefix-phone-tablet}is-invisible {
-			visibility: hidden !important;
+		.#{$config-prefix-phone-tablet}is-invisible {
+			visibility: hidden#{$important};
 		}
 
-		.#{$prefix-phone-tablet}is-transparent{
+		.#{$config-prefix-phone-tablet}is-transparent{
 			@include opacity(0);
 		}
-		.#{$prefix-phone-tablet}is-opaque{
+		.#{$config-prefix-phone-tablet}is-opaque{
 			@include opacity(1);
 		}
 
-		.#{$prefix-phone-tablet}block{
-			display: block !important;
+		.#{$config-prefix-phone-tablet}block{
+			display: block#{$important};
 		}
-		.#{$prefix-phone-tablet}inline-block{
-			@include inline-block("!important");
+		.#{$config-prefix-phone-tablet}inline-block{
+			@include inline-block($important);
 		}
-		.#{$prefix-phone-tablet}border-box{
+		.#{$config-prefix-phone-tablet}border-box{
 			@include border-box;
 		}
 
-		.#{$prefix-phone-tablet}hide-text {
+		.#{$config-prefix-phone-tablet}hide-text {
 		    @include hide-text();
 		}
 
-		.#{$prefix-phone-tablet}ellipsis {
+		.#{$config-prefix-phone-tablet}ellipsis {
 			@include ellipsis();
 		}
 
-		.#{$prefix-phone-tablet}non-selectable, .disable-text-select {
+		.#{$config-prefix-phone-tablet}non-selectable, .disable-text-select {
 			@include non-selectable();
 		}
 
-		.#{$prefix-phone-tablet}uc, .#{$prefix-phone-tablet}uppercase{
-			text-transform: uppercase !important;
+		.#{$config-prefix-phone-tablet}uc, .#{$config-prefix-phone-tablet}uppercase{
+			text-transform: uppercase#{$important};
 		}
-		.#{$prefix-phone-tablet}lc, .#{$prefix-phone-tablet}lowercase{
-			text-transform: lowercase !important;
+		.#{$config-prefix-phone-tablet}lc, .#{$config-prefix-phone-tablet}lowercase{
+			text-transform: lowercase#{$important};
 		}
 }
 
@@ -293,94 +293,94 @@
 
 	// ---- Width ----
 
-		.#{$prefix-phone}width-auto {
-			width:auto !important;
+		.#{$config-prefix-phone}width-auto {
+			width:auto#{$important};
 		}
-		.#{$prefix-phone}width-full {
-			width:100% !important;
+		.#{$config-prefix-phone}width-full {
+			width:100%#{$important};
 		}
 
 	// ---- Floats ----
 
-		.#{$prefix-phone}fl {
-			float:left !important;
+		.#{$config-prefix-phone}fl {
+			float:left#{$important};
 		}
-		.#{$prefix-phone}fr {
-			float:right !important;
+		.#{$config-prefix-phone}fr {
+			float:right#{$important};
 		}
-		.#{$prefix-phone}clr,
-		.#{$prefix-phone}clear {
+		.#{$config-prefix-phone}clr,
+		.#{$config-prefix-phone}clear {
 			clear:both;
 		}
 
 	// ---- Text Align ----
 
-		.#{$prefix-phone}ta-c, .#{$prefix-phone}align-center {
-			text-align: center !important;
+		.#{$config-prefix-phone}ta-c, .#{$config-prefix-phone}align-center {
+			text-align: center#{$important};
 		}
 
-		.#{$prefix-phone}ta-l, .#{$prefix-phone}align-left{
-			text-align: left !important;
+		.#{$config-prefix-phone}ta-l, .#{$config-prefix-phone}align-left{
+			text-align: left#{$important};
 		}
-		.#{$prefix-phone}ta-r, .#{$prefix-phone}align-right {
-			text-align: right !important;
+		.#{$config-prefix-phone}ta-r, .#{$config-prefix-phone}align-right {
+			text-align: right#{$important};
 		}
 
 	// ---- Align ----
 
-		.#{$prefix-phone}va-t, .#{$prefix-phone}align-top{
-			vertical-align: top !important;
+		.#{$config-prefix-phone}va-t, .#{$config-prefix-phone}align-top{
+			vertical-align: top#{$important};
 		}
-		.#{$prefix-phone}va-m, .#{$prefix-phone}align-middle {
-			vertical-align: middle !important;
+		.#{$config-prefix-phone}va-m, .#{$config-prefix-phone}align-middle {
+			vertical-align: middle#{$important};
 		}
-		.#{$prefix-phone}va-b, .#{$prefix-phone}align-bottom {
-			vertical-align: bottom !important;
+		.#{$config-prefix-phone}va-b, .#{$config-prefix-phone}align-bottom {
+			vertical-align: bottom#{$important};
 		}
 
 	// ---- Visibility and more ---- 
 
-		.#{$prefix-phone}is-hidden {
-			display: none !important;
+		.#{$config-prefix-phone}is-hidden {
+			display: none#{$important};
 		}
-		.#{$prefix-phone}is-invisible {
-			visibility: hidden !important;
+		.#{$config-prefix-phone}is-invisible {
+			visibility: hidden#{$important};
 		}
 
-		.#{$prefix-phone}is-transparent{
+		.#{$config-prefix-phone}is-transparent{
 			@include opacity(0);
 		}
-		.#{$prefix-phone}is-opaque{
+		.#{$config-prefix-phone}is-opaque{
 			@include opacity(1);
 		}
 
-		.#{$prefix-phone}block{
-			display: block !important;
+		.#{$config-prefix-phone}block{
+			display: block#{$important};
 		}
-		.#{$prefix-phone}inline-block{
-			@include inline-block("!important");
+		.#{$config-prefix-phone}inline-block{
+			@include inline-block($important);
 		}
-		.#{$prefix-phone}border-box{
+		.#{$config-prefix-phone}border-box{
 			@include border-box;
 		}
 
-		.#{$prefix-phone}hide-text {
+		.#{$config-prefix-phone}hide-text {
 		    @include hide-text();
 		}
 
-		.#{$prefix-phone}ellipsis {
+		.#{$config-prefix-phone}ellipsis {
 			@include ellipsis();
 		}
 
-		.#{$prefix-phone}non-selectable, .disable-text-select {
+		.#{$config-prefix-phone}non-selectable, .disable-text-select {
 			@include non-selectable();
 		}
 
-		.#{$prefix-phone}uc, .#{$prefix-phone}uppercase{
-			text-transform: uppercase !important;
+		.#{$config-prefix-phone}uc, .#{$config-prefix-phone}uppercase{
+			text-transform: uppercase#{$important};
 		}
-		.#{$prefix-phone}lc, .#{$prefix-phone}lowercase{
-			text-transform: lowercase !important;
+		.#{$config-prefix-phone}lc, .#{$config-prefix-phone}lowercase{
+			text-transform: lowercase#{$important};
 		}
 }
 
