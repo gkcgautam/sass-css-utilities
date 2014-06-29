@@ -26,15 +26,3 @@ $config-desktop-min-width : 980px !default;
 		@media only screen and (max-width: $config-phone-max-width) { @content; }
 	}
 }
-
-.test{
-	display: inline;
-	@include if-device(phone) {
-		display: block;
-	}
-}
-.test2{
-	@include if-device(phone) {
-		color: red;
-	}
-}
