@@ -28,6 +28,18 @@ This is just a simple example. The classes can be used to modify even a single p
 ----------
 ## Documentation
 
+### Utility classes
+
+#### Floats
+ - `fl` : Float left
+ - `fr` : Float right
+ - `clr` or `clear` : Clear both
+
+#### Text Align
+ - `ta-c` or `align-center` : Text align center
+ - `ta-l` or `align-left` : Text align left
+ - `ta-r` or `align-right` : Text align right
+
 ### Margin
 `ma` or `mar-auto` : Auto value for left and right margin. (margin-left:auto; margin-right:auto;)
 
@@ -57,7 +69,7 @@ Properties available are (where `X` is one of the values passed in `$config-marg
 `mh-X` : Horizontal Margin. Eg: mh-5 is margin-left: 5px; margin-right: 5px;
 
 ### Padding
-Padding classes are just like margin classes.
+Padding classes are also auto generated just like the margin classes.
 
 `pad-X` : Padding X. Eg: pad-5 is padding: 5px;
 
