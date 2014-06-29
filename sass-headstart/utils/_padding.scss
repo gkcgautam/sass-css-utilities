@@ -1,34 +1,52 @@
 
-@if variable-exists(config-paddings) {
-    @each $val in $config-paddings{
+$config-paddings: (0 5 10 15 20 25 30) !default;
+$config-tablet-paddings: $config-paddings !default;
+$config-phone-tablet-paddings: $config-paddings !default;
+$config-phone-paddings: $config-paddings !default;
 
-    	// Padding all
-		.pad-#{$val}{
+@mixin auto-generate-paddings($values, $prefix:"") {
+	@each $val in $values{
+		// Padding all
+		.#{$prefix}pad-#{$val}{
 			padding: #{$val}px !important;
 		}
 
 		// Padding top and vertical
-		.pt-#{$val},
-		.pv-#{$val}{
+		.#{$prefix}pt-#{$val},
+		.#{$prefix}pv-#{$val}{
 			padding-top: #{$val}px !important;
 		}
 
 		// Padding bottom and vertical
-		.pb-#{$val},
-		.pv-#{$val}{
+		.#{$prefix}pb-#{$val},
+		.#{$prefix}pv-#{$val}{
 			padding-bottom: #{$val}px !important;
 		}
 
 		// Padding left and horizontal
-		.pl-#{$val},
-		.ph-#{$val}{
+		.#{$prefix}pl-#{$val},
+		.#{$prefix}ph-#{$val}{
 			padding-left: #{$val}px !important;
 		}
 
 		// Padding right and horizontal
-		.pr-#{$val},
-		.ph-#{$val}{
+		.#{$prefix}pr-#{$val},
+		.#{$prefix}ph-#{$val}{
 			padding-right: #{$val}px !important;
 		}
-    }
+	}
+}
+
+@include auto-generate-paddings($config-paddings);
+
+@include if-device(tablet) {
+	@include auto-generate-paddings($config-tablet-paddings, "tab-");
+}
+
+@include if-device(phone-tablet) {
+	@include auto-generate-paddings($config-phone-tablet-paddings, "phn-tab-");
+}
+
+@include if-device(phone) {
+	@include auto-generate-paddings($config-phone-paddings, "phn-");
 }
