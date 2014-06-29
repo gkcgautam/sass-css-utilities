@@ -1,12 +1,68 @@
 
-.b, .bold {
+.normal {
+	font-weight: normal !important;
+}
+.bold {
     font-weight: bold !important;
 }
 
-.em, .italic {
+.italic {
     font-style: italic !important;
 }
 
-.del{
+.line-through{
     text-decoration: line-through !important;
+}
+
+@include if-device(tablet) {
+	.#{$prefix-tablet}normal {
+		font-weight: normal !important;
+	}
+	.#{$prefix-tablet}bold {
+	    font-weight: bold !important;
+	}
+
+	.#{$prefix-tablet}italic {
+	    font-style: italic !important;
+	}
+
+	.#{$prefix-tablet}line-through{
+	    text-decoration: line-through !important;
+	}
+}
+
+@include if-device(phone-tablet) {
+	.#{$prefix-phone-tablet}normal {
+		font-weight: normal !important;
+	}
+
+	.#{$prefix-phone-tablet}bold {
+	    font-weight: bold !important;
+	}
+
+	.#{$prefix-phone-tablet}italic {
+	    font-style: italic !important;
+	}
+
+	.#{$prefix-phone-tablet}line-through{
+	    text-decoration: line-through !important;
+	}
+}
+
+@include if-device(phone) {
+	.#{$prefix-phone}normal {
+		font-weight: normal !important;
+	}
+
+	.#{$prefix-phone}bold {
+	    font-weight: bold !important;
+	}
+
+	.#{$prefix-phone}italic {
+	    font-style: italic !important;
+	}
+
+	.#{$prefix-phone}line-through{
+	    text-decoration: line-through !important;
+	}
 }

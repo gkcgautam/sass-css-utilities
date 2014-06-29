@@ -84,8 +84,103 @@
 	}
 
 	.uc, .uppercase{
-		text-transform: uppercase;
+		text-transform: uppercase !important;
 	}
 	.lc, .lowercase{
-		text-transform: lowercase;
+		text-transform: lowercase !important;
 	}
+
+@include if-device(tablet) {
+
+	// ---- Width ----
+
+		.#{$prefix-tablet}width-auto {
+			width:auto !important;
+		}
+		.#{$prefix-tablet}width-full {
+			width:100% !important;
+		}
+	
+	// ---- Floats ----
+
+		.#{$prefix-tablet}fl {
+			float:left !important;
+		}
+		.#{$prefix-tablet}fr {
+			float:right !important;
+		}
+		.#{$prefix-tablet}clr,
+		.#{$prefix-tablet}clear {
+			clear:both;
+		}
+
+	// ---- Text Align ----
+
+		.#{$prefix-tablet}ta-c, .#{$prefix-tablet}align-center {
+			text-align: center !important;
+		}
+
+		.#{$prefix-tablet}ta-l, .#{$prefix-tablet}align-left{
+			text-align: left !important;
+		}
+		.#{$prefix-tablet}ta-r, .#{$prefix-tablet}align-right {
+			text-align: right !important;
+		}
+
+	// ---- Align ----
+
+		.#{$prefix-tablet}va-t, .#{$prefix-tablet}align-top{
+			vertical-align: top !important;
+		}
+		.#{$prefix-tablet}va-m, .#{$prefix-tablet}align-middle {
+			vertical-align: middle !important;
+		}
+		.#{$prefix-tablet}va-b, .#{$prefix-tablet}align-bottom {
+			vertical-align: bottom !important;
+		}
+
+	// ---- Visibility and more ---- 
+
+		.#{$prefix-tablet}is-hidden {
+			display: none !important;
+		}
+		.#{$prefix-tablet}is-invisible {
+			visibility: hidden !important;
+		}
+
+		.#{$prefix-tablet}is-transparent{
+			@include opacity(0);
+		}
+		.#{$prefix-tablet}is-opaque{
+			@include opacity(1);
+		}
+
+		.#{$prefix-tablet}block{
+			display: block !important;
+		}
+		.#{$prefix-tablet}inline-block{
+			@include inline-block("!important");
+		}
+		.#{$prefix-tablet}border-box{
+			@include border-box;
+		}
+
+		.#{$prefix-tablet}hide-text {
+		    @include hide-text();
+		}
+
+		.#{$prefix-tablet}ellipsis {
+			@include ellipsis();
+		}
+
+		.#{$prefix-tablet}non-selectable, .disable-text-select {
+			@include non-selectable();
+		}
+
+		.#{$prefix-tablet}uc, .#{$prefix-tablet}uppercase{
+			text-transform: uppercase !important;
+		}
+		.#{$prefix-tablet}lc, .#{$prefix-tablet}lowercase{
+			text-transform: lowercase !important;
+		}
+}

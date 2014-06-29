@@ -1,20 +1,70 @@
 
-.pos-rel,
 .pos-relative {
-	position:relative;
+	position:relative !important;
 }
 
-.pos-abs,
 .pos-absolute {
-	position:absolute;
+	position:absolute !important;
 }
 
-.pos-stc,
 .pos-static {
-	position:static;
+	position:static !important;
 }
 
-.pos-fix,
 .pos-fixed {
-	position:fixed;
+	position:fixed !important;
+}
+
+@include if-device(tablet) {
+	.#{$prefix-tablet}pos-relative {
+		position:relative !important;
+	}
+
+	.#{$prefix-tablet}pos-absolute {
+		position:absolute !important;
+	}
+
+	.#{$prefix-tablet}pos-static {
+		position:static !important;
+	}
+
+	.#{$prefix-tablet}pos-fixed {
+		position:fixed !important;
+	}
+}
+
+@include if-device(phone-tablet) {
+	.#{$prefix-phone-tablet}pos-relative {
+		position:relative !important;
+	}
+
+	.#{$prefix-phone-tablet}pos-absolute {
+		position:absolute !important;
+	}
+
+	.#{$prefix-phone-tablet}pos-static {
+		position:static !important;
+	}
+
+	.#{$prefix-phone-tablet}pos-fixed {
+		position:fixed !important;
+	}
+}
+
+@include if-device(phone) {
+	.#{$prefix-phone}pos-relative {
+		position:relative !important;
+	}
+
+	.#{$prefix-phone}pos-absolute {
+		position:absolute !important;
+	}
+
+	.#{$prefix-phone}pos-static {
+		position:static !important;
+	}
+
+	.#{$prefix-phone}pos-fixed {
+		position:fixed !important;
+	}
 }
