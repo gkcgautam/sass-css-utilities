@@ -56,17 +56,17 @@
 
 // ---- Visibility and more ---- 
 
-	.is-hidden {
+	.hide {
 		display: none#{$important};
 	}
-	.is-invisible {
+	.invisible {
 		visibility: hidden#{$important};
 	}
 
-	.is-transparent{
+	.transparent{
 		@include opacity(0);
 	}
-	.is-opaque{
+	.opaque{
 		@include opacity(1);
 	}
 
@@ -150,17 +150,17 @@
 
 	// ---- Visibility and more ---- 
 
-		.#{$config-prefix-tablet}is-hidden {
+		.#{$config-prefix-tablet}hide {
 			display: none#{$important};
 		}
-		.#{$config-prefix-tablet}is-invisible {
+		.#{$config-prefix-tablet}invisible {
 			visibility: hidden#{$important};
 		}
 
-		.#{$config-prefix-tablet}is-transparent{
+		.#{$config-prefix-tablet}transparent{
 			@include opacity(0);
 		}
-		.#{$config-prefix-tablet}is-opaque{
+		.#{$config-prefix-tablet}opaque{
 			@include opacity(1);
 		}
 
@@ -245,17 +245,17 @@
 
 	// ---- Visibility and more ---- 
 
-		.#{$config-prefix-phone-tablet}is-hidden {
+		.#{$config-prefix-phone-tablet}hide {
 			display: none#{$important};
 		}
-		.#{$config-prefix-phone-tablet}is-invisible {
+		.#{$config-prefix-phone-tablet}invisible {
 			visibility: hidden#{$important};
 		}
 
-		.#{$config-prefix-phone-tablet}is-transparent{
+		.#{$config-prefix-phone-tablet}transparent{
 			@include opacity(0);
 		}
-		.#{$config-prefix-phone-tablet}is-opaque{
+		.#{$config-prefix-phone-tablet}opaque{
 			@include opacity(1);
 		}
 
@@ -340,17 +340,17 @@
 
 	// ---- Visibility and more ---- 
 
-		.#{$config-prefix-phone}is-hidden {
+		.#{$config-prefix-phone}hide {
 			display: none#{$important};
 		}
-		.#{$config-prefix-phone}is-invisible {
+		.#{$config-prefix-phone}invisible {
 			visibility: hidden#{$important};
 		}
 
-		.#{$config-prefix-phone}is-transparent{
+		.#{$config-prefix-phone}transparent{
 			@include opacity(0);
 		}
-		.#{$config-prefix-phone}is-opaque{
+		.#{$config-prefix-phone}opaque{
 			@include opacity(1);
 		}
 
