@@ -55,10 +55,10 @@ If you want to change configuration, declare the configuration variables before 
  - `va-b` or `align-bottom` : Vertical align bottom
 
 #### Appearance ####
- - `is-hidden` : display:none
- - `is-invisible` : visibility: hidden
- - `is-transparent` : opacity 0
- - `is-opaque` : opacity 1
+ - `hide` : display:none
+ - `invisible` : visibility: hidden
+ - `transparent` : opacity 0
+ - `opaque` : opacity 1
  - `block` : display:block
  - `inline-block` : display:inline-block
  - `border-box` : border-box box model
