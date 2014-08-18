@@ -60,11 +60,16 @@
     $config-phone-tablet-margins:  $config-margins !default;
     $config-phone-margins:         $config-margins !default;
 
-// ====== Setting default variables based on config. Do not edit unless you know what you are doing! ======
+// ====== Setting default variable values based on config. Do not edit unless you know what you are doing! ======
 
-    $scu-important:                         if($scu-use-important, " !important", "");
-    $scu-important-paddings:                if($scu-paddings-use-important, " !important", "");
-    $scu-important-margins:                 if($scu-margins-use-important, " !important", "");
+    $scu-val-important:                     if ($scu-use-important, " !important", "");
+    $scu-val-important-paddings:            if ($scu-paddings-use-important, " !important", "");
+    $scu-val-important-margins:             if ($scu-margins-use-important, " !important", "");
+
+    $scu-val-prefix:                        $scu-prefix;
+    $scu-val-prefix-tablet:                 $scu-val-prefix + $scu-prefix-tablet;
+    $scu-val-prefix-phone-tablet:           $scu-val-prefix + $scu-prefix-phone-tablet;
+    $scu-val-prefix-phone:                  $scu-val-prefix + $scu-prefix-phone;
 
     $important: if($scu-use-important, " !important", "");
     $important-paddings: $important;
