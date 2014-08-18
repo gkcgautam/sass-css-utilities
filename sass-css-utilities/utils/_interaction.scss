@@ -1,5 +1,5 @@
 
-.clickable{
+.#{$scu-val-prefix}clickable{
     cursor: pointer;
 
     &.disabled{

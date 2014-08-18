@@ -1,16 +1,16 @@
 
-.normal {
+.#{$scu-val-prefix}normal {
     font-weight: normal#{$scu-val-important};
 }
-.bold {
+.#{$scu-val-prefix}bold {
     font-weight: bold#{$scu-val-important};
 }
 
-.italic {
+.#{$scu-val-prefix}italic {
     font-style: italic#{$scu-val-important};
 }
 
-.line-through{
+.#{$scu-val-prefix}line-through{
     text-decoration: line-through#{$scu-val-important};
 }
 

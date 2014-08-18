@@ -40,14 +40,14 @@
 
 // General margin classes
 
-    .ma,
-    .mar-auto {
+    .#{$scu-val-prefix}ma,
+    .#{$scu-val-prefix}mar-auto {
         margin-left: auto#{$scu-val-important-margins};
         margin-right: auto#{$scu-val-important-margins};
     }
 
-    .ml-a, .ml-auto { margin-left: auto#{$scu-val-important-margins}; }
-    .mr-a, .mr-auto { margin-right: auto#{$scu-val-important-margins}; }
+    .#{$scu-val-prefix}ml-a, .#{$scu-val-prefix}ml-auto { margin-left: auto#{$scu-val-important-margins}; }
+    .#{$scu-val-prefix}mr-a, .#{$scu-val-prefix}mr-auto { margin-right: auto#{$scu-val-important-margins}; }
 
 // Auto generated margin classes
 

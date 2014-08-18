@@ -1,39 +1,39 @@
 
 // ---- Width ----
 
-    .width-auto {
+    .#{$scu-val-prefix}width-auto {
         width:auto#{$scu-val-important};
     }
-    .width-fill {
+    .#{$scu-val-prefix}width-fill {
         width:auto#{$scu-val-important};
         display: block#{$scu-val-important};
         overflow: hidden#{$scu-val-important};
     }
-    .width-full {
+    .#{$scu-val-prefix}width-full {
         width:100%#{$scu-val-important};
     }
-    .width-full-alt {
+    .#{$scu-val-prefix}width-full-alt {
         width:100%#{$scu-val-important};
         display: block#{$scu-val-important};
         -moz-box-sizing: border-box#{$scu-val-important};
-             box-sizing: border-box#{$scu-val-important};
+        box-sizing: border-box#{$scu-val-important};
     }
 
 // ---- Floats and Clear Fix ----  
 
-    .fl {
+    .#{$scu-val-prefix}fl {
         float:left#{$scu-val-important};
     }
-    .fr {
+    .#{$scu-val-prefix}fr {
         float:right#{$scu-val-important};
     }
-    .clr,
-    .clear {
+    .#{$scu-val-prefix}clr,
+    .#{$scu-val-prefix}clear {
         clear:both;
     }
 
-    .cf,
-    .clearfix {
+    .#{$scu-val-prefix}cf,
+    .#{$scu-val-prefix}clearfix {
         zoom: 1;
 
         &:before,
@@ -50,88 +50,85 @@
 
 // ---- Text Align ----  
 
-    .ta-c, .align-center {
+    .#{$scu-val-prefix}ta-c, .#{$scu-val-prefix}align-center {
         text-align: center#{$scu-val-important};
     }
-
-    .ta-l, .align-left {
+    .#{$scu-val-prefix}ta-l, .#{$scu-val-prefix}align-left {
         text-align: left#{$scu-val-important};
     }
-    .ta-r, .align-right {
+    .#{$scu-val-prefix}ta-r, .#{$scu-val-prefix}align-right {
         text-align: right#{$scu-val-important};
     }
 
 // ---- Align ----  
 
-    .va-top, .align-top {
+    .#{$scu-val-prefix}va-top, .#{$scu-val-prefix}align-top {
         vertical-align: top#{$scu-val-important};
     }
-    .va-middle, .align-middle {
+    .#{$scu-val-prefix}va-middle, .#{$scu-val-prefix}align-middle {
         vertical-align: middle#{$scu-val-important};
     }
-    .va-bottom, .align-bottom {
+    .#{$scu-val-prefix}va-bottom, .#{$scu-val-prefix}align-bottom {
         vertical-align: bottom#{$scu-val-important};
     }
-    .va-baseline, .align-baseline {
+    .#{$scu-val-prefix}va-baseline, .#{$scu-val-prefix}align-baseline {
         vertical-align: baseline#{$scu-val-important};
     }
 
 // ---- Visibility and more ---- 
 
-    .hide .hidden {
+    .#{$scu-val-prefix}hide, .#{$scu-val-prefix}hidden {
         display: none#{$scu-val-important};
     }
-    .invisible {
+    .#{$scu-val-prefix}invisible {
         visibility: hidden#{$scu-val-important};
     }
 
-    .transparent {
+    .#{$scu-val-prefix}transparent {
         zoom: 1#{$scu-val-important};
         filter: alpha(opacity=0)#{$scu-val-important};
         opacity: 0#{$scu-val-important};
     }
-    .opaque {
+    .#{$scu-val-prefix}opaque {
         zoom: 1#{$scu-val-important};
         filter: alpha(opacity=100)#{$scu-val-important};
         opacity: 1#{$scu-val-important};
     }
 
-    .inline {
+    .#{$scu-val-prefix}inline {
         display: inline#{$scu-val-important};
     }
-    .block {
+    .#{$scu-val-prefix}block {
         display: block#{$scu-val-important};
     }
-    .inline-block {
+    .#{$scu-val-prefix}inline-block {
         display: inline-block#{$scu-val-important};
         max-width: 100%#{$scu-val-important};
     }
 
-    .table {
+    .#{$scu-val-prefix}table {
         display: table#{$scu-val-important};
     }
-
-    .table-cell {
+    .#{$scu-val-prefix}table-cell {
         display: table-cell#{$scu-val-important};
     }
-
-    .table-row {
+    .#{$scu-val-prefix}table-row {
         display: table-row#{$scu-val-important};
     }
 
-    .border-box {
+    .#{$scu-val-prefix}border-box {
         -moz-box-sizing: border-box#{$scu-val-important};
         -webkit-box-sizing: border-box#{$scu-val-important};
         box-sizing: border-box#{$scu-val-important};
     }
 
-    .hide-text {
+    .#{$scu-val-prefix}hide-text {
         display: block#{$scu-val-important};
         overflow: hidden#{$scu-val-important};
         text-indent: -9999px#{$scu-val-important};
     }
 
-    .ellipsis {
+    .#{$scu-val-prefix}ellipsis {
         white-space: nowrap#{$scu-val-important};
         overflow: hidden#{$scu-val-important};
         -ms-text-overflow: ellipsis#{$scu-val-important};
@@ -139,303 +136,487 @@
         text-overflow: ellipsis#{$scu-val-important};
     }
 
-    .non-selectable, .disable-text-select {
-        @include non-selectable();
+    .#{$scu-val-prefix}non-selectable, .#{$scu-val-prefix}disable-text-select {
         -webkit-user-select: none#{$scu-val-important};
         -moz-user-select: none#{$scu-val-important};
         -ms-user-select: none#{$scu-val-important};
         user-select: none#{$scu-val-important};
     }
 
-    .uc, .uppercase {
+    .#{$scu-val-prefix}uc, .#{$scu-val-prefix}uppercase {
         text-transform: uppercase#{$scu-val-important};
     }
-    .lc, .lowercase {
+    .#{$scu-val-prefix}lc, .#{$scu-val-prefix}lowercase {
         text-transform: lowercase#{$scu-val-important};
     }
 
-@include if-device(tablet) {
+@if $scu-build-tablet-classes{
+    @include if-device(tablet) {
 
-    // ---- Width ----
+        // ---- Width ----
 
-        .#{$config-prefix-tablet}width-auto {
-            width:auto#{$scu-val-important};
-        }
-        .#{$config-prefix-tablet}width-full {
-            width:100%#{$scu-val-important};
-        }
+            .#{$scu-val-prefix-tablet}width-auto {
+                width:auto#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}width-fill {
+                width:auto#{$scu-val-important};
+                display: block#{$scu-val-important};
+                overflow: hidden#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}width-full {
+                width:100%#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}width-full-alt {
+                width:100%#{$scu-val-important};
+                display: block#{$scu-val-important};
+                -moz-box-sizing: border-box#{$scu-val-important};
+                box-sizing: border-box#{$scu-val-important};
+            }
 
-    // ---- Floats ----
+        // ---- Floats ----
 
-        .#{$config-prefix-tablet}fl {
-            float:left#{$scu-val-important};
-        }
-        .#{$config-prefix-tablet}fr {
-            float:right#{$scu-val-important};
-        }
-        .#{$config-prefix-tablet}clr,
-        .#{$config-prefix-tablet}clear {
-            clear:both;
-        }
+            .#{$scu-val-prefix-tablet}fl {
+                float:left#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}fr {
+                float:right#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}clr,
+            .#{$scu-val-prefix-tablet}clear {
+                clear:both;
+            }
 
-    // ---- Text Align ----
+            .#{$scu-val-prefix-tablet}cf,
+            .#{$scu-val-prefix-tablet}clearfix {
+                zoom: 1;
 
-        .#{$config-prefix-tablet}ta-c, .#{$config-prefix-tablet}align-center {
-            text-align: center#{$scu-val-important};
-        }
+                &:before,
+                &:after {
+                    content: " ";
+                    display: table;
+                }
 
-        .#{$config-prefix-tablet}ta-l, .#{$config-prefix-tablet}align-left{
-            text-align: left#{$scu-val-important};
-        }
-        .#{$config-prefix-tablet}ta-r, .#{$config-prefix-tablet}align-right {
-            text-align: right#{$scu-val-important};
-        }
+                &:after {
+                    clear: both;
+                }
+            }
 
-    // ---- Align ----
+        // ---- Text Align ----
 
-        .#{$config-prefix-tablet}va-t, .#{$config-prefix-tablet}align-top{
-            vertical-align: top#{$scu-val-important};
-        }
-        .#{$config-prefix-tablet}va-m, .#{$config-prefix-tablet}align-middle {
-            vertical-align: middle#{$scu-val-important};
-        }
-        .#{$config-prefix-tablet}va-b, .#{$config-prefix-tablet}align-bottom {
-            vertical-align: bottom#{$scu-val-important};
-        }
+            .#{$scu-val-prefix-tablet}ta-c, .#{$scu-val-prefix-tablet}align-center {
+                text-align: center#{$scu-val-important};
+            }
 
-    // ---- Visibility and more ---- 
+            .#{$scu-val-prefix-tablet}ta-l, .#{$scu-val-prefix-tablet}align-left{
+                text-align: left#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}ta-r, .#{$scu-val-prefix-tablet}align-right {
+                text-align: right#{$scu-val-important};
+            }
 
-        .#{$config-prefix-tablet}hide {
-            display: none#{$scu-val-important};
-        }
-        .#{$config-prefix-tablet}invisible {
-            visibility: hidden#{$scu-val-important};
-        }
+        // ---- Align ----
 
-        .#{$config-prefix-tablet}transparent{
-            @include opacity(0);
-        }
-        .#{$config-prefix-tablet}opaque{
-            @include opacity(1);
-        }
+            .#{$scu-val-prefix-tablet}va-top, .#{$scu-val-prefix-tablet}align-top{
+                vertical-align: top#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}va-middle, .#{$scu-val-prefix-tablet}align-middle {
+                vertical-align: middle#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}va-bottom, .#{$scu-val-prefix-tablet}align-bottom {
+                vertical-align: bottom#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}va-baseline, .#{$scu-val-prefix-tablet}align-baseline {
+                vertical-align: baseline#{$scu-val-important};
+            }
 
-        .#{$config-prefix-tablet}block{
-            display: block#{$scu-val-important};
-        }
-        .#{$config-prefix-tablet}inline-block{
-            @include inline-block($scu-val-important);
-        }
-        .#{$config-prefix-tablet}border-box{
-            @include border-box;
-        }
+        // ---- Visibility and more ---- 
 
-        .#{$config-prefix-tablet}hide-text {
-            @include hide-text();
-        }
+            .#{$scu-val-prefix-tablet}hide, .#{$scu-val-prefix-tablet}hidden {
+                display: none#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}invisible {
+                visibility: hidden#{$scu-val-important};
+            }
 
-        .#{$config-prefix-tablet}ellipsis {
-            @include ellipsis();
-        }
+            .#{$scu-val-prefix-tablet}transparent{
+                zoom: 1#{$scu-val-important};
+                filter: alpha(opacity=0)#{$scu-val-important};
+                opacity: 0#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}opaque{
+                zoom: 1#{$scu-val-important};
+                filter: alpha(opacity=100)#{$scu-val-important};
+                opacity: 1#{$scu-val-important};
+            }
 
-        .#{$config-prefix-tablet}non-selectable, .disable-text-select {
-            @include non-selectable();
-        }
+            .#{$scu-val-prefix-tablet}inline {
+                display: inline#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}block{
+                display: block#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}inline-block{
+                display: inline-block#{$scu-val-important};
+                max-width: 100%#{$scu-val-important};
+            }
 
-        .#{$config-prefix-tablet}uc, .#{$config-prefix-tablet}uppercase{
-            text-transform: uppercase#{$scu-val-important};
-        }
-        .#{$config-prefix-tablet}lc, .#{$config-prefix-tablet}lowercase{
-            text-transform: lowercase#{$scu-val-important};
-        }
+            .#{$scu-val-prefix-tablet}table {
+                display: table#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-tablet}table-cell {
+                display: table-cell#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-tablet}table-row {
+                display: table-row#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-tablet}border-box{
+                -moz-box-sizing: border-box#{$scu-val-important};
+                -webkit-box-sizing: border-box#{$scu-val-important};
+                box-sizing: border-box#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-tablet}hide-text {
+                display: block#{$scu-val-important};
+                overflow: hidden#{$scu-val-important};
+                text-indent: -9999px#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-tablet}ellipsis {
+                white-space: nowrap#{$scu-val-important};
+                overflow: hidden#{$scu-val-important};
+                -ms-text-overflow: ellipsis#{$scu-val-important};
+                -o-text-overflow: ellipsis#{$scu-val-important};
+                text-overflow: ellipsis#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-tablet}non-selectable, .disable-text-select {
+                -webkit-user-select: none#{$scu-val-important};
+                -moz-user-select: none#{$scu-val-important};
+                -ms-user-select: none#{$scu-val-important};
+                user-select: none#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-tablet}uc, .#{$scu-val-prefix-tablet}uppercase{
+                text-transform: uppercase#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}lc, .#{$scu-val-prefix-tablet}lowercase{
+                text-transform: lowercase#{$scu-val-important};
+            }
+    }
 }
 
-@include if-device(phone-tablet) {
+@if $scu-build-phone-tablet-classes{
+    @include if-device(phone-tablet) {
 
-    // ---- Width ----
+        // ---- Width ----
 
-        .#{$config-prefix-phone-tablet}width-auto {
-            width:auto#{$scu-val-important};
-        }
-        .#{$config-prefix-phone-tablet}width-full {
-            width:100%#{$scu-val-important};
-        }
+            .#{$scu-val-prefix-phone-tablet}width-auto {
+                width:auto#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}width-fill {
+                width:auto#{$scu-val-important};
+                display: block#{$scu-val-important};
+                overflow: hidden#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}width-full {
+                width:100%#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}width-full-alt {
+                width:100%#{$scu-val-important};
+                display: block#{$scu-val-important};
+                -moz-box-sizing: border-box#{$scu-val-important};
+                box-sizing: border-box#{$scu-val-important};
+            }
 
-    // ---- Floats ----
+        // ---- Floats ----
 
-        .#{$config-prefix-phone-tablet}fl {
-            float:left#{$scu-val-important};
-        }
-        .#{$config-prefix-phone-tablet}fr {
-            float:right#{$scu-val-important};
-        }
-        .#{$config-prefix-phone-tablet}clr,
-        .#{$config-prefix-phone-tablet}clear {
-            clear:both;
-        }
+            .#{$scu-val-prefix-phone-tablet}fl {
+                float:left#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}fr {
+                float:right#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}clr,
+            .#{$scu-val-prefix-phone-tablet}clear {
+                clear:both;
+            }
 
-    // ---- Text Align ----
+            .#{$scu-val-prefix-phone-tablet}cf,
+            .#{$scu-val-prefix-phone-tablet}clearfix {
+                zoom: 1;
 
-        .#{$config-prefix-phone-tablet}ta-c, .#{$config-prefix-phone-tablet}align-center {
-            text-align: center#{$scu-val-important};
-        }
+                &:before,
+                &:after {
+                    content: " ";
+                    display: table;
+                }
 
-        .#{$config-prefix-phone-tablet}ta-l, .#{$config-prefix-phone-tablet}align-left{
-            text-align: left#{$scu-val-important};
-        }
-        .#{$config-prefix-phone-tablet}ta-r, .#{$config-prefix-phone-tablet}align-right {
-            text-align: right#{$scu-val-important};
-        }
+                &:after {
+                    clear: both;
+                }
+            }
 
-    // ---- Align ----
+        // ---- Text Align ----
 
-        .#{$config-prefix-phone-tablet}va-t, .#{$config-prefix-phone-tablet}align-top{
-            vertical-align: top#{$scu-val-important};
-        }
-        .#{$config-prefix-phone-tablet}va-m, .#{$config-prefix-phone-tablet}align-middle {
-            vertical-align: middle#{$scu-val-important};
-        }
-        .#{$config-prefix-phone-tablet}va-b, .#{$config-prefix-phone-tablet}align-bottom {
-            vertical-align: bottom#{$scu-val-important};
-        }
+            .#{$scu-val-prefix-phone-tablet}ta-c, .#{$scu-val-prefix-phone-tablet}align-center {
+                text-align: center#{$scu-val-important};
+            }
 
-    // ---- Visibility and more ---- 
+            .#{$scu-val-prefix-phone-tablet}ta-l, .#{$scu-val-prefix-phone-tablet}align-left{
+                text-align: left#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}ta-r, .#{$scu-val-prefix-phone-tablet}align-right {
+                text-align: right#{$scu-val-important};
+            }
 
-        .#{$config-prefix-phone-tablet}hide {
-            display: none#{$scu-val-important};
-        }
-        .#{$config-prefix-phone-tablet}invisible {
-            visibility: hidden#{$scu-val-important};
-        }
+        // ---- Align ----
 
-        .#{$config-prefix-phone-tablet}transparent{
-            @include opacity(0);
-        }
-        .#{$config-prefix-phone-tablet}opaque{
-            @include opacity(1);
-        }
+            .#{$scu-val-prefix-phone-tablet}va-top, .#{$scu-val-prefix-phone-tablet}align-top{
+                vertical-align: top#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}va-middle, .#{$scu-val-prefix-phone-tablet}align-middle {
+                vertical-align: middle#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}va-bottom, .#{$scu-val-prefix-phone-tablet}align-bottom {
+                vertical-align: bottom#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}va-baseline, .#{$scu-val-prefix-phone-tablet}align-baseline {
+                vertical-align: baseline#{$scu-val-important};
+            }
 
-        .#{$config-prefix-phone-tablet}block{
-            display: block#{$scu-val-important};
-        }
-        .#{$config-prefix-phone-tablet}inline-block{
-            @include inline-block($scu-val-important);
-        }
-        .#{$config-prefix-phone-tablet}border-box{
-            @include border-box;
-        }
+        // ---- Visibility and more ---- 
 
-        .#{$config-prefix-phone-tablet}hide-text {
-            @include hide-text();
-        }
+            .#{$scu-val-prefix-phone-tablet}hide, .#{$scu-val-prefix-phone-tablet}hidden {
+                display: none#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}invisible {
+                visibility: hidden#{$scu-val-important};
+            }
 
-        .#{$config-prefix-phone-tablet}ellipsis {
-            @include ellipsis();
-        }
+            .#{$scu-val-prefix-phone-tablet}transparent{
+                zoom: 1#{$scu-val-important};
+                filter: alpha(opacity=0)#{$scu-val-important};
+                opacity: 0#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}opaque{
+                zoom: 1#{$scu-val-important};
+                filter: alpha(opacity=100)#{$scu-val-important};
+                opacity: 1#{$scu-val-important};
+            }
 
-        .#{$config-prefix-phone-tablet}non-selectable, .disable-text-select {
-            @include non-selectable();
-        }
+            .#{$scu-val-prefix-phone-tablet}inline {
+                display: inline#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}block{
+                display: block#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}inline-block{
+                display: inline-block#{$scu-val-important};
+                max-width: 100%#{$scu-val-important};
+            }
 
-        .#{$config-prefix-phone-tablet}uc, .#{$config-prefix-phone-tablet}uppercase{
-            text-transform: uppercase#{$scu-val-important};
-        }
-        .#{$config-prefix-phone-tablet}lc, .#{$config-prefix-phone-tablet}lowercase{
-            text-transform: lowercase#{$scu-val-important};
-        }
+            .#{$scu-val-prefix-phone-tablet}table {
+                display: table#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}table-cell {
+                display: table-cell#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}table-row {
+                display: table-row#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone-tablet}border-box{
+                -moz-box-sizing: border-box#{$scu-val-important};
+                -webkit-box-sizing: border-box#{$scu-val-important};
+                box-sizing: border-box#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone-tablet}hide-text {
+                display: block#{$scu-val-important};
+                overflow: hidden#{$scu-val-important};
+                text-indent: -9999px#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone-tablet}ellipsis {
+                white-space: nowrap#{$scu-val-important};
+                overflow: hidden#{$scu-val-important};
+                -ms-text-overflow: ellipsis#{$scu-val-important};
+                -o-text-overflow: ellipsis#{$scu-val-important};
+                text-overflow: ellipsis#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone-tablet}non-selectable, .#{$scu-val-prefix-phone-tablet}disable-text-select {
+                -webkit-user-select: none#{$scu-val-important};
+                -moz-user-select: none#{$scu-val-important};
+                -ms-user-select: none#{$scu-val-important};
+                user-select: none#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone-tablet}uc, .#{$scu-val-prefix-phone-tablet}uppercase{
+                text-transform: uppercase#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}lc, .#{$scu-val-prefix-phone-tablet}lowercase{
+                text-transform: lowercase#{$scu-val-important};
+            }
+    }
 }
 
-@include if-device(phone) {
+@if $scu-build-phone-classes{
+    @include if-device(phone) {
 
-    // ---- Width ----
+        // ---- Width ----
 
-        .#{$config-prefix-phone}width-auto {
-            width:auto#{$scu-val-important};
-        }
-        .#{$config-prefix-phone}width-full {
-            width:100%#{$scu-val-important};
-        }
+            .#{$scu-val-prefix-phone}width-auto {
+                width:auto#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}width-fill {
+                width:auto#{$scu-val-important};
+                display: block#{$scu-val-important};
+                overflow: hidden#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}width-full {
+                width:100%#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}width-full-alt {
+                width:100%#{$scu-val-important};
+                display: block#{$scu-val-important};
+                -moz-box-sizing: border-box#{$scu-val-important};
+                box-sizing: border-box#{$scu-val-important};
+            }
 
-    // ---- Floats ----
+        // ---- Floats ----
 
-        .#{$config-prefix-phone}fl {
-            float:left#{$scu-val-important};
-        }
-        .#{$config-prefix-phone}fr {
-            float:right#{$scu-val-important};
-        }
-        .#{$config-prefix-phone}clr,
-        .#{$config-prefix-phone}clear {
-            clear:both;
-        }
+            .#{$scu-val-prefix-phone}fl {
+                float:left#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}fr {
+                float:right#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}clr,
+            .#{$scu-val-prefix-phone}clear {
+                clear:both;
+            }
 
-    // ---- Text Align ----
+            .#{$scu-val-prefix-phone}cf,
+            .#{$scu-val-prefix-phone}clearfix {
+                zoom: 1;
 
-        .#{$config-prefix-phone}ta-c, .#{$config-prefix-phone}align-center {
-            text-align: center#{$scu-val-important};
-        }
+                &:before,
+                &:after {
+                    content: " ";
+                    display: table;
+                }
 
-        .#{$config-prefix-phone}ta-l, .#{$config-prefix-phone}align-left{
-            text-align: left#{$scu-val-important};
-        }
-        .#{$config-prefix-phone}ta-r, .#{$config-prefix-phone}align-right {
-            text-align: right#{$scu-val-important};
-        }
+                &:after {
+                    clear: both;
+                }
+            }
 
-    // ---- Align ----
+        // ---- Text Align ----
 
-        .#{$config-prefix-phone}va-t, .#{$config-prefix-phone}align-top{
-            vertical-align: top#{$scu-val-important};
-        }
-        .#{$config-prefix-phone}va-m, .#{$config-prefix-phone}align-middle {
-            vertical-align: middle#{$scu-val-important};
-        }
-        .#{$config-prefix-phone}va-b, .#{$config-prefix-phone}align-bottom {
-            vertical-align: bottom#{$scu-val-important};
-        }
+            .#{$scu-val-prefix-phone}ta-c, .#{$scu-val-prefix-phone}align-center {
+                text-align: center#{$scu-val-important};
+            }
 
-    // ---- Visibility and more ---- 
+            .#{$scu-val-prefix-phone}ta-l, .#{$scu-val-prefix-phone}align-left{
+                text-align: left#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}ta-r, .#{$scu-val-prefix-phone}align-right {
+                text-align: right#{$scu-val-important};
+            }
 
-        .#{$config-prefix-phone}hide {
-            display: none#{$scu-val-important};
-        }
-        .#{$config-prefix-phone}invisible {
-            visibility: hidden#{$scu-val-important};
-        }
+        // ---- Align ----
 
-        .#{$config-prefix-phone}transparent{
-            @include opacity(0);
-        }
-        .#{$config-prefix-phone}opaque{
-            @include opacity(1);
-        }
+            .#{$scu-val-prefix-phone}va-top, .#{$scu-val-prefix-phone}align-top{
+                vertical-align: top#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}va-middle, .#{$scu-val-prefix-phone}align-middle {
+                vertical-align: middle#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}va-bottom, .#{$scu-val-prefix-phone}align-bottom {
+                vertical-align: bottom#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}va-baseline, .#{$scu-val-prefix-phone}align-baseline {
+                vertical-align: baseline#{$scu-val-important};
+            }
 
-        .#{$config-prefix-phone}block{
-            display: block#{$scu-val-important};
-        }
-        .#{$config-prefix-phone}inline-block{
-            @include inline-block($scu-val-important);
-        }
-        .#{$config-prefix-phone}border-box{
-            @include border-box;
-        }
+        // ---- Visibility and more ---- 
 
-        .#{$config-prefix-phone}hide-text {
-            @include hide-text();
-        }
+            .#{$scu-val-prefix-phone}hide, .#{$scu-val-prefix-phone}hidden {
+                display: none#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}invisible {
+                visibility: hidden#{$scu-val-important};
+            }
 
-        .#{$config-prefix-phone}ellipsis {
-            @include ellipsis();
-        }
+            .#{$scu-val-prefix-phone}transparent{
+                zoom: 1#{$scu-val-important};
+                filter: alpha(opacity=0)#{$scu-val-important};
+                opacity: 0#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}opaque{
+                zoom: 1#{$scu-val-important};
+                filter: alpha(opacity=100)#{$scu-val-important};
+                opacity: 1#{$scu-val-important};
+            }
 
-        .#{$config-prefix-phone}non-selectable, .disable-text-select {
-            @include non-selectable();
-        }
+            .#{$scu-val-prefix-phone}inline {
+                display: inline#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}block{
+                display: block#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}inline-block{
+                display: inline-block#{$scu-val-important};
+                max-width: 100%#{$scu-val-important};
+            }
 
-        .#{$config-prefix-phone}uc, .#{$config-prefix-phone}uppercase{
-            text-transform: uppercase#{$scu-val-important};
-        }
-        .#{$config-prefix-phone}lc, .#{$config-prefix-phone}lowercase{
-            text-transform: lowercase#{$scu-val-important};
-        }
+            .#{$scu-val-prefix-phone}table {
+                display: table#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}table-cell {
+                display: table-cell#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}table-row {
+                display: table-row#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone}border-box{
+                -moz-box-sizing: border-box#{$scu-val-important};
+                -webkit-box-sizing: border-box#{$scu-val-important};
+                box-sizing: border-box#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone}hide-text {
+                display: block#{$scu-val-important};
+                overflow: hidden#{$scu-val-important};
+                text-indent: -9999px#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone}ellipsis {
+                white-space: nowrap#{$scu-val-important};
+                overflow: hidden#{$scu-val-important};
+                -ms-text-overflow: ellipsis#{$scu-val-important};
+                -o-text-overflow: ellipsis#{$scu-val-important};
+                text-overflow: ellipsis#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone}non-selectable, .disable-text-select {
+                -webkit-user-select: none#{$scu-val-important};
+                -moz-user-select: none#{$scu-val-important};
+                -ms-user-select: none#{$scu-val-important};
+                user-select: none#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone}uc, .#{$scu-val-prefix-phone}uppercase{
+                text-transform: uppercase#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}lc, .#{$scu-val-prefix-phone}lowercase{
+                text-transform: lowercase#{$scu-val-important};
+            }
+    }
 }
 

@@ -11,22 +11,16 @@
 
 // ====== Prefixes ======
 
-    $scu-prefix:                            "" !default;
+    $scu-prefix:                            "u-" !default;
     $scu-prefix-tablet:                     "tab-" !default;
     $scu-prefix-phone-tablet:               "phn-tab-" !default;
     $scu-prefix-phone:                      "phn-" !default;
-
-    $config-prefix-tablet:                  "tab-" !default;
-    $config-prefix-phone-tablet:            "phn-tab-" !default;
-    $config-prefix-phone:                   "phn-" !default;
 
 // ====== !important ======
     
     $scu-use-important:                     true !default;
     $scu-paddings-use-important:            $scu-use-important !default;
     $scu-margins-use-important:             $scu-use-important !default;
-
-    $config-global-use-important:           true !default;
 
 // ====== Media Devices ======
 
@@ -71,11 +65,6 @@
     $scu-phone-margins-vertical:            $scu-margins-vertical !default;
     $scu-phone-margins-horizontal:          $scu-margins-horizontal !default;
 
-    $config-margins:               (0 5 10 15 20 25 30) !default;
-    $config-tablet-margins:        $config-margins !default;
-    $config-phone-tablet-margins:  $config-margins !default;
-    $config-phone-margins:         $config-margins !default;
-
 // ====== Setting default variable values based on config. Do not edit unless you know what you are doing! ======
 
     $scu-val-important:                     if($scu-use-important, " !important", "");
@@ -86,8 +75,4 @@
     $scu-val-prefix-tablet:                 $scu-val-prefix + $scu-prefix-tablet;
     $scu-val-prefix-phone-tablet:           $scu-val-prefix + $scu-prefix-phone-tablet;
     $scu-val-prefix-phone:                  $scu-val-prefix + $scu-prefix-phone;
-
-    $important: if($scu-use-important, " !important", "");
-    $important-paddings: $important;
-    $important-margins: $important;
 

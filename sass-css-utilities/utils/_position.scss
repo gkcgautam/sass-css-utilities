@@ -1,17 +1,17 @@
 
-.pos-relative {
+.#{$scu-val-prefix}pos-relative {
     position:relative#{$scu-val-important};
 }
 
-.pos-absolute {
+.#{$scu-val-prefix}pos-absolute {
     position:absolute#{$scu-val-important};
 }
 
-.pos-static {
+.#{$scu-val-prefix}pos-static {
     position:static#{$scu-val-important};
 }
 
-.pos-fixed {
+.#{$scu-val-prefix}pos-fixed {
     position:fixed#{$scu-val-important};
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
