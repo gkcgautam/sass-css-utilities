@@ -1,10 +1,38 @@
 
-@mixin font-size ($size: 12, $line_height:false ){
-	font-size: $size + px;
-	font-size: (0.125 * $size) + rem;
+@mixin rem($property, $px-values) {
+    // Convert the baseline into rems
+    $baseline-rem: $scu-rem-baseline-px / 1rem * 1;
 
-	@if $line_height{
-		line-height: $line_height + px;
-		line-height: (0.125 * $line_height) + rem;
-	}
+    // Print the first line in pixel values
+    @if $scu-rem-include-px{
+        #{$property}: $px-values;
+    }
+
+    // If there is only one (numeric) value, return the property/value line for it.
+    @if type-of($px-values) == "number" {
+        #{$property}: $px-values / $baseline-rem;
+    }
+    @else {
+        // Create an empty list that we can dump values into
+        $rem-values: ();
+        @each $value in $px-values {
+            // If the value is zero or not a number, return it
+            @if $value == 0 or type-of( $value ) != "number" {
+                $rem-values: append($rem-values, $value);
+            }
+            @else {
+                $rem-values: append($rem-values, $value / $baseline-rem);
+            }
+        }
+
+        // Return the property and its list of converted values
+        #{$property}: $rem-values;
+    }
+}
+
+@mixin rem-font($font-size-px, $line-height-px:false){
+    @include rem('font-size', $font-size-px);
+    @if $line-height-px{
+        @include rem('line-height', $line-height-px);
+    }
 }

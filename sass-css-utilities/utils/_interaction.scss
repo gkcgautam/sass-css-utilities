@@ -1,8 +1,8 @@
 
-.clickable{
-	cursor: pointer;
+.#{$scu-val-prefix}clickable{
+    cursor: pointer;
 
-	&.disabled{
-		cursor: default;
-	}
+    &.disabled{
+        cursor: default;
+    }
 }

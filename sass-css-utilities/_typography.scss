@@ -1,68 +1,74 @@
 
-.normal {
-	font-weight: normal#{$important};
+.#{$scu-val-prefix}normal {
+    font-weight: normal#{$scu-val-important};
 }
-.bold {
-    font-weight: bold#{$important};
-}
-
-.italic {
-    font-style: italic#{$important};
+.#{$scu-val-prefix}bold {
+    font-weight: bold#{$scu-val-important};
 }
 
-.line-through{
-    text-decoration: line-through#{$important};
+.#{$scu-val-prefix}italic {
+    font-style: italic#{$scu-val-important};
 }
 
-@include if-device(tablet) {
-	.#{$config-prefix-tablet}normal {
-		font-weight: normal#{$important};
-	}
-	.#{$config-prefix-tablet}bold {
-	    font-weight: bold#{$important};
-	}
-
-	.#{$config-prefix-tablet}italic {
-	    font-style: italic#{$important};
-	}
-
-	.#{$config-prefix-tablet}line-through{
-	    text-decoration: line-through#{$important};
-	}
+.#{$scu-val-prefix}line-through{
+    text-decoration: line-through#{$scu-val-important};
 }
 
-@include if-device(phone-tablet) {
-	.#{$config-prefix-phone-tablet}normal {
-		font-weight: normal#{$important};
-	}
+@if $scu-build-tablet-classes{
+    @include if-device(tablet) {
+        .#{$scu-val-prefix-tablet}normal {
+            font-weight: normal#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-tablet}bold {
+            font-weight: bold#{$scu-val-important};
+        }
 
-	.#{$config-prefix-phone-tablet}bold {
-	    font-weight: bold#{$important};
-	}
+        .#{$scu-val-prefix-tablet}italic {
+            font-style: italic#{$scu-val-important};
+        }
 
-	.#{$config-prefix-phone-tablet}italic {
-	    font-style: italic#{$important};
-	}
-
-	.#{$config-prefix-phone-tablet}line-through{
-	    text-decoration: line-through#{$important};
-	}
+        .#{$scu-val-prefix-tablet}line-through{
+            text-decoration: line-through#{$scu-val-important};
+        }
+    }
 }
 
-@include if-device(phone) {
-	.#{$config-prefix-phone}normal {
-		font-weight: normal#{$important};
-	}
+@if $scu-build-phone-tablet-classes{
+    @include if-device(phone-tablet) {
+        .#{$scu-val-prefix-phone-tablet}normal {
+            font-weight: normal#{$scu-val-important};
+        }
 
-	.#{$config-prefix-phone}bold {
-	    font-weight: bold#{$important};
-	}
+        .#{$scu-val-prefix-phone-tablet}bold {
+            font-weight: bold#{$scu-val-important};
+        }
 
-	.#{$config-prefix-phone}italic {
-	    font-style: italic#{$important};
-	}
+        .#{$scu-val-prefix-phone-tablet}italic {
+            font-style: italic#{$scu-val-important};
+        }
 
-	.#{$config-prefix-phone}line-through{
-	    text-decoration: line-through#{$important};
-	}
+        .#{$scu-val-prefix-phone-tablet}line-through{
+            text-decoration: line-through#{$scu-val-important};
+        }
+    }
+}
+
+@if $scu-build-phone-classes{
+    @include if-device(phone) {
+        .#{$scu-val-prefix-phone}normal {
+            font-weight: normal#{$scu-val-important};
+        }
+
+        .#{$scu-val-prefix-phone}bold {
+            font-weight: bold#{$scu-val-important};
+        }
+
+        .#{$scu-val-prefix-phone}italic {
+            font-style: italic#{$scu-val-important};
+        }
+
+        .#{$scu-val-prefix-phone}line-through{
+            text-decoration: line-through#{$scu-val-important};
+        }
+    }
 }
