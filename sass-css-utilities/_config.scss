@@ -6,14 +6,6 @@
     $scu-build-phone-tablet-classes:        true !default;
     $scu-build-phone-classes:               true !default;
 
-// ====== !important ======
-    
-    $scu-use-important:                     true !default;
-    $scu-paddings-use-important:            $scu-use-important !default;
-    $scu-margins-use-important:             $scu-use-important !default;
-
-    $config-global-use-important:           true !default;
-
 // ====== Prefixes ======
 
     $scu-prefix:                            "" !default;
@@ -24,6 +16,21 @@
     $config-prefix-tablet:                  "tab-" !default;
     $config-prefix-phone-tablet:            "phn-tab-" !default;
     $config-prefix-phone:                   "phn-" !default;
+
+// ====== !important ======
+    
+    $scu-use-important:                     true !default;
+    $scu-paddings-use-important:            $scu-use-important !default;
+    $scu-margins-use-important:             $scu-use-important !default;
+
+    $config-global-use-important:           true !default;
+
+// ====== Media Devices ======
+
+    $scu-desktop-min-width:                 980px !default;
+    $scu-tablet-min-width:                  768px !default;
+    $scu-tablet-max-width:                  979px !default;
+    $scu-phone-max-width:                   767px !default;
 
 // ====== Paddings ======
 
