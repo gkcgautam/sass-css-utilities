@@ -1,23 +1,43 @@
 
 @mixin at-least-width($device-width) {
-	@media only screen and (min-width: $device-width) { @content; }
+    @media only screen and (min-width: $device-width) { @content; }
 }
 
 @mixin until-width($device-width) {
-	@media only screen and (max-width: $device-width) { @content; }
+    @media only screen and (max-width: $device-width) { @content; }
 }
 
 @mixin if-device($device) {
-	@if $device == desktop {
-		@media only screen and (min-width: $scu-desktop-min-width) { @content; }
-	}
-	@else if $device == tablet {
-		@media only screen and (min-width: $scu-tablet-min-width) and (max-width: $scu-tablet-max-width) { @content; }
-	}
-	@else if $device == phone-tablet {
-		@media only screen and (max-width: $scu-tablet-max-width) { @content; }
-	}
-	@else if $device == phone {
-		@media only screen and (max-width: $scu-phone-max-width) { @content; }
-	}
+    @if $device == desktop {
+        @media only screen and (min-width: $scu-desktop-min-width) { @content; }
+    }
+    @else if $device == tablet {
+        @media only screen and (min-width: $scu-tablet-min-width) and (max-width: $scu-tablet-max-width) { @content; }
+    }
+    @else if $device == phone-tablet {
+        @media only screen and (max-width: $scu-tablet-max-width) { @content; }
+    }
+    @else if $device == phone {
+        @media only screen and (max-width: $scu-phone-max-width) { @content; }
+    }
+}
+
+@mixin bg-image-2x($file, $type, $width:false, $height:false) {
+    background-repeat:no-repeat;
+    background-image: url($file + '.' + $type);
+
+    @if $width{
+        -webkit-background-size: $width $height;  // Needed only for Android v < 3
+        background-size: $width $height;
+    }
+
+    @media print,
+    (-o-min-device-pixel-ratio: 5/4),
+    (-webkit-min-device-pixel-ratio: 1.25),
+    (min-resolution: 120dpi),
+    (min-resolution: 2dppx) {
+        & {
+            background-image: url($file + '@2x.' + $type);
+        }
+    }
 }
