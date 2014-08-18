@@ -1,100 +1,118 @@
 
-@mixin auto-generate-margins($values, $prefix:"") {
+@mixin auto-generate-margins($values, $values-vertical, $values-horizontal, $prefix:"") {
 
-	@each $val in $values{
-		// Margin all
-		.#{$prefix}mar-#{$val}{
-			margin: #{$val}px#{$important-margins};
-		}
+    // Margin all
+    @each $val in $values{
 
-		// Margin top and vertical
-		.#{$prefix}mt-#{$val},
-		.#{$prefix}mv-#{$val}{
-			margin-top: #{$val}px#{$important-margins};
-		}
+        .#{$prefix}mar-#{$val}{
+            margin: #{$val}px#{$scu-val-important-margins};
+        }
+    }
 
-		// Margin bottom and vertical
-		.#{$prefix}mb-#{$val},
-		.#{$prefix}mv-#{$val}{
-			margin-bottom: #{$val}px#{$important-margins};
-		}
+    // Margin top, bottom and vertical
+    @each $val in $values-vertical {
 
-		// Margin left and horizontal
-		.#{$prefix}ml-#{$val},
-		.#{$prefix}mh-#{$val}{
-			margin-left: #{$val}px#{$important-margins};
-		}
+        .#{$prefix}mt-#{$val},
+        .#{$prefix}mv-#{$val}{
+            margin-top: #{$val}px#{$scu-val-important-margins};
+        }
 
-		// Margin right and horizontal
-		.#{$prefix}mr-#{$val},
-		.#{$prefix}mh-#{$val}{
-			margin-right: #{$val}px#{$important-margins};
-		}
-	}
+        .#{$prefix}mb-#{$val},
+        .#{$prefix}mv-#{$val}{
+            margin-bottom: #{$val}px#{$scu-val-important-margins};
+        }
+    }
+
+    // Margin left, right and horizontal
+    @each $val in $values-horizontal {
+
+        .#{$prefix}ml-#{$val},
+        .#{$prefix}mh-#{$val}{
+            margin-left: #{$val}px#{$scu-val-important-margins};
+        }
+
+        .#{$prefix}mr-#{$val},
+        .#{$prefix}mh-#{$val}{
+            margin-right: #{$val}px#{$scu-val-important-margins};
+        }
+    }
 }
 
 // General margin classes
 
-	.ma,
-	.mar-auto {
-		margin-left: auto#{$important};
-		margin-right: auto#{$important};
-	}
+    .ma,
+    .mar-auto {
+        margin-left: auto#{$scu-val-important-margins};
+        margin-right: auto#{$scu-val-important-margins};
+    }
 
-	.ml-a, .ml-auto { margin-left: auto#{$important}; }
-	.mr-a, .mr-auto { margin-right: auto#{$important}; }
+    .ml-a, .ml-auto { margin-left: auto#{$scu-val-important-margins}; }
+    .mr-a, .mr-auto { margin-right: auto#{$scu-val-important-margins}; }
 
 // Auto generated margin classes
 
-	@include auto-generate-margins($config-margins);
+    @include auto-generate-margins($scu-margins, $scu-margins-vertical, $scu-margins-horizontal, $scu-val-prefix);
 
-	@include if-device(tablet) {
-		.#{$config-prefix-tablet}ma,
-		.#{$config-prefix-tablet}mar-auto {
-			margin-left: auto#{$important};
-			margin-right: auto#{$important};
-		}
+    @if $scu-build-tablet-classes{
+        @include if-device(tablet) {
+            .#{$scu-val-prefix-tablet}ma,
+            .#{$scu-val-prefix-tablet}mar-auto {
+                margin-left: auto#{$scu-val-important-margins};
+                margin-right: auto#{$scu-val-important-margins};
+            }
 
-		.#{$config-prefix-tablet}ml-a, .#{$config-prefix-tablet}ml-auto {
-			margin-left: auto#{$important};
-		}
-		.#{$config-prefix-tablet}mr-a, .#{$config-prefix-tablet}mr-auto {
-			margin-right: auto#{$important};
-		}
+            .#{$scu-val-prefix-tablet}ml-a,
+            .#{$scu-val-prefix-tablet}ml-auto {
+                margin-left: auto#{$scu-val-important-margins};
+            }
+            .#{$scu-val-prefix-tablet}mr-a,
+            .#{$scu-val-prefix-tablet}mr-auto {
+                margin-right: auto#{$scu-val-important-margins};
+            }
 
-		@include auto-generate-margins($config-tablet-margins, $config-prefix-tablet);
-	}
+            @include auto-generate-margins($scu-tablet-margins, $scu-tablet-margins-vertical, $scu-tablet-margins-horizontal, $scu-val-prefix-tablet);
+        }
+    }
 
-	@include if-device(phone-tablet) {
-		.#{$config-prefix-phone-tablet}ma,
-		.#{$config-prefix-phone-tablet}mar-auto {
-			margin-left: auto#{$important};
-			margin-right: auto#{$important};
-		}
+    @if $scu-build-phone-tablet-classes{
+        @include if-device(phone-tablet) {
+            .#{$scu-val-prefix-phone-tablet}ma,
+            .#{$scu-val-prefix-phone-tablet}mar-auto {
+                margin-left: auto#{$scu-val-important-margins};
+                margin-right: auto#{$scu-val-important-margins};
+            }
 
-		.#{$config-prefix-phone-tablet}ml-a, .#{$config-prefix-tablet}ml-auto {
-			margin-left: auto#{$important};
-		}
-		.#{$config-prefix-phone-tablet}mr-a, .#{$config-prefix-tablet}mr-auto {
-			margin-right: auto#{$important};
-		}
+            .#{$scu-val-prefix-phone-tablet}ml-a,
+            .#{$scu-val-prefix-phone-tablet}ml-auto {
+                margin-left: auto#{$scu-val-important-margins};
+            }
+            .#{$scu-val-prefix-phone-tablet}mr-a,
+            .#{$scu-val-prefix-phone-tablet}mr-auto {
+                margin-right: auto#{$scu-val-important-margins};
+            }
 
-		@include auto-generate-margins($config-phone-tablet-margins, $config-prefix-phone-tablet);
-	}
+            @include auto-generate-margins($scu-phone-tablet-margins, $scu-phone-tablet-margins-vertical, $scu-phone-tablet-margins-horizontal, $scu-val-prefix-phone-tablet);
+        }
+    }
 
-	@include if-device(phone) {
-		.#{$config-prefix-phone}ma,
-		.#{$config-prefix-phone}mar-auto {
-			margin-left: auto#{$important};
-			margin-right: auto#{$important};
-		}
+    @if $scu-build-phone-classes{
+        @include if-device(phone) {
+            .#{$scu-val-prefix-phone}ma,
+            .#{$scu-val-prefix-phone}mar-auto {
+                margin-left: auto#{$scu-val-important-margins};
+                margin-right: auto#{$scu-val-important-margins};
+            }
 
-		.#{$config-prefix-phone}ml-a, .#{$config-prefix-tablet}ml-auto {
-			margin-left: auto#{$important};
-		}
-		.#{$config-prefix-phone}mr-a, .#{$config-prefix-tablet}mr-auto {
-			margin-right: auto#{$important};
-		}
+            .#{$scu-val-prefix-phone}ml-a,
+            .#{$scu-val-prefix-phone}ml-auto {
+                margin-left: auto#{$scu-val-important-margins};
+            }
+            .#{$scu-val-prefix-phone}mr-a,
+            .#{$scu-val-prefix-phone}mr-auto {
+                margin-right: auto#{$scu-val-important-margins};
+            }
 
-		@include auto-generate-margins($config-phone-margins, $config-prefix-phone);
-	}
+            @include auto-generate-margins($scu-phone-margins, $scu-phone-margins-vertical, $scu-phone-margins-horizontal, $scu-val-prefix-phone);
+        }
+    }
+

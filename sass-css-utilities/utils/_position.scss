@@ -1,70 +1,84 @@
 
 .pos-relative {
-	position:relative#{$important};
+    position:relative#{$scu-val-important};
 }
 
 .pos-absolute {
-	position:absolute#{$important};
+    position:absolute#{$scu-val-important};
 }
 
 .pos-static {
-	position:static#{$important};
+    position:static#{$scu-val-important};
 }
 
 .pos-fixed {
-	position:fixed#{$important};
+    position:fixed#{$scu-val-important};
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
-@include if-device(tablet) {
-	.#{$config-prefix-tablet}pos-relative {
-		position:relative#{$important};
-	}
+@if $scu-build-tablet-classes{
+    @include if-device(tablet) {
+        .#{$scu-val-prefix-tablet}pos-relative {
+            position:relative#{$scu-val-important};
+        }
 
-	.#{$config-prefix-tablet}pos-absolute {
-		position:absolute#{$important};
-	}
+        .#{$scu-val-prefix-tablet}pos-absolute {
+            position:absolute#{$scu-val-important};
+        }
 
-	.#{$config-prefix-tablet}pos-static {
-		position:static#{$important};
-	}
+        .#{$scu-val-prefix-tablet}pos-static {
+            position:static#{$scu-val-important};
+        }
 
-	.#{$config-prefix-tablet}pos-fixed {
-		position:fixed#{$important};
-	}
+        .#{$scu-val-prefix-tablet}pos-fixed {
+            position:fixed#{$scu-val-important};
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+    }
 }
 
-@include if-device(phone-tablet) {
-	.#{$config-prefix-phone-tablet}pos-relative {
-		position:relative#{$important};
-	}
+@if $scu-build-phone-tablet-classes{
+    @include if-device(phone-tablet) {
+        .#{$scu-val-prefix-phone-tablet}pos-relative {
+            position:relative#{$scu-val-important};
+        }
 
-	.#{$config-prefix-phone-tablet}pos-absolute {
-		position:absolute#{$important};
-	}
+        .#{$scu-val-prefix-phone-tablet}pos-absolute {
+            position:absolute#{$scu-val-important};
+        }
 
-	.#{$config-prefix-phone-tablet}pos-static {
-		position:static#{$important};
-	}
+        .#{$scu-val-prefix-phone-tablet}pos-static {
+            position:static#{$scu-val-important};
+        }
 
-	.#{$config-prefix-phone-tablet}pos-fixed {
-		position:fixed#{$important};
-	}
+        .#{$scu-val-prefix-phone-tablet}pos-fixed {
+            position:fixed#{$scu-val-important};
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+    }
 }
 
-@include if-device(phone) {
-	.#{$config-prefix-phone}pos-relative {
-		position:relative#{$important};
-	}
+@if $scu-build-phone-classes{
+    @include if-device(phone) {
+        .#{$scu-val-prefix-phone}pos-relative {
+            position:relative#{$scu-val-important};
+        }
 
-	.#{$config-prefix-phone}pos-absolute {
-		position:absolute#{$important};
-	}
+        .#{$scu-val-prefix-phone}pos-absolute {
+            position:absolute#{$scu-val-important};
+        }
 
-	.#{$config-prefix-phone}pos-static {
-		position:static#{$important};
-	}
+        .#{$scu-val-prefix-phone}pos-static {
+            position:static#{$scu-val-important};
+        }
 
-	.#{$config-prefix-phone}pos-fixed {
-		position:fixed#{$important};
-	}
+        .#{$scu-val-prefix-phone}pos-fixed {
+            position:fixed#{$scu-val-important};
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+    }
 }
