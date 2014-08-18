@@ -1,386 +1,441 @@
 
 // ---- Width ----
 
-	.width-auto {
-		width:auto#{$important};
-	}
-	.width-full {
-		width:100%#{$important};
-	}
+    .width-auto {
+        width:auto#{$scu-val-important};
+    }
+    .width-fill {
+        width:auto#{$scu-val-important};
+        display: block#{$scu-val-important};
+        overflow: hidden#{$scu-val-important};
+    }
+    .width-full {
+        width:100%#{$scu-val-important};
+    }
+    .width-full-alt {
+        width:100%#{$scu-val-important};
+        display: block#{$scu-val-important};
+        -moz-box-sizing: border-box#{$scu-val-important};
+             box-sizing: border-box#{$scu-val-important};
+    }
 
-// ---- Floats ----  
+// ---- Floats and Clear Fix ----  
 
-	.fl {
-		float:left#{$important};
-	}
-	.fr {
-		float:right#{$important};
-	}
-	.clr,
-	.clear {
-		clear:both;
-	}
+    .fl {
+        float:left#{$scu-val-important};
+    }
+    .fr {
+        float:right#{$scu-val-important};
+    }
+    .clr,
+    .clear {
+        clear:both;
+    }
+
+    .cf,
+    .clearfix {
+        zoom: 1;
+
+        &:before,
+        &:after {
+            content: " ";
+            display: table;
+        }
+
+        &:after {
+            clear: both;
+        }
+    }
 
 
 // ---- Text Align ----  
 
-	.ta-c, .align-center {
-		text-align: center#{$important};
-	}
+    .ta-c, .align-center {
+        text-align: center#{$scu-val-important};
+    }
 
-	.ta-l, .align-left{
-		text-align: left#{$important};
-	}
-	.ta-r, .align-right {
-		text-align: right#{$important};
-	}
+    .ta-l, .align-left {
+        text-align: left#{$scu-val-important};
+    }
+    .ta-r, .align-right {
+        text-align: right#{$scu-val-important};
+    }
 
 // ---- Align ----  
 
-	.va-t, .align-top{
-		vertical-align: top#{$important};
-	}
-	.va-m, .align-middle {
-		vertical-align: middle#{$important};
-	}
-	.va-b, .align-bottom {
-		vertical-align: bottom#{$important};
-	}
-
-
-// ---- Clear Fix ----  
-
-	.clearfix{
-		@include clearfix;
-	}
+    .va-top, .align-top {
+        vertical-align: top#{$scu-val-important};
+    }
+    .va-middle, .align-middle {
+        vertical-align: middle#{$scu-val-important};
+    }
+    .va-bottom, .align-bottom {
+        vertical-align: bottom#{$scu-val-important};
+    }
+    .va-baseline, .align-baseline {
+        vertical-align: baseline#{$scu-val-important};
+    }
 
 // ---- Visibility and more ---- 
 
-	.hide {
-		display: none#{$important};
-	}
-	.invisible {
-		visibility: hidden#{$important};
-	}
+    .hide .hidden {
+        display: none#{$scu-val-important};
+    }
+    .invisible {
+        visibility: hidden#{$scu-val-important};
+    }
 
-	.transparent{
-		@include opacity(0);
-	}
-	.opaque{
-		@include opacity(1);
-	}
+    .transparent {
+        zoom: 1#{$scu-val-important};
+        filter: alpha(opacity=0)#{$scu-val-important};
+        opacity: 0#{$scu-val-important};
+    }
+    .opaque {
+        zoom: 1#{$scu-val-important};
+        filter: alpha(opacity=100)#{$scu-val-important};
+        opacity: 1#{$scu-val-important};
+    }
 
-	.block{
-		display: block#{$important};
-	}
-	.inline-block{
-		@include inline-block($important);
-	}
-	.border-box{
-		@include border-box;
-	}
+    .inline {
+        display: inline#{$scu-val-important};
+    }
+    .block {
+        display: block#{$scu-val-important};
+    }
+    .inline-block {
+        display: inline-block#{$scu-val-important};
+        max-width: 100%#{$scu-val-important};
+    }
 
-	.hide-text {
-	    @include hide-text();
-	}
+    .table {
+        display: table#{$scu-val-important};
+    }
 
-	.ellipsis {
-		@include ellipsis();
-	}
+    .table-cell {
+        display: table-cell#{$scu-val-important};
+    }
 
-	.non-selectable, .disable-text-select {
-		@include non-selectable();
-	}
+    .table-row {
+        display: table-row#{$scu-val-important};
+    }
 
-	.uc, .uppercase{
-		text-transform: uppercase#{$important};
-	}
-	.lc, .lowercase{
-		text-transform: lowercase#{$important};
-	}
+    .border-box {
+        -moz-box-sizing: border-box#{$scu-val-important};
+        -webkit-box-sizing: border-box#{$scu-val-important};
+        box-sizing: border-box#{$scu-val-important};
+    }
+
+    .hide-text {
+        display: block#{$scu-val-important};
+        overflow: hidden#{$scu-val-important};
+        text-indent: -9999px#{$scu-val-important};
+    }
+
+    .ellipsis {
+        white-space: nowrap#{$scu-val-important};
+        overflow: hidden#{$scu-val-important};
+        -ms-text-overflow: ellipsis#{$scu-val-important};
+        -o-text-overflow: ellipsis#{$scu-val-important};
+        text-overflow: ellipsis#{$scu-val-important};
+    }
+
+    .non-selectable, .disable-text-select {
+        @include non-selectable();
+        -webkit-user-select: none#{$scu-val-important};
+        -moz-user-select: none#{$scu-val-important};
+        -ms-user-select: none#{$scu-val-important};
+        user-select: none#{$scu-val-important};
+    }
+
+    .uc, .uppercase {
+        text-transform: uppercase#{$scu-val-important};
+    }
+    .lc, .lowercase {
+        text-transform: lowercase#{$scu-val-important};
+    }
 
 @include if-device(tablet) {
 
-	// ---- Width ----
+    // ---- Width ----
 
-		.#{$config-prefix-tablet}width-auto {
-			width:auto#{$important};
-		}
-		.#{$config-prefix-tablet}width-full {
-			width:100%#{$important};
-		}
+        .#{$config-prefix-tablet}width-auto {
+            width:auto#{$scu-val-important};
+        }
+        .#{$config-prefix-tablet}width-full {
+            width:100%#{$scu-val-important};
+        }
 
-	// ---- Floats ----
+    // ---- Floats ----
 
-		.#{$config-prefix-tablet}fl {
-			float:left#{$important};
-		}
-		.#{$config-prefix-tablet}fr {
-			float:right#{$important};
-		}
-		.#{$config-prefix-tablet}clr,
-		.#{$config-prefix-tablet}clear {
-			clear:both;
-		}
+        .#{$config-prefix-tablet}fl {
+            float:left#{$scu-val-important};
+        }
+        .#{$config-prefix-tablet}fr {
+            float:right#{$scu-val-important};
+        }
+        .#{$config-prefix-tablet}clr,
+        .#{$config-prefix-tablet}clear {
+            clear:both;
+        }
 
-	// ---- Text Align ----
+    // ---- Text Align ----
 
-		.#{$config-prefix-tablet}ta-c, .#{$config-prefix-tablet}align-center {
-			text-align: center#{$important};
-		}
+        .#{$config-prefix-tablet}ta-c, .#{$config-prefix-tablet}align-center {
+            text-align: center#{$scu-val-important};
+        }
 
-		.#{$config-prefix-tablet}ta-l, .#{$config-prefix-tablet}align-left{
-			text-align: left#{$important};
-		}
-		.#{$config-prefix-tablet}ta-r, .#{$config-prefix-tablet}align-right {
-			text-align: right#{$important};
-		}
+        .#{$config-prefix-tablet}ta-l, .#{$config-prefix-tablet}align-left{
+            text-align: left#{$scu-val-important};
+        }
+        .#{$config-prefix-tablet}ta-r, .#{$config-prefix-tablet}align-right {
+            text-align: right#{$scu-val-important};
+        }
 
-	// ---- Align ----
+    // ---- Align ----
 
-		.#{$config-prefix-tablet}va-t, .#{$config-prefix-tablet}align-top{
-			vertical-align: top#{$important};
-		}
-		.#{$config-prefix-tablet}va-m, .#{$config-prefix-tablet}align-middle {
-			vertical-align: middle#{$important};
-		}
-		.#{$config-prefix-tablet}va-b, .#{$config-prefix-tablet}align-bottom {
-			vertical-align: bottom#{$important};
-		}
+        .#{$config-prefix-tablet}va-t, .#{$config-prefix-tablet}align-top{
+            vertical-align: top#{$scu-val-important};
+        }
+        .#{$config-prefix-tablet}va-m, .#{$config-prefix-tablet}align-middle {
+            vertical-align: middle#{$scu-val-important};
+        }
+        .#{$config-prefix-tablet}va-b, .#{$config-prefix-tablet}align-bottom {
+            vertical-align: bottom#{$scu-val-important};
+        }
 
-	// ---- Visibility and more ---- 
+    // ---- Visibility and more ---- 
 
-		.#{$config-prefix-tablet}hide {
-			display: none#{$important};
-		}
-		.#{$config-prefix-tablet}invisible {
-			visibility: hidden#{$important};
-		}
+        .#{$config-prefix-tablet}hide {
+            display: none#{$scu-val-important};
+        }
+        .#{$config-prefix-tablet}invisible {
+            visibility: hidden#{$scu-val-important};
+        }
 
-		.#{$config-prefix-tablet}transparent{
-			@include opacity(0);
-		}
-		.#{$config-prefix-tablet}opaque{
-			@include opacity(1);
-		}
+        .#{$config-prefix-tablet}transparent{
+            @include opacity(0);
+        }
+        .#{$config-prefix-tablet}opaque{
+            @include opacity(1);
+        }
 
-		.#{$config-prefix-tablet}block{
-			display: block#{$important};
-		}
-		.#{$config-prefix-tablet}inline-block{
-			@include inline-block($important);
-		}
-		.#{$config-prefix-tablet}border-box{
-			@include border-box;
-		}
+        .#{$config-prefix-tablet}block{
+            display: block#{$scu-val-important};
+        }
+        .#{$config-prefix-tablet}inline-block{
+            @include inline-block($scu-val-important);
+        }
+        .#{$config-prefix-tablet}border-box{
+            @include border-box;
+        }
 
-		.#{$config-prefix-tablet}hide-text {
-		    @include hide-text();
-		}
+        .#{$config-prefix-tablet}hide-text {
+            @include hide-text();
+        }
 
-		.#{$config-prefix-tablet}ellipsis {
-			@include ellipsis();
-		}
+        .#{$config-prefix-tablet}ellipsis {
+            @include ellipsis();
+        }
 
-		.#{$config-prefix-tablet}non-selectable, .disable-text-select {
-			@include non-selectable();
-		}
+        .#{$config-prefix-tablet}non-selectable, .disable-text-select {
+            @include non-selectable();
+        }
 
-		.#{$config-prefix-tablet}uc, .#{$config-prefix-tablet}uppercase{
-			text-transform: uppercase#{$important};
-		}
-		.#{$config-prefix-tablet}lc, .#{$config-prefix-tablet}lowercase{
-			text-transform: lowercase#{$important};
-		}
+        .#{$config-prefix-tablet}uc, .#{$config-prefix-tablet}uppercase{
+            text-transform: uppercase#{$scu-val-important};
+        }
+        .#{$config-prefix-tablet}lc, .#{$config-prefix-tablet}lowercase{
+            text-transform: lowercase#{$scu-val-important};
+        }
 }
 
 @include if-device(phone-tablet) {
 
-	// ---- Width ----
+    // ---- Width ----
 
-		.#{$config-prefix-phone-tablet}width-auto {
-			width:auto#{$important};
-		}
-		.#{$config-prefix-phone-tablet}width-full {
-			width:100%#{$important};
-		}
+        .#{$config-prefix-phone-tablet}width-auto {
+            width:auto#{$scu-val-important};
+        }
+        .#{$config-prefix-phone-tablet}width-full {
+            width:100%#{$scu-val-important};
+        }
 
-	// ---- Floats ----
+    // ---- Floats ----
 
-		.#{$config-prefix-phone-tablet}fl {
-			float:left#{$important};
-		}
-		.#{$config-prefix-phone-tablet}fr {
-			float:right#{$important};
-		}
-		.#{$config-prefix-phone-tablet}clr,
-		.#{$config-prefix-phone-tablet}clear {
-			clear:both;
-		}
+        .#{$config-prefix-phone-tablet}fl {
+            float:left#{$scu-val-important};
+        }
+        .#{$config-prefix-phone-tablet}fr {
+            float:right#{$scu-val-important};
+        }
+        .#{$config-prefix-phone-tablet}clr,
+        .#{$config-prefix-phone-tablet}clear {
+            clear:both;
+        }
 
-	// ---- Text Align ----
+    // ---- Text Align ----
 
-		.#{$config-prefix-phone-tablet}ta-c, .#{$config-prefix-phone-tablet}align-center {
-			text-align: center#{$important};
-		}
+        .#{$config-prefix-phone-tablet}ta-c, .#{$config-prefix-phone-tablet}align-center {
+            text-align: center#{$scu-val-important};
+        }
 
-		.#{$config-prefix-phone-tablet}ta-l, .#{$config-prefix-phone-tablet}align-left{
-			text-align: left#{$important};
-		}
-		.#{$config-prefix-phone-tablet}ta-r, .#{$config-prefix-phone-tablet}align-right {
-			text-align: right#{$important};
-		}
+        .#{$config-prefix-phone-tablet}ta-l, .#{$config-prefix-phone-tablet}align-left{
+            text-align: left#{$scu-val-important};
+        }
+        .#{$config-prefix-phone-tablet}ta-r, .#{$config-prefix-phone-tablet}align-right {
+            text-align: right#{$scu-val-important};
+        }
 
-	// ---- Align ----
+    // ---- Align ----
 
-		.#{$config-prefix-phone-tablet}va-t, .#{$config-prefix-phone-tablet}align-top{
-			vertical-align: top#{$important};
-		}
-		.#{$config-prefix-phone-tablet}va-m, .#{$config-prefix-phone-tablet}align-middle {
-			vertical-align: middle#{$important};
-		}
-		.#{$config-prefix-phone-tablet}va-b, .#{$config-prefix-phone-tablet}align-bottom {
-			vertical-align: bottom#{$important};
-		}
+        .#{$config-prefix-phone-tablet}va-t, .#{$config-prefix-phone-tablet}align-top{
+            vertical-align: top#{$scu-val-important};
+        }
+        .#{$config-prefix-phone-tablet}va-m, .#{$config-prefix-phone-tablet}align-middle {
+            vertical-align: middle#{$scu-val-important};
+        }
+        .#{$config-prefix-phone-tablet}va-b, .#{$config-prefix-phone-tablet}align-bottom {
+            vertical-align: bottom#{$scu-val-important};
+        }
 
-	// ---- Visibility and more ---- 
+    // ---- Visibility and more ---- 
 
-		.#{$config-prefix-phone-tablet}hide {
-			display: none#{$important};
-		}
-		.#{$config-prefix-phone-tablet}invisible {
-			visibility: hidden#{$important};
-		}
+        .#{$config-prefix-phone-tablet}hide {
+            display: none#{$scu-val-important};
+        }
+        .#{$config-prefix-phone-tablet}invisible {
+            visibility: hidden#{$scu-val-important};
+        }
 
-		.#{$config-prefix-phone-tablet}transparent{
-			@include opacity(0);
-		}
-		.#{$config-prefix-phone-tablet}opaque{
-			@include opacity(1);
-		}
+        .#{$config-prefix-phone-tablet}transparent{
+            @include opacity(0);
+        }
+        .#{$config-prefix-phone-tablet}opaque{
+            @include opacity(1);
+        }
 
-		.#{$config-prefix-phone-tablet}block{
-			display: block#{$important};
-		}
-		.#{$config-prefix-phone-tablet}inline-block{
-			@include inline-block($important);
-		}
-		.#{$config-prefix-phone-tablet}border-box{
-			@include border-box;
-		}
+        .#{$config-prefix-phone-tablet}block{
+            display: block#{$scu-val-important};
+        }
+        .#{$config-prefix-phone-tablet}inline-block{
+            @include inline-block($scu-val-important);
+        }
+        .#{$config-prefix-phone-tablet}border-box{
+            @include border-box;
+        }
 
-		.#{$config-prefix-phone-tablet}hide-text {
-		    @include hide-text();
-		}
+        .#{$config-prefix-phone-tablet}hide-text {
+            @include hide-text();
+        }
 
-		.#{$config-prefix-phone-tablet}ellipsis {
-			@include ellipsis();
-		}
+        .#{$config-prefix-phone-tablet}ellipsis {
+            @include ellipsis();
+        }
 
-		.#{$config-prefix-phone-tablet}non-selectable, .disable-text-select {
-			@include non-selectable();
-		}
+        .#{$config-prefix-phone-tablet}non-selectable, .disable-text-select {
+            @include non-selectable();
+        }
 
-		.#{$config-prefix-phone-tablet}uc, .#{$config-prefix-phone-tablet}uppercase{
-			text-transform: uppercase#{$important};
-		}
-		.#{$config-prefix-phone-tablet}lc, .#{$config-prefix-phone-tablet}lowercase{
-			text-transform: lowercase#{$important};
-		}
+        .#{$config-prefix-phone-tablet}uc, .#{$config-prefix-phone-tablet}uppercase{
+            text-transform: uppercase#{$scu-val-important};
+        }
+        .#{$config-prefix-phone-tablet}lc, .#{$config-prefix-phone-tablet}lowercase{
+            text-transform: lowercase#{$scu-val-important};
+        }
 }
 
 @include if-device(phone) {
 
-	// ---- Width ----
+    // ---- Width ----
 
-		.#{$config-prefix-phone}width-auto {
-			width:auto#{$important};
-		}
-		.#{$config-prefix-phone}width-full {
-			width:100%#{$important};
-		}
+        .#{$config-prefix-phone}width-auto {
+            width:auto#{$scu-val-important};
+        }
+        .#{$config-prefix-phone}width-full {
+            width:100%#{$scu-val-important};
+        }
 
-	// ---- Floats ----
+    // ---- Floats ----
 
-		.#{$config-prefix-phone}fl {
-			float:left#{$important};
-		}
-		.#{$config-prefix-phone}fr {
-			float:right#{$important};
-		}
-		.#{$config-prefix-phone}clr,
-		.#{$config-prefix-phone}clear {
-			clear:both;
-		}
+        .#{$config-prefix-phone}fl {
+            float:left#{$scu-val-important};
+        }
+        .#{$config-prefix-phone}fr {
+            float:right#{$scu-val-important};
+        }
+        .#{$config-prefix-phone}clr,
+        .#{$config-prefix-phone}clear {
+            clear:both;
+        }
 
-	// ---- Text Align ----
+    // ---- Text Align ----
 
-		.#{$config-prefix-phone}ta-c, .#{$config-prefix-phone}align-center {
-			text-align: center#{$important};
-		}
+        .#{$config-prefix-phone}ta-c, .#{$config-prefix-phone}align-center {
+            text-align: center#{$scu-val-important};
+        }
 
-		.#{$config-prefix-phone}ta-l, .#{$config-prefix-phone}align-left{
-			text-align: left#{$important};
-		}
-		.#{$config-prefix-phone}ta-r, .#{$config-prefix-phone}align-right {
-			text-align: right#{$important};
-		}
+        .#{$config-prefix-phone}ta-l, .#{$config-prefix-phone}align-left{
+            text-align: left#{$scu-val-important};
+        }
+        .#{$config-prefix-phone}ta-r, .#{$config-prefix-phone}align-right {
+            text-align: right#{$scu-val-important};
+        }
 
-	// ---- Align ----
+    // ---- Align ----
 
-		.#{$config-prefix-phone}va-t, .#{$config-prefix-phone}align-top{
-			vertical-align: top#{$important};
-		}
-		.#{$config-prefix-phone}va-m, .#{$config-prefix-phone}align-middle {
-			vertical-align: middle#{$important};
-		}
-		.#{$config-prefix-phone}va-b, .#{$config-prefix-phone}align-bottom {
-			vertical-align: bottom#{$important};
-		}
+        .#{$config-prefix-phone}va-t, .#{$config-prefix-phone}align-top{
+            vertical-align: top#{$scu-val-important};
+        }
+        .#{$config-prefix-phone}va-m, .#{$config-prefix-phone}align-middle {
+            vertical-align: middle#{$scu-val-important};
+        }
+        .#{$config-prefix-phone}va-b, .#{$config-prefix-phone}align-bottom {
+            vertical-align: bottom#{$scu-val-important};
+        }
 
-	// ---- Visibility and more ---- 
+    // ---- Visibility and more ---- 
 
-		.#{$config-prefix-phone}hide {
-			display: none#{$important};
-		}
-		.#{$config-prefix-phone}invisible {
-			visibility: hidden#{$important};
-		}
+        .#{$config-prefix-phone}hide {
+            display: none#{$scu-val-important};
+        }
+        .#{$config-prefix-phone}invisible {
+            visibility: hidden#{$scu-val-important};
+        }
 
-		.#{$config-prefix-phone}transparent{
-			@include opacity(0);
-		}
-		.#{$config-prefix-phone}opaque{
-			@include opacity(1);
-		}
+        .#{$config-prefix-phone}transparent{
+            @include opacity(0);
+        }
+        .#{$config-prefix-phone}opaque{
+            @include opacity(1);
+        }
 
-		.#{$config-prefix-phone}block{
-			display: block#{$important};
-		}
-		.#{$config-prefix-phone}inline-block{
-			@include inline-block($important);
-		}
-		.#{$config-prefix-phone}border-box{
-			@include border-box;
-		}
+        .#{$config-prefix-phone}block{
+            display: block#{$scu-val-important};
+        }
+        .#{$config-prefix-phone}inline-block{
+            @include inline-block($scu-val-important);
+        }
+        .#{$config-prefix-phone}border-box{
+            @include border-box;
+        }
 
-		.#{$config-prefix-phone}hide-text {
-		    @include hide-text();
-		}
+        .#{$config-prefix-phone}hide-text {
+            @include hide-text();
+        }
 
-		.#{$config-prefix-phone}ellipsis {
-			@include ellipsis();
-		}
+        .#{$config-prefix-phone}ellipsis {
+            @include ellipsis();
+        }
 
-		.#{$config-prefix-phone}non-selectable, .disable-text-select {
-			@include non-selectable();
-		}
+        .#{$config-prefix-phone}non-selectable, .disable-text-select {
+            @include non-selectable();
+        }
 
-		.#{$config-prefix-phone}uc, .#{$config-prefix-phone}uppercase{
-			text-transform: uppercase#{$important};
-		}
-		.#{$config-prefix-phone}lc, .#{$config-prefix-phone}lowercase{
-			text-transform: lowercase#{$important};
-		}
+        .#{$config-prefix-phone}uc, .#{$config-prefix-phone}uppercase{
+            text-transform: uppercase#{$scu-val-important};
+        }
+        .#{$config-prefix-phone}lc, .#{$config-prefix-phone}lowercase{
+            text-transform: lowercase#{$scu-val-important};
+        }
 }
 
