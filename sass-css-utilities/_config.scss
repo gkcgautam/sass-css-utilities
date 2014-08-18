@@ -1,72 +1,72 @@
 // Default config values. Do NOT modify this file.
 
 // ====== !important ======
-	
-	$scu-use-important: 					true !default;
-	$scu-paddings-use-important:			$scu-use-important !default;
-	$scu-margins-use-important:				$scu-use-important !default;
+    
+    $scu-use-important:                     true !default;
+    $scu-paddings-use-important:            $scu-use-important !default;
+    $scu-margins-use-important:             $scu-use-important !default;
 
-	$config-global-use-important: 			true !default;
+    $config-global-use-important:           true !default;
 
 // ====== Prefixes ======
 
-	$scu-prefix: 			  				"" !default;
-	$scu-prefix-tablet:       				"tab-" !default;
-	$scu-prefix-phone-tablet: 				"phn-tab-" !default;
-	$scu-prefix-phone:        				"phn-" !default;
+    $scu-prefix:                            "" !default;
+    $scu-prefix-tablet:                     "tab-" !default;
+    $scu-prefix-phone-tablet:               "phn-tab-" !default;
+    $scu-prefix-phone:                      "phn-" !default;
 
-	$config-prefix-tablet:       			"tab-" !default;
-	$config-prefix-phone-tablet: 			"phn-tab-" !default;
-	$config-prefix-phone:        			"phn-" !default;
+    $config-prefix-tablet:                  "tab-" !default;
+    $config-prefix-phone-tablet:            "phn-tab-" !default;
+    $config-prefix-phone:                   "phn-" !default;
 
 // ====== Paddings ======
 
-	$scu-paddings: 			   				(0 5 10 15 20 25 30) !default;
-	$scu-paddings-vertical:    				$scu-paddings !default;
-	$scu-paddings-horizontal:  				$scu-paddings !default;
+    $scu-paddings:                          (0 5 10 15 20 25 30) !default;
+    $scu-paddings-vertical:                 $scu-paddings !default;
+    $scu-paddings-horizontal:               $scu-paddings !default;
 
-	$scu-tablet-paddings-vertical:  		$scu-paddings-vertical !default;
-	$scu-tablet-paddings-horizontal: 		$scu-paddings-horizontal !default;
+    $scu-tablet-paddings-vertical:          $scu-paddings-vertical !default;
+    $scu-tablet-paddings-horizontal:        $scu-paddings-horizontal !default;
 
-	$scu-phone-tablet-paddings-vertical:    $scu-paddings-vertical !default;
-	$scu-phone-tablet-paddings-horizontal:  $scu-paddings-horizontal !default;
+    $scu-phone-tablet-paddings-vertical:    $scu-paddings-vertical !default;
+    $scu-phone-tablet-paddings-horizontal:  $scu-paddings-horizontal !default;
 
-	$scu-phone-paddings-vertical:   		$scu-paddings-vertical !default;
-	$scu-phone-paddings-horizontal:  		$scu-paddings-horizontal !default;
+    $scu-phone-paddings-vertical:           $scu-paddings-vertical !default;
+    $scu-phone-paddings-horizontal:         $scu-paddings-horizontal !default;
 
 
-	$config-paddings: 			   (0 5 10 15 20 25 30) !default;
-	$config-tablet-paddings:       $config-paddings !default;
-	$config-phone-tablet-paddings: $config-paddings !default;
-	$config-phone-paddings:        $config-paddings !default;
+    $config-paddings:              (0 5 10 15 20 25 30) !default;
+    $config-tablet-paddings:       $config-paddings !default;
+    $config-phone-tablet-paddings: $config-paddings !default;
+    $config-phone-paddings:        $config-paddings !default;
 
 // ====== Margins ======
 
-	$scu-margins: 			   				(0 5 10 15 20 25 30) !default;
-	$scu-margins-vertical:    				$scu-margins !default;
-	$scu-margins-horizontal:  				$scu-margins !default;
+    $scu-margins:                           (0 5 10 15 20 25 30) !default;
+    $scu-margins-vertical:                  $scu-margins !default;
+    $scu-margins-horizontal:                $scu-margins !default;
 
-	$scu-tablet-margins-vertical:  			$scu-margins-vertical !default;
-	$scu-tablet-margins-horizontal: 		$scu-margins-horizontal !default;
+    $scu-tablet-margins-vertical:           $scu-margins-vertical !default;
+    $scu-tablet-margins-horizontal:         $scu-margins-horizontal !default;
 
-	$scu-phone-tablet-margins-vertical:     $scu-margins-vertical !default;
-	$scu-phone-tablet-margins-horizontal:   $scu-margins-horizontal !default;
+    $scu-phone-tablet-margins-vertical:     $scu-margins-vertical !default;
+    $scu-phone-tablet-margins-horizontal:   $scu-margins-horizontal !default;
 
-	$scu-phone-margins-vertical:   			$scu-margins-vertical !default;
-	$scu-phone-margins-horizontal:  		$scu-margins-horizontal !default;
+    $scu-phone-margins-vertical:            $scu-margins-vertical !default;
+    $scu-phone-margins-horizontal:          $scu-margins-horizontal !default;
 
-	$config-margins: 			   (0 5 10 15 20 25 30) !default;
-	$config-tablet-margins:        $config-margins !default;
-	$config-phone-tablet-margins:  $config-margins !default;
-	$config-phone-margins:         $config-margins !default;
+    $config-margins:               (0 5 10 15 20 25 30) !default;
+    $config-tablet-margins:        $config-margins !default;
+    $config-phone-tablet-margins:  $config-margins !default;
+    $config-phone-margins:         $config-margins !default;
 
 // ====== Setting default variables based on config. Do not edit unless you know what you are doing! ======
 
-	$scu-important: 						if($scu-use-important, " !important", "");
-	$scu-important-paddings: 				if($scu-paddings-use-important, " !important", "");
-	$scu-important-margins: 				if($scu-margins-use-important, " !important", "");
+    $scu-important:                         if($scu-use-important, " !important", "");
+    $scu-important-paddings:                if($scu-paddings-use-important, " !important", "");
+    $scu-important-margins:                 if($scu-margins-use-important, " !important", "");
 
-	$important: if($scu-use-important, " !important", "");
-	$important-paddings: $important;
-	$important-margins: $important;
+    $important: if($scu-use-important, " !important", "");
+    $important-paddings: $important;
+    $important-margins: $important;
 
