@@ -1,50 +1,61 @@
 
-@mixin auto-generate-paddings($values, $prefix:"") {
+@mixin auto-generate-paddings($values, $values-vertical, $values-horizontal, $prefix:"") {
 
-	@each $val in $values{
-		// Padding all
+	// Padding all
+	@each $val in $values {
+
 		.#{$prefix}pad-#{$val}{
-			padding: #{$val}px#{$important-paddings};
+			padding: #{$val}px#{$scu-val-important-paddings};
 		}
+	}
 
-		// Padding top and vertical
+	// Padding top, bottom and vertical
+	@each $val in $values-vertical {
+
 		.#{$prefix}pt-#{$val},
 		.#{$prefix}pv-#{$val}{
-			padding-top: #{$val}px#{$important-paddings};
+			padding-top: #{$val}px#{$scu-val-important-paddings};
 		}
 
-		// Padding bottom and vertical
 		.#{$prefix}pb-#{$val},
 		.#{$prefix}pv-#{$val}{
-			padding-bottom: #{$val}px#{$important-paddings};
+			padding-bottom: #{$val}px#{$scu-val-important-paddings};
 		}
+	}
 
-		// Padding left and horizontal
+	// Padding left, right and horizontal
+	@each $val in $values-horizontal {
+
 		.#{$prefix}pl-#{$val},
 		.#{$prefix}ph-#{$val}{
-			padding-left: #{$val}px#{$important-paddings};
+			padding-left: #{$val}px#{$scu-val-important-paddings};
 		}
 
-		// Padding right and horizontal
 		.#{$prefix}pr-#{$val},
 		.#{$prefix}ph-#{$val}{
-			padding-right: #{$val}px#{$important-paddings};
+			padding-right: #{$val}px#{$scu-val-important-paddings};
 		}
 	}
 }
 
 // Auto generated padding classes
 
-	@include auto-generate-paddings($config-paddings);
+	@include auto-generate-paddings($scu-paddings, $scu-paddings-vertical, $scu-paddings-horizontal, $scu-val-prefix);
 
-	@include if-device(tablet) {
-		@include auto-generate-paddings($config-tablet-paddings, $config-prefix-tablet);
+	@if $scu-build-tablet-classes{
+		@include if-device(tablet) {
+			@include auto-generate-paddings($scu-tablet-paddings, $scu-tablet-paddings-vertical, $scu-tablet-paddings-horizontal, $scu-val-prefix-tablet);
+		}
 	}
 
-	@include if-device(phone-tablet) {
-		@include auto-generate-paddings($config-phone-tablet-paddings, $config-prefix-phone-tablet);
+	@if $scu-build-phone-tablet-classes{
+		@include if-device(phone-tablet) {
+			@include auto-generate-paddings($scu-phone-tablet-paddings, $scu-phone-tablet-paddings-vertical, $scu-phone-tablet-paddings-horizontal, $scu-val-prefix-phone-tablet);
+		}
 	}
 
-	@include if-device(phone) {
-		@include auto-generate-paddings($config-phone-paddings, $config-prefix-phone);
+	@if $scu-build-phone-classes{
+		@include if-device(phone) {
+			@include auto-generate-paddings($scu-phone-paddings, $scu-phone-paddings-vertical, $scu-phone-paddings-horizontal, $scu-val-prefix-phone);
+		}
 	}

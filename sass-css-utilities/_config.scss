@@ -38,20 +38,17 @@
     $scu-paddings-vertical:                 $scu-paddings !default;
     $scu-paddings-horizontal:               $scu-paddings !default;
 
+    $scu-tablet-paddings:                   $scu-paddings !default;
     $scu-tablet-paddings-vertical:          $scu-paddings-vertical !default;
     $scu-tablet-paddings-horizontal:        $scu-paddings-horizontal !default;
 
+    $scu-phone-tablet-paddings:             $scu-paddings !default;
     $scu-phone-tablet-paddings-vertical:    $scu-paddings-vertical !default;
     $scu-phone-tablet-paddings-horizontal:  $scu-paddings-horizontal !default;
 
+    $scu-phone-paddings:                    $scu-paddings !default;
     $scu-phone-paddings-vertical:           $scu-paddings-vertical !default;
     $scu-phone-paddings-horizontal:         $scu-paddings-horizontal !default;
-
-
-    $config-paddings:              (0 5 10 15 20 25 30) !default;
-    $config-tablet-paddings:       $config-paddings !default;
-    $config-phone-tablet-paddings: $config-paddings !default;
-    $config-phone-paddings:        $config-paddings !default;
 
 // ====== Margins ======
 
@@ -75,9 +72,9 @@
 
 // ====== Setting default variable values based on config. Do not edit unless you know what you are doing! ======
 
-    $scu-val-important:                     if ($scu-use-important, " !important", "");
-    $scu-val-important-paddings:            if ($scu-paddings-use-important, " !important", "");
-    $scu-val-important-margins:             if ($scu-margins-use-important, " !important", "");
+    $scu-val-important:                     if($scu-use-important, " !important", "");
+    $scu-val-important-paddings:            if($scu-paddings-use-important, " !important", "");
+    $scu-val-important-margins:             if($scu-margins-use-important, " !important", "");
 
     $scu-val-prefix:                        $scu-prefix;
     $scu-val-prefix-tablet:                 $scu-val-prefix + $scu-prefix-tablet;
