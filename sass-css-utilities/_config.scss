@@ -1,5 +1,11 @@
 // Default config values. Do NOT modify this file.
 
+// ====== Features ======
+    
+    $scu-build-tablet-classes:              true !default;
+    $scu-build-phone-tablet-classes:        true !default;
+    $scu-build-phone-classes:               true !default;
+
 // ====== !important ======
     
     $scu-use-important:                     true !default;
