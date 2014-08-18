@@ -1,5 +1,8 @@
 // Default config values. Do NOT modify this file.
 
+    $scu-rem-baseline-px:                   16px !default;
+    $scu-rem-include-px:                    true !default;
+
 // ====== Features ======
     
     $scu-build-tablet-classes:              true !default;
