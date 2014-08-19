@@ -43,6 +43,7 @@ If you want to change configuration, declare the configuration variables before 
  - `fl` : Float left
  - `fr` : Float right
  - `clr` or `clear` : Clear both
+ - `cf` or `clearfix` : Clear fix
 
 #### Text Align ####
  - `ta-c` or `align-center` : Text align center
@@ -50,17 +51,22 @@ If you want to change configuration, declare the configuration variables before 
  - `ta-r` or `align-right` : Text align right
 
 #### Vertical Align ####
- - `va-t` or `align-top` : Vertical align top
- - `va-m` or `align-middle` : Vertical align middle
- - `va-b` or `align-bottom` : Vertical align bottom
+ - `va-top` or `align-top` : Vertical align top
+ - `va-middle` or `align-middle` : Vertical align middle
+ - `va-bottom` or `align-bottom` : Vertical align bottom
+ - `va-baseline` or `align-baseline` : Vertical align baseline
 
 #### Appearance ####
- - `hide` : display:none
+ - `hide` or `hidden` : display:none
  - `invisible` : visibility: hidden
  - `transparent` : opacity 0
  - `opaque` : opacity 1
+ - `inline` : display:inline
  - `block` : display:block
- - `inline-block` : display:inline-block
+ - `inline-block` : display:inline-block, max-width:100%
+ - `table` : display: table
+ - `table-cell` : display: table-cell
+ - `table-row` : display: table-row
  - `border-box` : border-box box model
 
 #### Text Utilities ####
@@ -70,14 +76,20 @@ If you want to change configuration, declare the configuration variables before 
  - `uc` or `uppercase` : Transforms text to uppercase
  - `lc` or `lowercase` : Transforms text to lowercase
 
+#### Color Utilities ####
+ - `inherit-color` : color: inherit
+
 #### Position ####
  - `pos-relative` : Relative position
  - `pos-absolute` : Absolute position
- - `pos-fixed` : Fixed position
+ - `pos-fixed` : Fixed position, includes backface-visibility: hidden
  - `pos-static` : Static position
 
 #### Interaction ####
- - `clickable` : cursor:pointer; (Add adjacent class `disabled` to disable it for the element)
+ - `clickable` : cursor:pointer
+ - `link` : text-decoration: none, on hover and focus: text-decoration: underline
+ - `link-clean` : text-decoration: none for every state
+ - `link-block` : display: block, text-decoration: none
 
 ----------
 ### Utility SASS mixins ###
