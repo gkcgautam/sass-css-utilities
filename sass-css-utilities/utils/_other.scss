@@ -27,6 +27,10 @@
     .#{$scu-val-prefix}fr {
         float:right#{$scu-val-important};
     }
+    .#{$scu-val-prefix}fn,
+    .#{$scu-val-prefix}float-none {
+        float:none#{$scu-val-important};
+    }
     .#{$scu-val-prefix}clr,
     .#{$scu-val-prefix}clear {
         clear:both;
@@ -184,6 +188,10 @@
             }
             .#{$scu-val-prefix-tablet}fr {
                 float:right#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}fn,
+            .#{$scu-val-prefix-tablet}float-none {
+                float:none#{$scu-val-important};
             }
             .#{$scu-val-prefix-tablet}clr,
             .#{$scu-val-prefix-tablet}clear {
@@ -347,6 +355,10 @@
             .#{$scu-val-prefix-phone-tablet}fr {
                 float:right#{$scu-val-important};
             }
+            .#{$scu-val-prefix-phone-tablet}fn,
+            .#{$scu-val-prefix-phone-tablet}float-none {
+                float:none#{$scu-val-important};
+            }
             .#{$scu-val-prefix-phone-tablet}clr,
             .#{$scu-val-prefix-phone-tablet}clear {
                 clear:both;
@@ -506,6 +518,10 @@
             }
             .#{$scu-val-prefix-phone}fr {
                 float:right#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}fn,
+            .#{$scu-val-prefix-phone}float-none {
+                float:none#{$scu-val-important};
             }
             .#{$scu-val-prefix-phone}clr,
             .#{$scu-val-prefix-phone}clear {
