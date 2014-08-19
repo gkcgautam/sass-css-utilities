@@ -39,11 +39,18 @@ If you want to change configuration, declare the configuration variables before 
 
 ### Utility classes ###
 
-#### Floats ####
+#### Float and Clear ####
  - `fl` : Float left
  - `fr` : Float right
+ - `fn` or `float-none` : Float none
  - `clr` or `clear` : Clear both
  - `cf` or `clearfix` : Clear fix
+
+#### Width ####
+ - `width-auto` : width:auto
+ - `width-fill` : width:auto, display: block, overflow: hidden
+ - `width-full` : width:100%
+ - `width-full-alt` : width:100%, display: block, box-sizing: border-box
 
 #### Text Align ####
  - `ta-c` or `align-center` : Text align center
