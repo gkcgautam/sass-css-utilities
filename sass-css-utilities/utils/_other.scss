@@ -150,6 +150,10 @@
         text-transform: lowercase#{$scu-val-important};
     }
 
+    .#{$scu-val-prefix}inherit-color{
+        color: inherit#{$scu-val-important};
+    }
+
 @if $scu-build-tablet-classes{
     @include if-device(tablet) {
 
@@ -304,6 +308,10 @@
             }
             .#{$scu-val-prefix-tablet}lc, .#{$scu-val-prefix-tablet}lowercase{
                 text-transform: lowercase#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-tablet}inherit-color{
+                color: inherit#{$scu-val-important};
             }
     }
 }
@@ -461,6 +469,10 @@
             .#{$scu-val-prefix-phone-tablet}lc, .#{$scu-val-prefix-phone-tablet}lowercase{
                 text-transform: lowercase#{$scu-val-important};
             }
+
+            .#{$scu-val-prefix-phone-tablet}inherit-color{
+                color: inherit#{$scu-val-important};
+            }
     }
 }
 
@@ -616,6 +628,10 @@
             }
             .#{$scu-val-prefix-phone}lc, .#{$scu-val-prefix-phone}lowercase{
                 text-transform: lowercase#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone}inherit-color{
+                color: inherit#{$scu-val-important};
             }
     }
 }

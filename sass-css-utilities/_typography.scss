@@ -14,6 +14,10 @@
     text-decoration: line-through#{$scu-val-important};
 }
 
+.#{$scu-val-prefix}text-break{
+    word-wrap: break-word#{$scu-val-important};
+}
+
 @if $scu-build-tablet-classes{
     @include if-device(tablet) {
         .#{$scu-val-prefix-tablet}normal {
@@ -29,6 +33,10 @@
 
         .#{$scu-val-prefix-tablet}line-through{
             text-decoration: line-through#{$scu-val-important};
+        }
+
+        .#{$scu-val-prefix-tablet}text-break{
+            word-wrap: break-word#{$scu-val-important};
         }
     }
 }
@@ -50,6 +58,10 @@
         .#{$scu-val-prefix-phone-tablet}line-through{
             text-decoration: line-through#{$scu-val-important};
         }
+
+        .#{$scu-val-prefix-phone-tablet}text-break{
+            word-wrap: break-word#{$scu-val-important};
+        }
     }
 }
 
@@ -69,6 +81,10 @@
 
         .#{$scu-val-prefix-phone}line-through{
             text-decoration: line-through#{$scu-val-important};
+        }
+
+        .#{$scu-val-prefix-phone}text-break{
+            word-wrap: break-word#{$scu-val-important};
         }
     }
 }
