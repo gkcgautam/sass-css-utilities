@@ -1,7 +1,67 @@
-$config-paddings: (0 5 10 15 20 25 30);
-$config-margins: (0 5 10 15 20 25 30);
 
-// $config-global-use-important: true;
+// ====== REM ======
 
-// $config-paddings-use-important : true;
-// $config-margins-use-important : true;
+    $scu-rem-baseline-px:                   16px;   // REM values are calculated in respect to this
+    $scu-rem-include-px:                    true;   // Whether to include px values along with rem values
+
+// ====== Features ======
+    
+    $scu-build-tablet-classes:              true;   // Build classess for tablet devices
+    $scu-build-phone-tablet-classes:        true;   // Build classess for phone and tablet devices
+    $scu-build-phone-classes:               true;   // Build classess for phone devices
+
+// ====== Prefixes ======
+
+    $scu-prefix:                            "";          // Prefix for all classes
+    $scu-prefix-tablet:                     "tab-";      // Prefix for tablet classes
+    $scu-prefix-phone-tablet:               "phn-tab-";  // Prefix for phone and tablet classes
+    $scu-prefix-phone:                      "phn-";      // Prefix for phone classes
+
+// ====== !important ======
+    
+    $scu-use-important:                     true;
+    // $scu-paddings-use-important:         $scu-use-important;
+    // $scu-margins-use-important:          m$scu-use-important;
+
+// ====== Media Devices ======
+
+    // $scu-desktop-min-width:                 980px;
+    // $scu-tablet-min-width:                  768px;
+    // $scu-tablet-max-width:                  979px;
+    // $scu-phone-max-width:                   767px;
+
+// ====== Paddings ======
+
+    $scu-paddings:                          (0 5 10 15 20 25 30);
+    // $scu-paddings-vertical:                 $scu-paddings;
+    // $scu-paddings-horizontal:               $scu-paddings;
+
+    // $scu-tablet-paddings:                   $scu-paddings;
+    // $scu-tablet-paddings-vertical:          $scu-paddings-vertical;
+    // $scu-tablet-paddings-horizontal:        $scu-paddings-horizontal;
+
+    // $scu-phone-tablet-paddings:             $scu-paddings;
+    // $scu-phone-tablet-paddings-vertical:    $scu-paddings-vertical;
+    // $scu-phone-tablet-paddings-horizontal:  $scu-paddings-horizontal;
+
+    // $scu-phone-paddings:                    $scu-paddings;
+    // $scu-phone-paddings-vertical:           $scu-paddings-vertical;
+    // $scu-phone-paddings-horizontal:         $scu-paddings-horizontal;
+
+// ====== Margins ======
+
+    $scu-margins:                           (0 5 10 15 20 25 30);
+    // $scu-margins-vertical:                  $scu-margins;
+    // $scu-margins-horizontal:                $scu-margins;
+
+    // $scu-tablet-margins:                    $scu-margins;
+    // $scu-tablet-margins-vertical:           $scu-margins-vertical;
+    // $scu-tablet-margins-horizontal:         $scu-margins-horizontal;
+
+    // $scu-phone-tablet-margins:              $scu-margins;
+    // $scu-phone-tablet-margins-vertical:     $scu-margins-vertical;
+    // $scu-phone-tablet-margins-horizontal:   $scu-margins-horizontal;
+
+    // $scu-phone-margins:                     $scu-margins;
+    // $scu-phone-margins-vertical:            $scu-margins-vertical;
+    // $scu-phone-margins-horizontal:          $scu-margins-horizontal;
