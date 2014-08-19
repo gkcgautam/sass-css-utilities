@@ -118,10 +118,10 @@ If you want to change configuration, declare the configuration variables before 
 
 Device width config can be updated with these variables:
 ```
-$config-phone-max-width   : 767px;
-$config-tablet-min-width  : 768px;
-$config-tablet-max-width  : 979px;
-$config-desktop-min-width : 980px;
+$scu-phone-max-width   : 767px;
+$scu-tablet-min-width  : 768px;
+$scu-tablet-max-width  : 979px;
+$scu-desktop-min-width : 980px;
 ```
 
 #### Example ####
@@ -155,12 +155,12 @@ Example:
 ```
 
 #### Font size and line height ####
- - `font-size($size, $line_height)` : Converts to rem values + provides px values as fallback.
+ - `rem-font($font-size-px, $line-height-px:false)` : Converts to rem values + provides px values as fallback (unless disabled in config).
 
 Line height is optional. Example:
 ```
 .title{
-    @include font-size(18,24);
+    @include rem-font(18px,24px);
 }
 ```
 
@@ -235,11 +235,11 @@ Example:
 `mr-a` or `mr-auto`: `auto` value for right margin property
 
 #### Auto generated margin classes: ####
-Specify values of margins to be generated in variable `$config-margins` and the library will automatically generate different cases based on these. 
+Specify values of margins to be generated in variable `$scu-margins` and the library will automatically generate different cases based on these. 
 
-    $config-margins: (0 5 10 15 20)
+    $scu-margins: (0 5 10 15 20)
 
-Properties available are (where `X` is one of the values passed in `$config-margins`
+Properties available are (where `X` is one of the values passed in `$scu-margins`
 
 `mar-X` : Margin X. Eg: mar-5 is margin: 5px;
 
