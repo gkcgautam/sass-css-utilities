@@ -1,6 +1,6 @@
 sass-css-utilities - A SASS library for rapid frontend development.
 ==============
-c
+
 ## Intro ##
 
 The main aim of the library is to speedup up the website development process with the usage of simple utility classes.
