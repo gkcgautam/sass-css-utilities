@@ -22,13 +22,13 @@
     }
 }
 
-@mixin bg-image-2x($file, $type, $width:false, $height:false) {
+@mixin bg-image-2x($file, $type, $bg-size:false) {
     background-repeat:no-repeat;
     background-image: url($file + '.' + $type);
 
-    @if $width{
-        -webkit-background-size: $width $height;  // Needed only for Android v < 3
-        background-size: $width $height;
+    @if $bg-size{
+        -webkit-background-size: $bg-size;  // Needed for Android v < 3
+        background-size: $bg-size;
     }
 
     @media print,
