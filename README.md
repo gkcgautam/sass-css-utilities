@@ -108,10 +108,13 @@ If you want to change configuration, declare the configuration variables before 
  - `border-radius-bottom-left($radius)`
  - `border-radius-bottom-right($radius)`
 
-#### Media queries ####
-
 #### Retina @2x background image ####
- - `bg-image-2x($file, $type, $bg-size:false)` : Example: $file: "trip", $type: "png", $bg-size: "200px 100px" will use trip@2x.png for retina devices. 
+ - `bg-image-2x($file, $type, $bg-size:false)` : Example: $file: "trip", $type: "png", $bg-size: "200px 100px" will use trip@2x.png for retina devices.
+
+#### Media queries ####
+- `at-least-width($device-width)` : Devices with min width as specified
+- `until-width($device-width)` : Devices with max width as specified
+- `if-device($device)` : Media query specific to a device. Possible values are `tablet`, `phone-tablet` and `phone`.
 
 Device width config can be updated with these variables:
 ```
