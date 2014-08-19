@@ -1,6 +1,6 @@
 sass-css-utilities - A SASS library for rapid frontend development.
 ==============
-
+c
 ## Intro ##
 
 The main aim of the library is to speedup up the website development process with the usage of simple utility classes.
@@ -290,37 +290,28 @@ Text align will be `center` in desktop and `left` in phone.
 By default all of the css properties defined in the utility classes have `!important` attribute to ensure that the classes work as expected by overiding values for the element.
 This can be disabled with these variable:
 ```
-$config-global-use-important: true; // For all classes. Default value is true
-$config-paddings-use-important: true; // For auto generated paddings
-$config-margins-use-important: true; // For auto generated margins
+$scu-use-important: true; // For all classes. Default value is true
+$scu-paddings-use-important: true; // For auto generated paddings
+$scu-margins-use-important: true; // For auto generated margins
 ```
 
-### Device prefixes ###
-Default device prefixes can be changed with these variables:
+### Prefixes ###
+Default Global and device prefixes can be changed with these variables:
 ```
-$config-prefix-tablet:       "tab-";
-$config-prefix-phone-tablet: "phn-tab-";
-$config-prefix-phone:        "phn-";
+$scu-prefix:              "";
+$scu-prefix-tablet:       "tab-";
+$scu-prefix-phone-tablet: "phn-tab-";
+$scu-prefix-phone:        "phn-";
 ```
 ### Custom values for auto-generated margins and paddings ###
 The classes to be generated can be specified in variables `$config-paddings` and `$config-margins`. The default values are:
 ```
-$config-paddings: (0 5 10 15 20 25 30);
-$config-margins:  (0 5 10 15 20 25 30);
+$scu-paddings: (0 5 10 15 20 25 30);
+$scu-margins:  (0 5 10 15 20 25 30);
 ```
 
-Device prefixed margin and padding classess will also use the above values by default, but you can change them with these variables:
-```
-$config-tablet-paddings:       (0 5 10 15 20 25 30);
-$config-phone-tablet-paddings: (0 5 10 15 20 25 30);
-$config-phone-paddings:        (0 5 10 15 20 25 30);
-```
-```
-$config-tablet-margins:       (0 5 10 15 20 25 30);
-$config-phone-tablet-margins: (0 5 10 15 20 25 30);
-$config-phone-margins:        (0 5 10 15 20 25 30);
-```
-
+You can even specify different values for vertical and horizontal classes. (Global as well as media cases)
+Check the `config.scss` file for all other config options and examples.
 
 ----------
 
