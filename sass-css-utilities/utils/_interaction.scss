@@ -1,8 +1,24 @@
 
 .#{$scu-val-prefix}clickable{
-    cursor: pointer;
+    cursor: pointer#{$scu-val-important};
+}
 
-    &.disabled{
-        cursor: default;
+.#{$scu-val-prefix}link{
+    &, &:active{
+        text-decoration: none#{$scu-val-important};
     }
+    &:hover, &:focus{
+        text-decoration: underline#{$scu-val-important};
+    }
+}
+
+.#{$scu-val-prefix}link-clean{
+    &, &:hover, &:focus, &:active{
+        text-decoration: none#{$scu-val-important};
+    }
+}
+
+.#{$scu-val-prefix}link-block{
+    display: block#{$scu-val-important};
+    text-decoration: none#{$scu-val-important};
 }
