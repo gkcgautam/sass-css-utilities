@@ -72,9 +72,16 @@ If you want to change configuration, declare the configuration variables before 
 #### Text Utilities ####
  - `hide-text` : Hides text using text-index technique
  - `ellipsis` : Truncates text with ellipsis
+ - `text-break` : word-wrap: break-word
  - `non-selectable` or `disable-text-select` : Disables text selection
  - `uc` or `uppercase` : Transforms text to uppercase
  - `lc` or `lowercase` : Transforms text to lowercase
+
+#### Typography ####
+ - `normal` : font-weight: normal
+ - `bold` : font-weight: bold
+ - `italic` : font-style: italic
+ - `line-through` : text-decoration: line-through
 
 #### Color Utilities ####
  - `inherit-color` : color: inherit
@@ -102,9 +109,9 @@ If you want to change configuration, declare the configuration variables before 
  - `border-radius-bottom-right($radius)`
 
 #### Media queries ####
- - `at-least-width($device-width)` : Devices with min width as specified
- - `until-width($device-width)` : Devices with max width as specified
- - `if-device($device)` : Media query specific to a device. Possible values are `tablet`, `phone-tablet` and `phone`.
+
+#### Retina @2x background image ####
+ - `bg-image-2x($file, $type, $bg-size:false)` : Example: $file: "trip", $type: "png", $bg-size: "200px 100px" will use trip@2x.png for retina devices. 
 
 Device width config can be updated with these variables:
 ```
