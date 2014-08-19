@@ -4,16 +4,16 @@
 }
 
 .#{$scu-val-prefix}link{
-    &, &:active{
+    &, &:active {
         text-decoration: none#{$scu-val-important};
     }
-    &:hover, &:focus{
+    &:hover, &:focus {
         text-decoration: underline#{$scu-val-important};
     }
 }
 
 .#{$scu-val-prefix}link-clean{
-    &, &:hover, &:focus, &:active{
+    &, &:hover, &:focus, &:active {
         text-decoration: none#{$scu-val-important};
     }
 }
@@ -22,3 +22,88 @@
     display: block#{$scu-val-important};
     text-decoration: none#{$scu-val-important};
 }
+
+@if $scu-build-tablet-classes{
+    @include if-device(tablet) {
+        .#{$scu-val-prefix-tablet}clickable{
+            cursor: pointer#{$scu-val-important};
+        }
+
+        .#{$scu-val-prefix-tablet}link{
+            &, &:active {
+                text-decoration: none#{$scu-val-important};
+            }
+            &:hover, &:focus {
+                text-decoration: underline#{$scu-val-important};
+            }
+        }
+
+        .#{$scu-val-prefix-tablet}link-clean{
+            &, &:hover, &:focus, &:active {
+                text-decoration: none#{$scu-val-important};
+            }
+        }
+
+        .#{$scu-val-prefix-tablet}link-block{
+            display: block#{$scu-val-important};
+            text-decoration: none#{$scu-val-important};
+        }
+    }
+}
+
+@if $scu-build-phone-tablet-classes{
+    @include if-device(phone-tablet) {
+        .#{$scu-val-prefix-phone-tablet}clickable{
+            cursor: pointer#{$scu-val-important};
+        }
+
+        .#{$scu-val-prefix-phone-tablet}link{
+            &, &:active {
+                text-decoration: none#{$scu-val-important};
+            }
+            &:hover, &:focus {
+                text-decoration: underline#{$scu-val-important};
+            }
+        }
+
+        .#{$scu-val-prefix-phone-tablet}link-clean{
+            &, &:hover, &:focus, &:active {
+                text-decoration: none#{$scu-val-important};
+            }
+        }
+
+        .#{$scu-val-prefix-phone-tablet}link-block{
+            display: block#{$scu-val-important};
+            text-decoration: none#{$scu-val-important};
+        }
+    }
+}
+
+@if $scu-build-phone-classes{
+    @include if-device(phone) {
+        .#{$scu-val-prefix-phone}clickable{
+            cursor: pointer#{$scu-val-important};
+        }
+
+        .#{$scu-val-prefix-phone}link{
+            &, &:active {
+                text-decoration: none#{$scu-val-important};
+            }
+            &:hover, &:focus {
+                text-decoration: underline#{$scu-val-important};
+            }
+        }
+
+        .#{$scu-val-prefix-phone}link-clean{
+            &, &:hover, &:focus, &:active {
+                text-decoration: none#{$scu-val-important};
+            }
+        }
+
+        .#{$scu-val-prefix-phone}link-block{
+            display: block#{$scu-val-important};
+            text-decoration: none#{$scu-val-important};
+        }
+    }
+}
+
