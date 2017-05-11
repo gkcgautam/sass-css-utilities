@@ -1,0 +1,277 @@
+// except for align-self, apply all classes on parent element
+.#{$scu-val-prefix}flex {
+    display: flex#{$scu-val-important};
+}
+
+// specifies main-axis direction on wich the child elements will be lined
+// by default flex-direction: row
+.#{$scu-val-prefix}flex-col {
+    flex-direction: column#{$scu-val-important};
+}
+.#{$scu-val-prefix}flex-row {
+    flex-direction: row#{$scu-val-important};
+}
+.#{$scu-val-prefix}flex-col-reverse {
+    flex-direction: column-reverse#{$scu-val-important};
+}
+.#{$scu-val-prefix}flex-row-reverse {
+    flex-direction: row-reverse#{$scu-val-important};
+}
+
+// justify-content controls how you align items on the MAIN axis.
+.#{$scu-val-prefix}flex-jc-start {
+    justify-content: flex-start#{$scu-val-important};
+}
+.#{$scu-val-prefix}flex-jc-end {
+    justify-content: flex-end#{$scu-val-important};
+}
+.#{$scu-val-prefix}flex-jc-center {
+    justify-content: center#{$scu-val-important};
+}
+.#{$scu-val-prefix}flex-jc-space-between {
+    justify-content: space-between#{$scu-val-important};
+}
+.#{$scu-val-prefix}flex-jc-space-around {
+    justify-content: space-around#{$scu-val-important};
+}
+
+// align-items controls how you align items on the CROSS axis.
+.#{$scu-val-prefix}flex-ai-start {
+    align-items: flex-start#{$scu-val-important};
+}
+.#{$scu-val-prefix}flex-ai-end {
+    align-items: flex-end#{$scu-val-important};
+}
+.#{$scu-val-prefix}flex-ai-center {
+    align-items: center#{$scu-val-important};
+}
+.#{$scu-val-prefix}flex-ai-stretch {
+    align-items: stretch#{$scu-val-important};
+}
+.#{$scu-val-prefix}flex-ai-baseline {
+    align-items: baseline#{$scu-val-important};
+}
+
+// align-self overrides align-items on the applied element
+.#{$scu-val-prefix}flex-as-start {
+    align-self: flex-start#{$scu-val-important};
+}
+.#{$scu-val-prefix}flex-as-end {
+    align-self: flex-end#{$scu-val-important};
+}
+.#{$scu-val-prefix}flex-as-center {
+    align-self: center#{$scu-val-important};
+}
+.#{$scu-val-prefix}flex-as-stretch {
+    align-self: stretch#{$scu-val-important};
+}
+.#{$scu-val-prefix}flex-as-baseline {
+    align-self: baseline#{$scu-val-important};
+}
+
+@if $scu-build-tablet-classes{
+    @include if-device(tablet) {
+        .#{$scu-val-prefix-tablet}flex {
+            display: flex#{$scu-val-important};
+        }
+
+        .#{$scu-val-prefix-tablet}flex-col {
+            flex-direction: column#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-tablet}flex-row {
+            flex-direction: row#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-tablet}flex-col-reverse {
+            flex-direction: column-reverse#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-tablet}flex-row-reverse {
+            flex-direction: row-reverse#{$scu-val-important};
+        }
+
+        .#{$scu-val-prefix-tablet}flex-jc-start {
+            justify-content: flex-start#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-tablet}flex-jc-end {
+            justify-content: flex-end#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-tablet}flex-jc-center {
+            justify-content: center#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-tablet}flex-jc-space-between {
+            justify-content: space-between#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-tablet}flex-jc-space-around {
+            justify-content: space-around#{$scu-val-important};
+        }
+
+        .#{$scu-val-prefix-tablet}flex-ai-start {
+            align-items: flex-start#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-tablet}flex-ai-end {
+            align-items: flex-end#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-tablet}flex-ai-center {
+            align-items: center#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-tablet}flex-ai-stretch {
+            align-items: stretch#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-tablet}flex-ai-baseline {
+            align-items: baseline#{$scu-val-important};
+        }
+
+        .#{$scu-val-prefix-tablet}flex-as-start {
+            align-self: flex-start#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-tablet}flex-as-end {
+            align-self: flex-end#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-tablet}flex-as-center {
+            align-self: center#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-tablet}flex-as-stretch {
+            align-self: stretch#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-tablet}flex-as-baseline {
+            align-self: baseline#{$scu-val-important};
+        }
+    }
+}
+
+@if $scu-build-phone-tablet-classes{
+    @include if-device(phone-tablet) {
+        .#{$scu-val-prefix-phone-tablet}flex {
+            display: flex#{$scu-val-important};
+        }
+
+        .#{$scu-val-prefix-phone-tablet}flex-col {
+            flex-direction: column#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone-tablet}flex-row {
+            flex-direction: row#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone-tablet}flex-col-reverse {
+            flex-direction: column-reverse#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone-tablet}flex-row-reverse {
+            flex-direction: row-reverse#{$scu-val-important};
+        }
+
+        .#{$scu-val-prefix-phone-tablet}flex-jc-start {
+            justify-content: flex-start#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone-tablet}flex-jc-end {
+            justify-content: flex-end#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone-tablet}flex-jc-center {
+            justify-content: center#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone-tablet}flex-jc-space-between {
+            justify-content: space-between#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone-tablet}flex-jc-space-around {
+            justify-content: space-around#{$scu-val-important};
+        }
+
+        .#{$scu-val-prefix-phone-tablet}flex-ai-start {
+            align-items: flex-start#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone-tablet}flex-ai-end {
+            align-items: flex-end#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone-tablet}flex-ai-center {
+            align-items: center#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone-tablet}flex-ai-stretch {
+            align-items: stretch#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone-tablet}flex-ai-baseline {
+            align-items: baseline#{$scu-val-important};
+        }
+
+        .#{$scu-val-prefix-phone-tablet}flex-as-start {
+            align-self: flex-start#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone-tablet}flex-as-end {
+            align-self: flex-end#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone-tablet}flex-as-center {
+            align-self: center#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone-tablet}flex-as-stretch {
+            align-self: stretch#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone-tablet}flex-as-baseline {
+            align-self: baseline#{$scu-val-important};
+        }
+    }
+}
+
+@if $scu-build-phone-classes{
+    @include if-device(phone) {
+        .#{$scu-val-prefix-phone}flex {
+            display: flex#{$scu-val-important};
+        }
+
+        .#{$scu-val-prefix-phone}flex-col {
+            flex-direction: column#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone}flex-row {
+            flex-direction: row#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone}flex-col-reverse {
+            flex-direction: column-reverse#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone}flex-row-reverse {
+            flex-direction: row-reverse#{$scu-val-important};
+        }
+
+        .#{$scu-val-prefix-phone}flex-jc-start {
+            justify-content: flex-start#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone}flex-jc-end {
+            justify-content: flex-end#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone}flex-jc-center {
+            justify-content: center#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone}flex-jc-space-between {
+            justify-content: space-between#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone}flex-jc-space-around {
+            justify-content: space-around#{$scu-val-important};
+        }
+
+        .#{$scu-val-prefix-phone}flex-ai-start {
+            align-items: flex-start#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone}flex-ai-end {
+            align-items: flex-end#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone}flex-ai-center {
+            align-items: center#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone}flex-ai-stretch {
+            align-items: stretch#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone}flex-ai-baseline {
+            align-items: baseline#{$scu-val-important};
+        }
+
+        .#{$scu-val-prefix-phone}flex-as-start {
+            align-self: flex-start#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone}flex-as-end {
+            align-self: flex-end#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone}flex-as-center {
+            align-self: center#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone}flex-as-stretch {
+            align-self: stretch#{$scu-val-important};
+        }
+        .#{$scu-val-prefix-phone}flex-as-baseline {
+            align-self: baseline#{$scu-val-important};
+        }
+    }
+}

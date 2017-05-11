@@ -98,6 +98,32 @@ If you want to change configuration, declare the configuration variables before 
  - `link-clean` : text-decoration: none for every state
  - `link-block` : display: block, text-decoration: none
 
+#### Flexbox ####
+ - `flex` : display: flex
+
+ - `flex-col` : flex-direction: column
+ - `flex-row` : flex-direction: row
+ - `flex-col-reverse` : flex-direction: column-reverse
+ - `flex-row-reverse` : flex-direction: row-reverse
+ 
+ - `flex-jc-start` : justify-content: flex-start
+ - `flex-jc-end` : justify-content: flex-end
+ - `flex-jc-center` : justify-content: center
+ - `flex-jc-space-between` : justify-content: space-between
+ - `flex-jc-space-around` : justify-content: space-around
+ 
+ - `flex-ai-start` : align-items: flex-start
+ - `flex-ai-end` : align-items: flex-end
+ - `flex-ai-center` : align-items: center
+ - `flex-ai-stretch` : align-items: stretch
+ - `flex-ai-baseline` : align-items: baseline
+
+ - `flex-as-start` : align-self: flex-start
+ - `flex-as-end` : align-self: flex-end
+ - `flex-as-center` : align-self: center
+ - `flex-as-stretch` : align-self: stretch
+ - `flex-as-baseline` : align-self: baseline
+
 ----------
 ### Utility SASS mixins ###
 
